@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | Tips | Implementare min-height anche su Internet Explorer</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li ><a href="../../tutorial/index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li ><a href="../../clonazioni/index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li ><a href="../../template/index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li ><a href="../../DHTML/index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">Tips</a> &gt; <a href="index.html">Min-height</a> &gt; Implementare min-height anche su Internet Explorer</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+<h1 id="titoloArticolo">Implementare min-height anche su Internet Explorer</h1>
+<p>Internet Explorer, nonostante i grossi passi avanti fatti dalla versione 6.0 rispetto alla versione 5.x, ha ancora diversi problemi nel supporto di molte, troppe, propriet&#224; dei CSS.<br />
+Una delle propriet&#224; pi&#249; utili a non essere supportate &#232; <code>min-height</code>.</p>
+<p>Questa propriet&#224; stabilisce l'altezza minima di un box e prevede che il box possa poi espandersi oltre l'altezza specificata. Le possibilit&#224; di applicazione sono molteplici, dunque il limite di Internet Explorer &#232; piuttosto grave.</p>
+<p>Per fortuna, un'altra incapacit&#224; del browser Microsoft fornisce una soluzione al problema: <strong>Internet Explorer non supporta l'operatore <code>!important</code></strong> (<a href="http://www.w3.org/TR/REC-CSS2/cascade.html#important-rules" title="dettagli sull'operatore !important">maggiori dettagli</a> sull'operatore <code>!important</code> sono disponibili sul <a href="http://www.w3.org/TR/REC-CSS2/cascade.html#important-rules" title="dettagli sull'operatore !important">sito del W3C</a>).<br />
+Senza entrare in dettagli, si pu&#242; semplicemente dire che l'operatore <code>!important</code> permette ad una regola di sovrascrivere regole che la seguono, ma Internet Explorer ignora questo principio e si comporta come se l'operatore <code>!important</code> non esistesse.</p>
+<p>Un altro aspetto peculiare di Internet Explorer che pu&#242; essere usato per ovviare al mancato supporto della propriet&#224; <code>min-height</code> &#232; rappresentato dal fatto che <strong>Internet Explorer intepreta <code>height</code> come se si trattasse di <code>min-height</code></strong>: se i contenuti di un dato box occupano uno spazio verticale inferiore a quello specificato per la propriet&#224; <code>height</code>, allora il box ha l'altezza specificata, se invece i contenuti eccedono lo spazio a loro disposizione, allora Internet Explorer ignora l'altezza specificata e fa espandere il box. Diversamente, Opera, Mozilla e gli altri browser non espanderanno il box che non sar&#224; pi&#249; in grado di impaginare i contenuti.</p>
+<h2>La soluzione</h2>
+<p>Sfuttando i due difetti di interpretazione precedentemente esposti, &#232; possibile ottenere l'implementazione di <code>min-height</code> su tutti i browser.</p>
+<p>Il codice da utilizzare &#232; il seguente:</p>
+<p class="code"><code>
+.box {<br />
+min-height: 200px;<br />
+height: auto !important;<br />
+height: 200px;<br />
+}</code></p>
+<p>La prima dichiarazione non &#232; interpetata da Internet Explorer.</p>
+<p>La seconda dichiarazione serve per Opera, Mozilla e gli altri browser per sovrascrivere la terza dichiarazione che vincolerebbe in ogni caso l'altezza del box (cosa non prevista da <code>min-height</code>). Internet Explorer non d&#224; peso alla direttiva <code>!important</code>.</p>
+<p>La terza dichiarazione &#232; interpretata solo da Internet Explorer poich&#233; per gli altri browser la seconda dichiarazione &#232; pi&#249; importante. In ogni caso Internet Explorer intepreter&#224; <code>height</code> come se si trattasse di <code>min-height</code>.</p>
+<p>E' disponibile un <a href="min-height.html" title="Pagina di esempio">semplice esempio</a>.</p><p><a href="../../commenti/index.html?aid=23" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 06.11.2003</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="min-height.html">Esempio</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../../tutorial/IE5_box_model/index.html">Il box model di IE5/Win</a></li>
+  <li><a href="../nascondere_i_css/index.html">Nascondere i CSS</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=23" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/tips/min-height/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+

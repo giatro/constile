@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | Template | Layout a tre colonne per tutti i gusti</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li ><a href="../../tutorial/index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li ><a href="../../clonazioni/index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li ><a href="../../tips/index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li ><a href="../../DHTML/index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">Template</a> &gt; <a href="index.html">Nuovo layout a tre colonne</a> &gt; Layout a tre colonne per tutti i gusti</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+<h1 id="titoloArticolo">Layout a tre colonne per tutti i gusti</h1>
+
+ <p>In questo articolo vedremo come realizzare un layout a tre colonne sfruttando il posizionamento assoluto invece della propriet&agrave; <code>float</code>. Attraverso tre diversi CSS, col medesimo codice XHTML, otterremo tre diversi tipi di layout: a larghezza prefissata, liquido con colonne laterali di larghezza prefissata, completamente liquido.</p>
+
+ <h2>Il codice XHTML</h2>
+
+ <p>Come detto utilizzeremo lo stesso codice XHTML per ottenere le tre versioni. Ci&ograve; non deve sorprendere poich&eacute; i CSS sono stati creati per separare i contenuti dal modo in cui questi sono presentati. Il codice utilizzato per il <code>body</code> &egrave; il seguente:</p>
+ <p class="code"><code>&lt;body&gt;<br />
+ &lt;!-- testa --&gt;<br />
+ &lt;div id=&quot;testa&quot;&gt;&lt;h1&gt;NomeSito&lt;/h1&gt;&lt;/div&gt;<br />
+ &lt;!-- /testa --&gt;<br />
+ &lt;hr /&gt;<br />
+ &lt;!-- corpo --&gt;<br />
+ &lt;div id=&quot;corpo&quot;&gt;<br />
+ <br />
+ &lt;div id=&quot;corpo-colonna1&quot;&gt;[...]&lt;/div&gt;<br />
+ &lt;hr /&gt;<br />
+ &lt;div id=&quot;corpo-colonna2&quot;&gt;[...]&lt;/div&gt;<br />
+ &lt;hr /&gt;<br />
+ &lt;div id=&quot;corpo-colonna3&quot;&gt;[...]&lt;/div&gt;<br />
+ <br />
+ &lt;/div&gt;<br />
+ &lt;!-- /corpo --&gt;<br />
+ &lt;hr /&gt;<br />
+ &lt;!-- pie' di pagina --&gt;<br />
+ &lt;div id=&quot;piedipagina&quot;&gt;&lt;p&gt;pi&eacute; di pagina&lt;/p&gt;&lt;/div&gt;<br />
+ &lt;!-- pie' di pagina --&gt;<br />
+ &lt;/body&gt;</code></p>
+
+ <p>La pagina &egrave; cos&igrave; strutturata:</p>
+
+ <ul>
+ <li>un'intestazione, identificata dal selettore <code>id=&quot;testa&quot;</code></li>
+
+ <li>
+ un corpo, identificato dal selettore <code>id=&quot;corpo&quot;</code>, suddiviso in tre colonne: 
+
+ <ul>
+ <li>colonna 1: id=&quot;corpo-colonna1&quot;</li>
+
+ <li>colonna 2: id=&quot;corpo-colonna2&quot;</li>
+
+ <li>colonna 3: id=&quot;corpo-colonna3&quot;</li>
+ </ul>
+ </li>
+
+ <li>un pi&egrave; di pagina, identificato dal selettore <code>id=&quot;piedipagina&quot;</code></li>
+ </ul>
+
+ <p>La struttura, come evidenziato dal codice, &egrave; stata ottenuta attraverso dei tag <code>DIV</code>, identificati attraverso l'attributo <code>ID</code>. Fra le varie sezioni sono stati inseriti degli <code>HR</code>, il cui scopo &egrave; quello di evidenziare la separazione dei contenuti anche quando il browser non &egrave; in grado di leggere o interpretare il foglio di stile.</p>
+
+ <h2>Il codice CSS</h2>
+
+ <p>Come detto i tre diversi layout saranno applicati attraverso tre diversi fogli di stile. In tutti e tre i casi, in luogo della propriet&agrave; <code>float</code>, come nel <a href="../layout_a_tre_colonne/index.html" title="Link ad un precedente articolo in cui il layou a tre colonne si ottiene attraverso una differente tecnica">precedente articolo</a> sul layout a tre colonne, si &egrave; fatto uso del posizionamento assoluto.</p>
+
+ <p>Il principio su cui si costruiscono i tre layout &egrave; basato su quanto segue. Innanzitutto si posiziona in maniera relativa il corpo (<code>id=&quot;corpo&quot;</code>) affinch&eacute; ogni posizionamento assoluto, di elementi al suo interno, si riferisca al corpo stesso e non a tutta la pagina. In seguito si creano le colonne laterali, impostandone la larghezza e posizionandole in maniera assoluta. A questo punto, le colonne laterali si troveranno sovrapposte alla colonna centrale. Per evitare tale sovrapposizione sar&agrave; sufficiente impostare i margini laterali della colonna centrale.</p>
+
+ <p>Questa tecnica offre <strong>vantaggi</strong> rispetto al classico uso della propriet&agrave; float (trascurando i <a href="../../tutorial/css_vs_table/index.html" title="Collegamento all'articolo: ''CSS e tabelle a confronto''">soliti vantaggi</a> rispetto l'uso delle tabelle), ma presenta anche uno <strong>svantaggio</strong>, nulla di grave per fortuna. I vantaggi pi&ugrave; evidenti sono la possibilit&agrave; di disporre le colonne nell'<strong>ordine preferito</strong>. Ad esempio &egrave; possibile scrivere nel codice XHTML prima i contenuti della colonna centrale e poi quelli della colonna laterale, ovvero &egrave; possibile spostare tutte e due le colonne sulla destra o tutte e due sulla sinistra della colonna centrale. Nella struttura della pagina, infatti, si &egrave; generalizzato parlando di colonna 1, colonna 2, colonna 3, senza specificare quale fosse la colonna di sinistra o di centro o di destra. Un secondo vantaggio consiste nella maggiore <strong>robustezza</strong> del metodo ai capricci dei browser, che potrebbero &quot;spingere&quot;la colonna di destra sotto quella di sinistra. Lo <strong>svantaggio</strong> consiste nel fatto che la colonna centrale <strong>deve</strong> essere sempre pi&ugrave; alta di quelle laterali. Questo vincolo in genere pu&ograve; essere <strong>facilmente rispettato</strong>, poich&eacute; la colonna centrale &egrave; quella che presenta i maggiori contenuti. Qualora il vincolo non possa essere soddisfatto, &egrave; <strong>sufficiente</strong> aggiungere del padding inferiore (<code>padding-bottom</code>) alla colonna centrale. Il vincolo &egrave; dovuto al fatto che le colonne laterali sono posizionate in maniera assoluta, dunque non sono pi&ugrave; in grado di <strong>influire</strong> sulla disposizione degli altri box della pagina. Il pi&egrave; di pagina si trova posto sotto il corpo, la cui altezza &egrave; determinata da quella della colonna centrale (priva di posizionamento assoluto) e del tutto indifferente all'altezza delle colonne laterali, poich&eacute; posizionate in maniera assoluta. Se il vincolo non fosse rispettato, le colonne laterali si sovrapporrebbero al footer.</p>
+
+ <p>Detto questo, &egrave; possibile illustrare i tre CSS utilizzati per la realizzazione dei differenti layout.</p>
+
+ <h3>Il layout a larghezza prefissata</h3>
+
+ <p>Vedremo ora come realizzare il codice per il layout a <a href="esempio_1.html">larghezza prefissata</a>.</p>
+
+ <p>Eliminiamo i margini e il padding predefiniti dal browser per il tag <code>BODY</code>, eliminiamo anche gli horizontal-rule, inutili nel layout che realizzeremo.</p>
+ <code class="blok">body { margin:0; padding:0 }<br />
+ hr { display:none }</code></p>
+
+ <p>Impostiamo la larghezza assoluta, pari a 760 pixel, per <code>#testa</code>, <code>#corpo</code> e <code>#piedipagina</code>. Tutte e tre le sezioni saranno poste al centro della pagina.</p>
+ <p class="code"><code>body { text-align:center }<br />
+ #testa {<br />
+ width:760px;<br />
+ margin:1em auto;<br />
+ text-align:left<br />
+ }<br />
+ #corpo {<br />
+ width:760px;<br />
+ margin:1em auto;<br />
+ text-align:left<br />
+ }<br />
+ #piedipagina {<br />
+ width:760px;<br />
+ margin:1em auto;<br />
+ text-align:left<br />
+ }</code></p>
+
+ <p>Per posizionare le colonne laterali in maniera assoluta, prendendo come riferimento la sezione <code>#corpo</code>, quest'ultima deve essere posizionata in maniera relativa.</p>
+ <p class="code"><code>#corpo {<br />
+ position:relative;<br />
+ }</code></p>
+
+ <p>Adesso &egrave; possibile posizionare le colonne laterali. La prima colonna sar&agrave; posta a sinistra e larga 160 pixel:</p>
+ <p class="code"><code>#corpo-colonna1 {<br />
+ position:absolute;<br />
+ top:0; left:0;<br />
+ width:160px;<br />
+ }</code></p>
+
+ <p>Il posizionamento assoluto (<code>position:aboslute</code>) consente di porre il nel punto desiderato indipendentemente dagli altri elementi della pagina. Le propriet&agrave; <code>top:0; left:0</code>, se associate alla propriet&agrave; <code>position:absolute</code>, stabiliscono che il box sia posto esattamente in alto a destra rispetto al box della sezione <code>#corpo</code>, essendo questa posizionata in maniera relativa.</p>
+
+ <p>La terza colonna sar&agrave; posta in alto a sinistra e sar&agrave; larga 200 pixel:</p>
+ <p class="code"><code>#corpo-colonna3 {<br />
+ position:absolute;<br />
+ top:0; right:0;<br />
+ width:200px;<br />
+ }</code></p>
+
+ <p>Il codice &egrave; praticamente lo stesso di quello usato per regolare la posizione della prima colonna. L'unica differenza (altre al valore della propriet&agrave; <code>width</code>) consiste nell'uso della proriet&agrave; <code>right:0</code> in luogo di <code>left:0</code>.</p>
+
+ <p>A questo punto le colonne laterali, essendo disposte indipendentemente dagli altri elementi della pagina, saranno sovrapposte alla colonna centrale, poich&eacute; questa si sviluppa per tutta la larghezza del corpo. Per evitare questa sovrapposizione &egrave; sufficiente impostare i margini della seconda colonna in modo tale da avere a destra e a sinistra lo spazio necessario per contenere comodamente le due colonne:</p>
+ <code>#corpo-colonna2 {<br />
+ margin:0 200px 0 160px;<br />
+ }</code></p>
+
+ <p>Il margine sinistro &egrave; largo 160px, proprio come la prima colonna, mentre il margine destro &egrave; largo 200px come la terza colonna.</p>
+
+ <p>Si ottiene cos&igrave; una struttura come quella rappresentata dalla seguente immagine.</p>
+ <img src="figura1.png" alt="[Immagine: Figura 1] Il risultato ottenuto col codice finora illustrato." class="esempio" /> 
+
+ <p>Nell'immagine si vede la struttura con l'intestazione, le tre colonne e il pi&egrave; di pagina. Per completare il layout, ormai &egrave; sufficiente definire i bordi e i colori di sfondo delle varie sezioni.</p>
+
+ <p>Gli unici problemi, in questa fase, si presentano con le colonne. Queste non si sviluppano in altezza come la colonna centrale, dunque se i bordi e i colori di sfondo fossero definiti nelle regole per i selettori #colonna-1 e #colonna-3 si avrebbe l'effetto mostrato nella seguente figura:</p>
+ <img src="figura2.png" alt="[Immagine: Figura 2] Sono evidenziate l'interruzione delle colonne subito dopo i contenuti" class="esempio" /> 
+
+ <p>Si nota che le colonne s'interrompono subito dopo i contenuti.</p>
+
+ <p>Il problema &egrave; di facile soluzione. Per quanto riguarda i bordi &egrave; sufficiente impostarli non nelle colonne laterali ma in quella centrale:</p>
+ <p class="code"><code>#corpo-colonna2 {<br />
+ border-left:1px solid #000;<br />
+ border-right:1px dotted #000;<br />
+ }</code></p>
+
+ <p>Per quanto riguarda il colore dello sfondo delle colonne, la soluzione &egrave; molto semplice. Invece di agire direttamente sullo sfondo delle colonne, si agisce sullo sfondo del corpo e della colonna centrale, lasciando lo sfondo delle colonne trasparente:</p>
+ <p class="code"><code>#corpo {<br />
+ background:#f0f0f0;<br />
+ }<br />
+ #corpo-colonna2 {<br />
+ background:#fff<br />
+ }</code></p>
+
+ <p>In questo modo le colonne laterali, essendo trasparenti, appariranno come se avessero uno sfondo grigio chiaro (<code>#f0f0f0</code>), mentre la colonna centrale avr&agrave; uno sfondo bianco. Qualora si volesse che le due colonne non siano dello stesso colore, potremmo sfruttare un'immagine (GIF o PNG) monocromatica (un grigio leggermente pi&ugrave; scuro, ad esempio <code>#e0e0e0</code>), larga come la colonna di sinistra (160 pixel) e alta un solo pixel. Impostando quest'immagine come sfondo che si ripete solo verticalmente per il corpo, avremo due colonne di differente colore. Il codice sopra riportato va cos&igrave; modificato:</p>
+ <p class="code"><code>#corpo {<br />
+ background:#f0f0f0 url(sfondo_colonna1.png) repeat-y;<br />
+ }<br />
+ #corpo-colonna2 {<br />
+ background:#fff<br />
+ }</code></p>
+
+ <p>Il risultato del codice finora prodotto &egrave; illustrato nell'immagine seguente:</p>
+ <img src="figura3.png" alt="[Immagine: Figura 3] Il layout quasi completo" class="esempio" /> 
+
+ <p>Ormai manca solo l'impostazione del padding, per allontanare i contenuti dai bordi. <a href="../../tutorial/IE5_box_model/index.html">Ricordando</a> che il padding destro e quello sinistro vanno a sommarsi alla larghezza del box, non possiamo impostare tali propriet&agrave; direttamente nelle regole per le tre colonne, il padding superiore e quello inferiore possono invece essere regolati comodamente:</p>
+ <p class="code"><code>#corpo-colonna1 {<br />
+ padding:1em 0;<br />
+ }<br />
+ #corpo-colonna2 {<br />
+ padding:1em 0;<br />
+ }<br />
+ #corpo-colonna3 {<br />
+ padding:1em 0;<br />
+ }</code></p>
+
+ <p>Come fare dunque ad allontanare i contenuti delle colonne dai bordi? La risposta &egrave; semplice se consideriamo che le colonne sono solo dei contenitori per i contenuti. Questi contenuti saranno dei testi racchiusi da paragrafi (tag <code>P</code>), ovvero saranno a loro volta racchiusi in altri contenitori, come ad esempio liste, box e cos&igrave; via. Nella <a href="esempio1.html">pagina d'esempio</a>, i contenuti sono porzioni del codice CSS adottato, racchiusi nel tag <code>CODE</code>. L'allontanamento dai bordi &egrave; stato ottenuto impostando i margini di tal elemento:</p>
+ <p class="code"><code>code {<br />
+ font:80% verdana,helvetica,sans-serif;<br />
+ display:block;<br />
+ margin:0 1em .5em 1em;<br />
+ }</code></p>
+
+ <p>Il <a href="esempio1.html">risultato finale</a>, di cui &egrave; disponibile un <a href="esempio1.html">esempio</a>, &egrave; una pagina con intestazione, pi&egrave; di pagina e un corpo a tre colonne, tutto con larghezza fissata in modo assoluto.</p>
+
+ <h3>Il layout liquido con colonne laterali di larghezza prefissata</h3>
+
+ <p>L'unica differenza col layout precedentemente illustrato &egrave; nella larghezza dell'intestazione, del corpo e del pi&egrave; di pagina. In questo caso infatti gli elementi della pagina si allargano per occupare sempre la stessa porzione dello spazio disponibile. Per maggiore chiarezza si veda l'<a href="esempio_2.html">esempio</a>.</p>
+
+ <p>Volendo, ad esempio, che il layout occupi il 90% dello spazio disponibile, sar&agrave; sufficiente modificare il codice precedentemente illustrato come di seguito riportato:</p>
+ <p class="code"><code>#testa { width:90%; }<br />
+ #corpo { width:90%; }<br />
+ #piedipagina { width:90%; }</code></p>
+
+ <p>Il resto del codice pu&ograve; restare tranquillamente invariato.</p>
+
+ <h3>Il layout completamente liquido</h3>
+
+ <p>L'ultimo layout che sar&agrave; considerato in questo articolo &egrave; quello totalmente liquido. Rispetto al layout liquido con colonne laterali di larghezza prefissata, in questo caso le colonne avranno anch'esse una larghezza espressa in percentuale.</p>
+
+ <p>Si voglia ad esempio che la prima colonna sia larga il 20% del corpo e la terza colonna sia larga il 25%. Per maggiore chiarezza si veda l'<a href="esempio_3.html">esempio</a>. La larghezza delle colonne laterali e i margini della colonna centrale andranno adattati di conseguenza.</p>
+
+ <p>Rispetto alla versione liquida con colonne laterali di larghezza prefissata, il codice CSS va d&igrave;modificato come segue:</p>
+ <p class="code"><code>#corpo-colonna1 { width:20% }<br />
+ #corpo-colonna3 { width:25% }<br />
+ #corpo-colonna2 { margin:0 25% 0 20% }</code></p>
+
+ <p>Con queste modifiche per&ograve;, non &egrave; nota a priori la larghezza delle colonne. Non &egrave; pi&ugrave; consigliabile l'utilizzo di una immagine di sfondo per impostare il colore di una delle due colonne. Il codice CSS riguardante lo sfondo del corpo sar&agrave; modificato come segue:</p>
+ <p class="code"><code>#corpo { background:#f0f0f0; }</code></p>
+
+ <h2>Compatibilit&agrave;</h2>
+
+ <p>I template sono stati testati con successo con IE5.5 e IE6, Mozilla 1 (Netscape Navigator 6), Opera 6, Opera 7 (BETA), Konqueror 3.0.4. L'unico problema si &egrave; verificato con Opera 6, il quale non interpreta correttamente il margine fra testa, corpo e pi&egrave; di pagina.</p><p><a href="../../commenti/index.html?aid=18" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 25.01.2003</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="nuovo_layout_a_tre_colonne.html">Esempio</a></li>
+<li><a href="nuovo_layout_a_tre_colonne.zip" title="Scarica l&acute;articolo in PDF, esempi, ecc. [file zip - 91 KB]">ZIP</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../../tutorial/css_vs_table/index.html">CSS e tabelle a confronto</a></li>
+  <li><a href="../../tutorial/IE5_box_model/index.html">Il box model di IE5/Win</a></li>
+  <li><a href="../../tutorial/progettare_con_stile/index.html">Progettare con i CSS</a></li>
+  <li><a href="../layout_a_tre_colonne/index.html">Layout di base a tre colonne</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=18" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/template/nuovo_layout_a_tre_colonne/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+

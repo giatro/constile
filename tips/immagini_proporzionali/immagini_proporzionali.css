@@ -1,0 +1,18 @@
+/* gestione immagine */
+img#copertina { width:100% }
+
+/* aspetto generale della pagina*/
+body {
+margin:0;padding:0;
+font:64% verdana,helvetica,sans-serif;
+}
+#contenuti {width:40%;padding:0 1em 1em 1em;border-right:1px dotted #900}
+h1 {
+padding:10px;
+margin:0 -.5em 0.5em -.5em;
+font-size:2em;
+background:#900;
+color:#fff;
+border:solid #900;
+border-width:0 .5em;
+}

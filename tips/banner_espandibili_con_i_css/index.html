@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | Tips | Banner espandibili con i CSS</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li ><a href="../../tutorial/index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li ><a href="../../clonazioni/index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li ><a href="../../template/index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li ><a href="../../DHTML/index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">Tips</a> &gt; <a href="index.html">Banner espandibili con i css</a> &gt; Banner espandibili con i CSS</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+<h1 id="titoloArticolo">Banner espandibili con i CSS</h1>
+<p>Non sempre &egrave; necessario il JavaScript per ottenere effetti dinamici. In questo articolo vedremo come realizzare dei banner che si espandono al passaggio del mouse, utilizzando esclusivamente i CSS.</p>
+<h2>L'esempio</h2>
+<p>Nella <a href="banner_espandibili_con_i_css.html" title="Collegamento alla pagina di esempio">pagina di esempio</a> &egrave; presente un piccolo banner 120x60 pixel posto sopra un blocco di testo. Quando il mouse passa sopra tale banner, l'immagine viene sostituita da una di maggiori dimensioni (240x240 pixel). Per ottenere tali risultato spessi si utilizza il JavaScript, misto ai CSS, per gestire la comparsa delle due differenti immagini e gli eventi del mose che si trova o meno sopra il banner. Con questo articolo sar&agrave; illustrato come il JavaScript possa essere tranquillamente evitato.</p>
+<h2>Il codice XHTML</h2>
+<p>Il codice (X)HTML da utilizzare &egrave; estremamente semplice:</p>
+<p class="code"><code>&lt;div id=&quot;banner&quot;&gt;<br />
+&lt;a href=&quot;...&quot;&gt;&lt;img src=&quot;banner_120x60.png&quot; alt=&quot;...&quot; /&gt;&lt;/a&gt;<br />
+&lt;/div&gt;<br />
+</code></p>
+<p>Come i pi&ugrave; attenti avranno notato, si &egrave; fatto uso di un selettore <code>ID</code> e non di una classe. Ci&ograve; &egrave; necessario poich&eacute; tutte le informazioni necessarie all'effetto, informazioni che in genere differiscono per ogni banner, sono contenute nel foglio di stile.</p>
+<p>L'uso del tag <code>DIV</code>, serve a creare un blocco di dimensione fissa che identifichi la posizione del banner indipendentemente dallo stato dello stesso. Infatti non &egrave; auspicabile che il banner, una volta espanso, vada a disturbare la posizione degli altri elementi della pagina web.</p>
+<h2>Il codice CSS</h2>
+<p>Il codice CSS, nonostante la sua efficacia, non &egrave; molto complesso e di facile comprensione:</p>
+<p class="code"><code>#banner { height:60px;width:120px }<br />
+#banner img { border:none }<br />
+#banner a {<br />
+display:block;<br />
+position:absolute<br />
+}<br />
+#banner a:hover img, #banner a:active img { display:none }<br />
+#banner a:hover, #banner a:active {<br />
+height:240px;width:240px;<br />
+background:url(banner_240x240.png)<br />
+}</code></p>
+<p>Commenteremo ora ogni porzione di codice.</p>
+<p class="code"><code>#banner { height:60px;width:120px }</code></p>
+<p>Questa regola serve ad impostare la dimensione dell'area occupata dal banner <strong>rispetto gli altri elementi della pagina</strong> indipendentemente dallo stato del banner. Altezza e larghezza del box devono essere uguali all'altezza e alla larghezza del banner.</p>
+<p class="code"><code>#banner img { border:none }</code></p>
+<p>Cos&igrave; facendo si elimina il bordo attorno all'immagine che costituisce il banner.</p>
+<p class="code"><code>
+#banner a {<br />
+display:block;<br />
+position:absolute<br />
+}
+</code></p>
+<p>Il link all'interno del box &egrave; posizionato in modo assoluto. Cos&igrave; facendo si evita che il banner, allargandosi, possa influenzare il layout (vedi la <a href="banner_espandibili_con_i_css.html" title="Collegamento alla pagina di esempio">pagina di esempio</a>). La propriet&agrave; &egrave; necessaria per il corretto posizionamento.</p>
+<p class="code"><code>#banner a:hover img, #banner a:active img { display:none }</code></p>
+<p>Quando il mouse si trova sopra il link (cio&egrave; sopra il banner) ovvero il link viene attivato, l'immagine che cositutisce il banner &egrave; rimossa, lasciando spazio per l'immagine che costituir&agrave; il nuovo banner.</p>
+<p class="code"><code>#banner a:hover, #banner a:active {<br />
+height:240px;width:240px;<br />
+background:url(banner_240x240.png)<br />
+}</code></p>
+<p>Quando il mouse si trova sopra il link (cio&egrave; sopra il banner) ovvero il link viene attivato, il link assumer&agrave; le dimensioni dell'immagine estesa, in questo caso 240x240 pixel. Cos&igrave; facendo, l'area cliccabile si espander&agrave; rispettando le dimensioni della nuova immagine (vedi la <a href="banner_espandibili_con_i_css.html" title="Collegamento alla pagina di esempio">pagina di esempio</a>). Avendo posizionato il tag <code>A</code> in modo assoluto, le nuove dimensioni non influenzeranno il layout. La nuova immagine sar&agrave; mostrata come sfondo del link e non attraverso tag <code>IMG</code>. Ci&ograve; costituisce la principale differenza coi vari JavaScript che svolgono il medesimo compito.</p><p><a href="../../commenti/index.html?aid=19" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 26.02.2003</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="banner_espandibili_con_i_css.html">Esempio</a></li>
+<li><a href="banner_espandibili_con_i_css.zip" title="Scarica l&acute;articolo in PDF, esempi, ecc. [file zip - 16 KB]">ZIP</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../../tutorial/progettare_con_stile/index.html">Progettare con i CSS</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=19" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/tips/banner_espandibili_con_i_css/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+

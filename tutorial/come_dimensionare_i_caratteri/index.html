@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | Tutorial | Dimensionare i caratteri con i CSS</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li ><a href="../../clonazioni/index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li ><a href="../../template/index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li ><a href="../../tips/index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li ><a href="../../DHTML/index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">Tutorial</a> &gt; <a href="index.html">Come dimensionare i caratteri</a> &gt; Dimensionare i caratteri con i CSS</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+<h1 id="titoloArticolo">Dimensionare i caratteri con i CSS</h1>
+
+<p>I CSS vengono spesso utilizzati per dimensionare i caratteri, ma se male utilizzati possono peggiorare l'accessibilit&agrave; di un sito. Con questo articolo si cercher&agrave; di fornire una piccola guida su come dimensionare i caratteri rispettando l'accessibilit&agrave; del sito.</p>
+
+<h2>Come definire la grandezza del font</h2>
+
+<p>Il codice CSS per definire la grandezza dei font &egrave; il seguente:</p>
+
+<p class="code"><code><em>selettore</em> { <br />  font-size: <em>valore</em>;<br />}  <br /></code></p>
+
+<p>In base a <em>valore</em> &egrave; possibile definire la dimensione dei font del <em>selettore</em>.</p>
+
+<h2>I valori che &egrave; possibile assegnare alla propriet&agrave; font-size</h2>
+
+<p>Alla propriet&agrave; font-size &egrave; possibile assegnare i seguenti valori:</p>
+
+<ul>
+<li><strong>dimensioni assolute</strong>: i possibili valori sono: xx-small | x-small | small | medium | large | x-large | xx-large</li>
+
+<li><strong>dimensioi relative</strong>: i possibili valori sono: larger | smaller</li>
+
+<li><strong>unit&agrave; di lunghezza</strong>: le unit&agrave; di lunghezza si suddividono in due classi: 
+<ul>
+<li><strong>unit&agrave; di lunghezza assolute</strong>, di cui quelle adatte a definire le dimensioni dei caratteri sono: 
+<ul>
+<li>pt</li>
+
+<li>pc</li>
+</ul>
+</li>
+
+<li><strong>unit&agrave; di lunghezza relative</strong>, di cui quelle adatte a definire le dimensioni dei caratteri sono: 
+<ul>
+<li>em</li>
+
+<li>px</li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li><strong>percentuali</strong></li>
+</ul>
+
+<h3>Dimensioni assolute</h3>
+
+<p class="code"><code>.class { font-size: small; }<br />p { font-size: medium; }<br />h1 { font-size: xx-large; }<br /></code></p>
+
+<p>Il dimensionamento assoluto si basa su 7 parole chiave (xx-small | x-small | small | medium | large | x-large | xx-large) che, come chiaramente indicato dal nome, impostano la dimensione dei caratteri specificando se il carattere debba essere estremamente piccolo, molto piccolo, piccolo, medio, grande, molto grande, estremamente grande.</p>
+
+<p>Ovviamente le parole chiave piccolo e grande, come pure tutte le altre, non avrebbero significato se non ci fosse un riferimento: piccolo rispetto a cosa? Il riferimento &egrave; la dimensione (del font) standard dello <span title="Il programma utilizzato per interpretare la pagina web" class="help">User Agent</span> (UA) dell'utente.</p>
+
+<p>L'uso di queste parole chiave comporta un doppio vantaggio: per il webmaster e per l'utente. Il webmaster ha a disposizione sette dimensioni, dall'estremamente piccolo all'estremamente grande, che risultano semplici da usare e garantiscono coerenza alle pagine web (spesso, purtroppo, capita di vedere pagine web in cui i caratteri assumono le pi&ugrave; svariate dimensioni). L'utente ha il vantaggio di poter <span title="Con IE/Win: Menu &gt; Visualizza &gt; Carattere &gt; opz." class="help">variare</span> la dimensione del carattere di default, in questo modo pu&ograve; aumentare la dimensione di caratteri troppo piccoli o ridurre quella di caratteri troppo grandi.</p>
+
+<p>Purtroppo queste parole chiave non vengono interpretate correttamente da molti browser, cos&igrave; da renderle utili solo in casi limitati (ad esempio proiezioni in conferenze). In futuro saranno certamente sfruttate al meglio.</p>
+
+<h3>Dimensioni relative</h3>
+
+<p class="code"><code>.nota { font-size: smaller; }<br />.titolo { font-size: xx-larger; }<br /></code></p>
+
+<p>Il dimensionamento relativo si basa su due sole parole chiave: larger (pi&ugrave; grande di) smaller (pi&ugrave; piccolo di). Il riferimento &egrave; la dimensione dell'elemento parent. L'elemento parent &egrave; quello che contiene l'elemento preso in considerazione. Ad esempio, nel seguente codice:</p>
+
+<p class="code"><code>&lt;div id=&quot;elementoA&quot;&gt;<br />  ...<br />  &lt;div id=&quot;elementoB&quot;&gt;<br />    ...<br />    &lt;div id=&quot;elementoC&quot;&gt;<br />    ...<br />    &lt;/div&gt;    <br />  &lt;/div&gt;<br />&lt;/div&gt;<br /></code></p>
+
+<p>l'elemento B &egrave; il parent dell'elemento C, l'elemento A e il parent dell'elemento B.</p>
+
+<p>I vantaggi offerti da queste due parole chiave sono soprattutto per l'utente. Il webmaster ha a disposizione un elemento poco elastico, ma che pu&ograve; tornare utile in molti casi, mentre l'utente ha gli stessi vantaggi offerti dal dimensionamento assoluto.</p>
+
+<p>Come per il dimensionamento assoluto, molti browser non supportano sufficientemente queste parole chiave.</p>
+
+<h3>Unit&agrave; di lunghezza</h3>
+
+<p>Le unit&agrave; di lunghezza si dividono in unit&agrave; di lunghezza assolute e unit&agrave; di lunghezza relative.</p>
+
+<h4>Unit&agrave; di lunghezza assolute</h4>
+
+<p class="code"><code>.class { font-size: 10pt; }<br />p { font-size: 12pt;  }<br />h1 { font-size: 2pc; }<br /></code></p>
+
+<p>Le unit&agrave; di lunghezza assolute adatte a definire le dimensioni dei caratteri sono:</p>
+
+<ul>
+<li>pt: punti;</li>
+
+<li>pc: picas (1pc=12pt).</li>
+</ul>
+
+<p>Il risultato &egrave; fortemente dipendente dal dispositivo con cui si visiona la pagina e non dovrebbero mai essere utilizzate per il media 'screen' (<a href="../../tips/css_e_media_type/index.html" title="Maggiori dettagli sui media e i CSS">maggiori dettagli</a>). Questo tipo di unit&agrave; di misura &egrave; molto pi&ugrave; utile con media quali la stampante (vedi: &quot;<a href="../stampare_con_i_css/index.html" title="Maggiori dettagli su come ottenere il meglio dall'uso combinato di stampante e CSS">Pagine pronte per la stampa con i CSS</a>&quot;).</p>
+
+<h4>Unit&agrave; di lunghezza relative</h4>
+
+<p>Le unit&agrave; di lunghezza relative adatte a definire le dimensioni dei caratteri sono:</p>
+
+<ul>
+<li>em: se utilizzata per definire la dimensione dei font, l'unit&agrave; 'em' &egrave; la dimensione del carattere dell'elemento parent (ad esempio 0.80em indicano l'80% della dimensione del carattere dell'elemento parent);</li>
+
+<li>px: il pixel, la dimensione di un pixel dipende dalla risoluzione del dispositivo che si utilizza per visualizzare le pagine.</li>
+</ul>
+
+<h5>L'unit&agrave; 'em'</h5>
+
+<p class="code"><code>.class { font-size: .80em; }<br />p { font-size: 1.00em; }<br />h1 { font-size: 1.80em; }<br /></code></p>
+
+<p>L'unit&agrave; 'em' offre vantaggi e svantaggi al webmaster, e vantaggi all'utente.</p>
+
+<p>Il vantaggio per l'utente st&agrave; nel fatto che, come per le lunghezze assolute (xx-smal, medium , large, ...) e le lunghezze relative (larger, smaller), &egrave; possibile aumentare o ridurre la dimensione dei font, migliorando la leggibilit&agrave;, agendo sul browser.</p>
+
+<p>La comodit&agrave; per il webmaster consiste nella coerenza che &egrave; possibile dare alle pagine. Si possono infatti scegliere alcuni valori percentuali (ad esempio 80%=0.80em e 125%=1.25em -- si noti come 0.80*1.25=1.00) con i quali incrementare e ridurre i font su schermo e mantenere omogenee le dimensioni dei font. Questa comodit&agrave; pu&ograve; per&ograve; essere uno svantaggio. Annidando troppi elementi, si pu&ograve; raggiungere in breve tempo una dimensione troppo piccola ovvero troppo grande per il testo. Si consideri ad esempio il codice di seuito riportato:</p>
+
+<p class="code"><code><em>CSS</em><br /><br />[...]<br />.smaller { font-size:0.80em }<br />.bigger { font-size:1.25em }<br />[...]<br /><br /><em>(X)HTML</em><br />&lt;div&gt;Questo testo &egrave; come il corpo dell'articolo<br />  &lt;div class=&quot;smaller&quot;&gt;<br />    Riuscite a leggere questo testo?<br />    &lt;div class=&quot;smaller&quot;&gt;<br />      Riuscite a leggere questo testo?<br />      &lt;div class=&quot;smaller&quot;&gt;<br />        Riuscite a leggere questo testo?<br />        &lt;div class=&quot;smaller&quot;&gt;<br />          Riuscite a leggere questo testo?<br />        &lt;/div&gt;<br />      &lt;/div&gt;<br />    &lt;/div&gt;<br />  &lt;/div&gt;<br />&lt;/div&gt;<br /></code></p>
+
+<p>Il risultato &egrave; riportato qui di seguito:</p>
+
+<div style="padding:5px; border: 1px solid #CCC">Questo testo &egrave; come il corpo dell'articolo 
+<div class="smaller">Riuscite a leggere questo testo? 
+<div class="smaller">Riuscite a leggere questo testo? 
+<div class="smaller">Riuscite a leggere questo testo? 
+<div class="smaller">Riuscite a leggere questo testo?</div>
+</div>
+</div>
+</div>
+</div>
+
+<p>Probabilmente dalla terza riga in poi, il testo risulter&agrave; illegibile.</p>
+
+<p>Il problema pu&ograve; essere superato con un minimo di accortezza in fase di creazione dei fogli di stile. Probabilmente, soprattutto se i selettori sono specificati con una certa intelligenza e per uno scopo specifico (la classe smaller qui utilizzata &egrave; solo didattica e non ha uno scopo specifico), non sar&agrave; necessario specificare a molte classi la dimensione dei font , prestando la dovuta attenzione, non si avranno questi tipi di problemi.</p>
+
+
+<p>Bisogna per&ograve; specificare che NN4 e IE3 non supportano bene l'unit&agrave; 'em'.</p>
+
+<h5>L'unit&agrave; 'px'</h5>
+
+<p class="code"><code>.class { font-size: 10px; }<br />p { font-size: 12px; }<br />h1 { font-size: 20px; }<br /></code></p>
+
+<p>L'unit&agrave; px offre al webmaster il grosso vantaggio di poter specificare la dimensione esatta in pixel (anche se alcuni browser, come NN4 possono resituire testo pi&ugrave; piccolo di quello specificato). Il webmaster dovr&agrave; per&ograve; stare attento a non creare di fogli di stile che generino confusione, preoccupandosi di salvaguardare la coerenza del testo.</p>
+
+<p>Bisogna per&ograve; prestare molta attenzione alle dimensioni scelte. Se il font fosse troppo piccole, utenti dotati di una vista non ottima, potrebbero avere difficolt&agrave; di lettura e abbandonare il sito. Infatti se browser come Opera o Mozzilla permettono di zoomare sul testo indipendentemente dalle impostazioni dei CSS, il browser pi&ugrave; diffuso, IE/Win, non riesce a ingrandire il testo attraverso il menu Visualizza &gt; Carattere. In questo caso, potrebbe essere compromessa l'usabilit&agrave; e l'accessibilit&agrave; del sito. Inoltre lo script precedentemente illustrato non potrebbe funzionare (vedi la <a href="come_dimensionare_i_caratteri.html" title="Esempio associato all'articolo - La pagina si apre in una nuova finestra" rel="esterno">pagina di esempio</a>).</p>
+
+<h4>Percentuali</h4>
+
+<p class="code"><code>.class { font-size: 80%; }<br />p { font-size: 100%; }<br />h1 { font-size: 180%; }<br /></code></p>
+
+<p>Le unit&agrave; percentuali funzionano come le unit&agrave; di misura 'em' e sono dunque caratterizzate dai medesimi pregi e difetti.</p>
+
+<h2>Quale via percorrere?</h2>
+
+<p>Se non fosse per l'incapacit&agrave; di Internet Explorer di ridimensionare i caratteri specificati in pixel, il metodo pi&ugrave; semplice e funzionale per stabilire la grandezza dei font sarebbe specificare le dimensioni in pixel. Purtroppo IE &egrave; il browser in assoluto pi&ugrave; diffuso e il problema dell'accessibilit&agrave; non pu&ograve; essere trascurato.</p>
+
+<p>La migliore scelta rimane dunque quella di adottare le unit&agrave; percentuali e/o l'unit&agrave; 'em', prestando attenzione alle propriet&agrave; degli elementi parent.</p>
+
+<p>Utilizzando le percentuali &egrave; nella definizione della dimensione del testo del BODY e per gli altri elementi del documento, per modificare la dimensione del testo di tutto il documento &egrave; sufficiente modificare la dimensione nel body:</p>
+
+<p class="code"><code>body { font-size:70% }<br /><br /><em>oppure</em><br /><br />body { font-size:80% }<br /><br /><em>oppure</em><br /><br />body { font-size:100% }<br /></code></p>
+
+<p>La propriet&agrave; font-size del BODY pu&ograve; addirittura essere modificata &quot;al volo&quot; attraverso l'uso del codice Javascript:</p>
+
+<p class="code"><code><em>/* Codice Javascript */</em><br />function setFontSize(value) {<br />  theStyle = null;<br />  if (value == &quot;small&quot;) theStyle = &quot;70%&quot;;<br />  if (value == &quot;medium&quot;) theStyle = &quot;80%&quot;;<br />  if (value == &quot;large&quot;) theStyle = &quot;100%&quot;;<br />  if (theStyle) <br />    document.getElementsByTagName(&quot;body&quot;)[0].style.fontSize = theStyle;<br />} <br /><em>/* funziona solo con un browser <br />che supporti bene il DOM come IE5+, NN6, Moz.1. <br />Non funziona con Opera 6*/</em><br /></code></p>
+
+<p>Un'esempio del funzionamento del codice &egrave; disponibile nella <a href="come_dimensionare_i_caratteri.html" title="Esempio associato all'articolo - La pagina si apre in una nuova finestra" rel="esterno">pagina di esempio</a>.</p><p><a href="../../commenti/index.html?aid=10" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 26.09.2002</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="come_dimensionare_i_caratteri.html">Esempio</a></li>
+<li><a href="come_dimensionare_i_caratteri.css" title="Foglio di stile associato all&acute;esempio">Codice CSS</a></li>
+<li><a href="come_dimensionare_i_caratteri.zip" title="Scarica l&acute;articolo in PDF, esempi, ecc. [file zip - 32 KB]">ZIP</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../IE5_box_model/index.html">Il box model di IE5/Win</a></li>
+  <li><a href="../progettare_con_stile/index.html">Progettare con i CSS</a></li>
+  <li><a href="../stampare_con_i_css/index.html">Pagine pronte per la stampa con i CSS</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=10" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/tutorial/come_dimensionare_i_caratteri/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+

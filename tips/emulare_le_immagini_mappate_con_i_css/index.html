@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | Tips | Emulare le immagini mappate con i CSS</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li ><a href="../../tutorial/index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li ><a href="../../clonazioni/index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li ><a href="../../template/index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li ><a href="../../DHTML/index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">Tips</a> &gt; <a href="index.html">Emulare le immagini mappate con i css</a> &gt; Emulare le immagini mappate con i CSS</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+    <h1 id="titoloArticolo">Emulare le immagini mappate con i CSS</h1>
+    <p>Tramite i CSS &egrave; possibile realizzare immagini mappate utilizzando una semplice lista di link. Il codice XHTML &egrave; assolutamente semplice e totalmente accessibile con qualsiasi dispositivo. Il codice CSS &egrave; di facile comprensione e completamente personalizzabile.</p>
+    <h2>L&#39;esempio</h2>
+    <p>La <a href="emulare_le_immagini_mappate_con_i_css.html" title="L&#39;esempio pratico associato all&#39;articolo">pagina di esempio</a>, se visitata con un browser in grado di supportare i CSS, presenta una semplice immagine con quattro aree distinte. Ad ogni immagine sar&agrave; associato un link.</p>
+    <img class="esempio" src="mappa.gif" alt="immagine utilizzata nella pagina di esempio" /> 
+    <p>Il codice XHTML utilizzato &egrave; di seguito riportato:</p>
+    <p class="code"><code>&lt;ul id=&quot;mappa1&quot;&gt;<br />
+     &lt;li id=&quot;mappa1-link1&quot;&gt;&lt;a title=&quot;link area 1&quot; href=&quot;link1&quot;&gt;&lt;span class=&quot;alt&quot;&gt;link1&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;<br />
+     &lt;li id=&quot;mappa1-link2&quot;&gt;&lt;a title=&quot;link area 2&quot; href=&quot;link2&quot;&gt;&lt;span class=&quot;alt&quot;&gt;link2&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;<br />
+     &lt;li id=&quot;mappa1-link3&quot;&gt;&lt;a title=&quot;link area 3&quot; href=&quot;link3&quot;&gt;&lt;span class=&quot;alt&quot;&gt;link3&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;<br />
+     &lt;li id=&quot;mappa1-link4&quot;&gt;&lt;a title=&quot;link area 4&quot; href=&quot;link4&quot;&gt;&lt;span class=&quot;alt&quot;&gt;link4&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;<br />
+     &lt;/ul&gt;</code></p>
+    <p>Come si vede, si tratta di una semplice lista, con <strong>opportuni identificatori</strong>. Alla mappa &egrave; stato associato l&#39;identificatore <code>mappa1</code>, per distinguerla da altre eventuali mappe. Ad ogni elemento della lista &egrave; stato associato un differente identificatore per distinguere i differenti link. Il testo alternativo da associare ad ogni area della mappa &egrave; stato inserito tramite l&#39;attributo <code>title</code> dei link. <em>Si noti che tale testo alternativo non occorre per i browser non grafici</em>, che di fatto leggono il normale testo dei link, ma per i browser in grado di interpretare i CSS (non sempre l&#39;immagine &egrave; completamente &quot;auto-esplicativa&quot;).</p>
+    <p>Il <a href="emulare_le_immagini_mappate_con_i_css.css" title="collegamento al foglio di stile">codice CSS utilizzato per l&#39;esempio</a> &egrave; il seguente:</p>
+    <p class="code"><code>ul#mappa1 {<br />
+     margin:0;padding:0;<br />
+     list-style:none;<br />
+     position:relative;<br />
+     width:300px;height:300px;<br />
+     background:url(&quot;mappa.gif&quot;) no-repeat;<br />
+     }<br />
+     ul#mappa1 li {<br />
+     display:block;<br />
+     position:absolute;<br />
+     margin:0;padding:0<br />
+     }<br />
+     li#mappa1-link1 {<br />
+     left:0;top:0;<br />
+     width:54px;height:43px<br />
+     }<br />
+     li#mappa1-link2 {<br />
+     left:55px;top:44px;<br />
+     width:104px;height:71px<br />
+     }<br />
+     li#mappa1-link3 {<br />
+     left:160px;top:44px;<br />
+     width:140px;height:134px<br />
+     }<br />
+     li#mappa1-link4 {<br />
+     left:96px;top:209px;<br />
+     width:174px;height:56px<br />
+     }<br />
+     #mappa1 a {<br />
+     display:block;<br />
+     width:100%;<br />
+     height:100%;<br />
+     }<br />
+     #mappa1 .alt { display:none }</code></p>
+    <h2>Il codice CSS</h2>
+    <p>Senza il codice CSS, la mappa appare come un normale lista.</p>
+    <img class="esempio" src="esempio0.gif" alt="Esempio del risultato che si ottiene senza il codice CSS" /> 
+    <p>In questo modo, con <strong>qualsiasi</strong> browser, i link saranno accessibili.</p>
+    <p class="code"><code>ul#mappa1 {<br />
+     margin:0;padding:0;<br />
+     list-style:none;<br />
+     position:relative;<br />
+     width:300px;height:300px;<br />
+     background:url(&quot;mappa.gif&quot;) no-repeat;<br />
+     }</code></p>
+    <p>Innanzi tutto eliminiamo i margini e il padding propri della lista e i marcatori della lista (tramite la propriet&agrave; <code>list-style</code>). La lista &egrave; posizionata in modo relativo in modo da costituire il riferimento per il posizionamento assoluto dei link al suo interno.</p>
+    <p>Altezza e larghezza della lista sono pari a quelli dell&#39;immagine da mappare che sar&agrave; posta come sfondo della lista.</p>
+    <p>A questo punto il risultato che si ottiene &egrave; rappresentato dall&#39;immagine di seguito riportata.</p>
+    <img class="esempio" src="esempio1.gif" alt="Esempio del risultato che si ottiene col codice finora illustrato" /> 
+    <p>Si vede come in questo modo l&#39;immagine da mappare &egrave; portata su schermo, per ora i link sono ancora disposti secondo la lista.</p>
+    <p class="code"><code>ul#mappa1 li {<br />
+     display:block;<br />
+     position:absolute;<br />
+     margin:0;padding:0<br />
+     }<br />
+     li#mappa1-link1 {<br />
+     left:0;top:0;<br />
+     width:54px;height:43px<br />
+     }<br />
+     <em>[...]</em><br />
+     li#mappa1-link4 {<br />
+     left:96px;top:209px;<br />
+     width:174px;height:56px<br />
+     }</code></p>
+    <p>Ogni elemento della lista &egrave; posizionato in modo assoluto. Tramite le propriet&agrave; <code>top</code> e <code>left</code> &egrave; possibile disporre ogni link nell&#39;angolo superiore sinistro di ogni area da mappare. Tramite le propriet&agrave; <code>width</code> ed <code>height</code> si determina l&#39;area occupata da ogni elemento della lista. Tale area deve sovrapporsi alla zona corrispondente nell&#39;immagine da mappare.</p>
+    <img class="esempio" src="esempio2.gif" alt="Esempio del risultato che si ottiene col codice finora illustrato" /> 
+    <p>Si noti che ogni link occupa ancora solamente l&#39;area del testo.</p>
+    <p class="code"><code>#mappa1 a {<br />
+     display:block;<br />
+     width:100%;<br />
+     height:100%;<br />
+     }</code></p>
+    <p>Affinch&eacute; sia cliccabile tutta l&#39;area occupata da ogni elemento della lista, si &egrave; trasformato il il tag <code>A</code> in block e le dimensioni orizzontale e verticale sono poste pari al 100%.</p>
+    <img class="esempio" src="esempio3.gif" alt="Esempio del risultato che si ottiene col codice finora illustrato" /> 
+    <p>In questo modo, il link occupa tutta l&#39;area a sua disposizione, ovverosia tutta l&#39;area occupata dall&#39;elemento della lista in cui il link &egrave; inserito. Ricordiamo che ogni elemento della lista occupa un&#39;area pari a quella della zona da mappare.</p>
+    <p class="code"><code>#mappa1 .alt { display:none }</code></p>
+    <p>Infine eliminiamo il testo dal link, sfruttando la propriet&agrave; <code>display</code> associata alla classe <code>alt</code>.</p>
+    <img class="esempio" src="esempio4.gif" alt="Esempio del risultato finale" /> 
+    <h2>Vantaggi e limiti</h2>
+    <h3>Vantaggi</h3>
+    <p>I vantaggi sono evidenti. La lista di link &egrave; accessibile con qualsiasi dispositivo per l&#39;accesso ad internet, compresi PDA e smartphone. Il codice XHTML necessario &egrave; semplice e leggero, con vantaggi evidenti sul peso delle pagine e sul traffico. Si ricordi che il codice CSS rimane nella cache del computer, mentre il codice (X)HTML deve sempre essere ricaricato.</p>
+    <p>Il codice CSS necessario &egrave; molto semplice ed intuitivo, facilmente personalizzabile.</p>
+    <p>Il metodo &egrave; compatibile con Opera 5 e superiori, Internet Explorer 5 (Win/Mac) e superiori, Netscape Navigator 6 e superiori, Mozilla, Konqueror 3 e Safari.</p>
+    <h3>Limiti</h3>
+    <p>L&#39;unico vero limite di questo metodo (trascurando l&#39;ovvia incompatibilit&agrave; con Netscape Navigator 4) consiste nel fatto che le <strong>aree mappabili</strong> possono essere <strong>solo rettangolari</strong>. In alcuni casi le immagini mappate richiedono aree cliccabili di forma differente, ma aree rettangolari hanno sicuramente un vasto campo di applicazione.</p>
+<p><a href="../../commenti/index.html?aid=20" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 15.04.2003</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="emulare_le_immagini_mappate_con_i_css.html">Esempio</a></li>
+<li><a href="emulare_le_immagini_mappate_con_i_css.css" title="Foglio di stile associato all&acute;esempio">Codice CSS</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../../tutorial/progettare_con_stile/index.html">Progettare con i CSS</a></li>
+  <li><a href="../banner_espandibili_con_i_css/index.html">Banner espandibili con i CSS</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=20" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/tips/emulare_le_immagini_mappate_con_i_css/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+

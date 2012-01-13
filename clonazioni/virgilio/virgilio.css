@@ -1,0 +1,95 @@
+/*
+File 			> foglio di stile per realizzare un layout simile a quello di Virgilio senza fare uso di tabelle.
+					  Maggiori dettagli @ http://www.constile.org/clonazioni/virgilio/
+Autore 		> gianluca troiani | g.troiani@constile.org | www.constile.org
+Versione	> 3.9.2002.10.11
+*/
+
+/* BODY */
+body { padding: 0px; margin:0px;text-align:center; }
+hr { display: none; }
+
+/* #logo */
+#logo { width:760px; margin:10px auto 0 auto; position: relative; text-align:left; }
+	#logo img { margin-left: 8px; }
+
+/* #content */
+#content { width: 760px; margin:-20px auto 0 auto; color: #000; background: #FC6; border-top: 8px solid #000; text-align:left; }
+
+/* #leftcontent */
+#leftcontent { float: left; width: 610px; background: #FFF;color: #000; }
+
+/* #header */
+#header { border-bottom: 1px solid #F30; color: #000; background: #F90 url(img/header_bgr.gif) 0 0 no-repeat; }
+	#header form { margin: 0 0 0 65px; height: 47px; text-align: center; }
+	#header form input { padding: 0; font: bold 12px verdana,sans-serif; }
+	#header form input.formbut { border: 1px outset #FC6; background: #900; color: #FFF; font: bold 11px verdana,sans-serif; text-transform: uppercase; }
+	#header form input.formtxt { margin-top: 12px; }
+
+/* #navbar */
+#navbar { margin: 0px; padding: 0px 5px; font: 11px Verdana,sans-serif; color: #999; background: #666; border: 2px solid #000; text-align: center; }
+	#navbar A { padding: 0px 5px; text-decoration: none; text-transform: uppercase; font: bold 11px Verdana,sans-serif; color: #FFF; background: #666; }
+
+/* #subnavbar */
+#subnavbar { padding: 0px 5px; font: 10px Verdana,sans-serif; color: #FFF; background: #CCC; border: 2px solid #FFF; text-align: center; }
+	#subnavbar A { padding: 0px 6px; text-decoration: none; font: bold 10px Verdana,sans-serif; color: #000; background: #CCC; }
+
+/* #main */
+#main { padding-top: 32px; border-top: 1px dotted #000; }
+	/* #ultimenotizie */
+	#ultimenotizie { float: left; height: 158px; width: 152px; padding: 7px 3px; margin-right: 23px; border: 1px solid #F90; font: 10px verdana,sans-serif; background: #FFF url(img/ic_notizie.gif) 3px 3px no-repeat; }	
+		#ultimenotizie p.testa { font: bold 10px verdana, sans-serif; margin: 0 0 5px 20px; }
+		#ultimenotizie p.news { font: bold 10px verdana, sans-serif; margin: 0; margin-bottom: 3px; }
+		#ultimenotizie p.news A { background: #FFF; color: #900; }
+	/* #strillo */
+	#strillo { height: 85px; margin-left: 185px; padding-right: 12px; border-bottom: 1px dotted #C60; font: 12px verdana,sans-serif; }
+		#strillo img { float: left; margin-right: 5px; }
+		#strillo p { margin: 0; }
+		#strillo p.right { margin-top: 10px; text-align: right; font-weight: bold; }
+	/* #community */
+	#community { height: 80px; padding: 10px 20px 0px 0px; margin-left: 185px; font: 10px verdana,sans-serif; }
+		#community A { margin-right: 20px; font: bold 12px verdana,sans-serif; color: #000; }
+		#community .box { width: 150px; height: 70px; margin-left: 250px; background: #FFF url(img/com_ang.gif) 40px -3px no-repeat; text-align: right; }
+		#community .fumetto { height: 36px; width: 130px; padding: 10px; margin: 3px 0 10px 0; background: #900; color: #FFF; text-align: left; }
+		#community .fumetto A { font: bold 10px verdana,sans-serif; background: #900; color: #FFF; }
+	/* #principale */
+	#principale { margin-top: 20px; border-top: 1px dotted #C60; }
+		#canali {float: right; padding: 10px; border-left: 19px solid #F90; background: #DDD; color: #000; font: 10px verdana,sans-serif; }
+			#canali .content { width: 406px; }
+				#canali .content .colonna { float: left; width: 195px; }
+					#canali .content .colonna big{ display: block; font: bold 12px verdana,sans-serif; }
+				#canali .content .separacolonne { width: 10px; float: left; }
+	/* #colonna */
+		#colonna { width: 160px; font: 10px verdana,sans-serif; }
+			#sondaggio { width: 160px; font: bold 11px verdana,sans-serif; color: #F63; background: #FFF url(img/ang_sondaggio.gif) 80px 1px no-repeat; }
+				#sondaggio .fumetto { padding: 10px; margin-top: 3px; background: #699; }
+				#sondaggio .fumetto A { font: bold 10px verdana,sans-serif; background: #699; color: #FFF; }
+			.spot { width: 160px; margin-top: 10px; padding-top: 10px; border-top: 1px dotted #F90; font: 10px verdana,sans-serif; }
+				.spot A { font-weight: bold; font-size: 12px; }
+
+/* #rightbar */				
+#rightbar { float: right; width: 150px; margin: 0px; background: #FC6; }
+	#emailform { padding: 10px 0 10px 10px; border-bottom: 1px solid #F30; background: #F90; color: #000; }
+		#emailform form,#emailform input { margin: 0px; font: 10px verdana,sans-serif; display: inline; }
+		#emailform input.log { width: 70px; margin: 0px 0px 5px 0px; display: block; }
+		#emailform .enter { float: right; margin-top: -62px; padding-right: 10px; text-align: right; }
+			#emailform .enter input { border: 1px outset #FC6; text-transform: uppercase; background: #900; color: #FFF; }
+
+	#rightsponsor { }
+		.sponsorbox { margin-top: 20px; border: 1px solid #F30; padding: 5px; font: 10px verdana,sans-serif; background: #FFF; color: #000; }
+			.sponsorbox .content { width: 138px; }	
+				.sponsorbox  .content strong{ font: bold 12px verdana,sans-serif; display: block; } 
+			
+#footer { clear: both; background: #FFF; color: #000; font: 10px verdana,sans-serif; text-align: left; }
+	#footer .topleft { float: left; padding: 2px 3px 2px 3px; background: #333 url(img/angolo.gif) 100% 100% no-repeat; color: #FFF; }
+		#footer .topleft .content { width: 604px; }
+			#footer .topleft .content A { color: #FFF; font-weight: bold; }
+	#footer .topright { float: right; padding: 2px 3px 2px 3px; text-align: center; background: #F90; color: #000; }
+		#footer .topright .content { width: 144px; }
+			#footer .topright .content A { text-decoration: none; font-weight: bold; }
+	#footer .bottom { padding: 0px 10px; text-align: center; }
+	
+	
+A { color: #900; background: transparent }
+.ripristino-float { clear: both; height:1px;overflow:hidden;margin:-1px; }
+img { border: none; }

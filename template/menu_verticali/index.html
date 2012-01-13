@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | Template | Menu verticali con i CSS</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li ><a href="../../tutorial/index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li ><a href="../../clonazioni/index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li ><a href="../../tips/index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li ><a href="../../DHTML/index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">Template</a> &gt; <a href="index.html">Menu verticali</a> &gt; Menu verticali con i CSS</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+    <h1 id="titoloArticolo">Menu verticali con i CSS</h1>
+    <p>[versione riveduta e corretta: sono stati corretti alcuni problemi con Opera e IE5 ed &egrave; stato dato un diverso taglio all'articolo]</p>
+    <p>In questo articolo saranno illustrati tre esempi di come sia possibile trasformare una semplice lista di link in un menu verticale. Attraverso l&#39;uso delle pseudo-classi <code>a:hover</code> e <code>a:active</code> &egrave; possibile ottenere effetti roll-over senza l&#39;uso di javascript.</p>
+    <h2>Il menu come lista</h2>
+    <p>Per rendere i menu verticali compatibili con tutti i browser il codice (X)HTML &egrave; stato reso pi&ugrave; semplice e chiaro possibile usando le liste. Il codice (X)HTML di un menu sar&agrave;, ad esempio, il seguente:</p>
+    <p class="code"><code>&lt;ul class=&quot;menu1&quot;&gt;<br />
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sezione Link 1&lt;/a&gt;&lt;/li&gt;<br />
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sezione Link 2&lt;/a&gt;&lt;/li&gt;<br />
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sezione Link 3&lt;/a&gt;&lt;/li&gt;<br />
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sezione Link 4&lt;/a&gt;&lt;/li&gt;<br />
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sezione Link 5&lt;/a&gt;&lt;/li&gt;<br />
+    &lt;/ul&gt;<br />
+    </code></p>
+    <p>Senza le regole CSS il risultato (semplice ma compatibile con qualsiasi browser e/o dispositivo per la navigazione in internet, compresi screen reader e browser testuali come Lynx) sarebbe il seguente:</p>
+    <ul>
+      <li><a href="example.html#">Sezione Link 1</a></li>
+      <li><a href="example.html#">Sezione Link 2</a></li>
+      <li><a href="example.html#">Sezione Link 3</a></li>
+      <li><a href="example.html#">Sezione Link 4</a></li>
+      <li><a href="example.html#">Sezione Link 5</a></li>
+    </ul>
+    <p>A partire da suddetta lista costruiremo tre menu (<a title="Pagina di esempio con i menu illustrati nell&#39;esempio" href="menu_verticali.html">vedi pagina di esempio</a>) di cui il primo, molto semplice, sar&agrave; un modello di base per la creazione di menu pi&ugrave; elaborati. I tre differenti a tre differenti menu saranno associati alle classi: &quot;menu1&quot;, &quot;menu2&quot;, &quot;menu3&quot;.</p>
+    <h2>Il modello di base</h2>
+    <p>Il primo menu &egrave; molto semplice e serve come <strong>base di sviluppo</strong> per menu pi&ugrave; elaborati.</p>
+    <p>Attraverso le regole CSS trasformeremo una semplice lista di link in un semplice menu verticale. Per fare ci&ograve; elimineremo i marcatori di lista e la sottolineatura, aggiungeremo un effetto roll-over realizzato con i soli CSS senza l&#39;uso del JavaScript e renderemo il link attivo non solo sul testo ma su tutta l&#39;area orizzontale associata al link. Quanto detto &egrave; illustrato nella seguente immagine.</p>
+    <p><img class="esempio" title="trasformazione da semplice lista a menu elaborato" alt="Illustra i risultati parziali dell&#39;applicazione dei CSS" src="applicazione_css.png" /></p>
+    <p>Per realizzare tale trasformazione abbiamo adottato le seguenti regole CSS.</p>
+    <p class="code"><code>ul.menu1 {<br />
+     width:150px;<br />
+    list-style:none; <em>/* elimino i punti elenco */</em><br />
+    margin:0; padding:0; <em>/* elimino i rientri delle liste */</em><br />
+    }</code></p>
+    <p>Innanzitutto impostiamo la larghezza del menu, eliminiamo i marcatori della lista ed annulliamo l&#39;indentazione tipica delle liste. A questo punto il menu appare con una semplice list di link, senza marcatori n&eacute; indentazione.</p>
+    <p class="code"><code>ul.menu1 li a {<br />
+     display:block; <em>/* il link occupa tutto lo spazio orizzontale */</em><br />
+    text-decoration:none; <em>/* elimino la sottolineatura, che si tratta di un link si capisce dalla struttura */</em><br />
+    padding:0 1em; <em>/* lascia spazio far il bordo del menu e il testo del link */</em><br />
+    height:2em;line-height:2em; <em>/* altezza del link: height e line-height devono avere il medesimo valore */</em><br />
+     }<br />
+    ul.menu1 li { display:inline } <em>/*elimina lo spazio fra gli elementi della lista introdotto da Opera*/</em></code></p>
+    <p>Attraverso la dichiarazione <code>display:block</code>, il link occuper&agrave; tutta l&#39;area orizzontale quindi non sar&agrave; cliccabile solo il testo del link ma tutta l&#39;area della riga occupata dal link. Si elimina poi la sottolineatura del link poich&eacute; sar&agrave; la struttura stessa del menu ad indicare la presenza di collegamenti. Attraveso il <code>padding</code> si discostano i link dal bordo del menu. Utilizzando le propriet&agrave; <code>height</code> e <code>line-height</code> &egrave; possibile determinare l&#39;altezza dell&#39;area occupata da ogni singolo link. Ci&ograve; si dimostra molto utile anche per un piacevole &quot;effetto collaterale&quot; che annulla un fastidioso bug di Internet Explorer. Su quest&#39;ultimo browser, infatti, il link non occupa tutta l&#39;area (nonostante la dichiarazione <code>display:block</code>) se &egrave; contenuto in un elemento di cui si &egrave; fissata la larghezza (come appunto l&#39;elemento <code>ul.menu1</code>). Lo svantaggio di specificare l&#39;altezza (necessario per sopperire ad un bug di Internet Explorer) consiste nel fatto che se il testo del link non entra tutto in una sola riga si possono avere spiacevoli sovrapposizioni fra link adiacenti.</p>
+    <p class="code"><code>ul.menu1 li a:link, ul.menu1 li a:visited {<br />
+     background:#ccc;<br />
+    color: #009;<br />
+    } /* colori per il link */<br />
+    ul.menu1 li a:hover, ul.menu1 li a:active {<br />
+     background: #eee;<br />
+    color:#c00;<br />
+    } /* colori per l&#39;effetto roll-over */</code></p>
+    <p>Infine si crea l&#39;effetto roll-over, sfruttando la pseudo-classe <code>a:hover</code> semplicemente giocando con i colori dello sfondo e del testo dei link.</p>
+    <p>Il risultato finale &egrave; illustrato dal primo dei menu della <a title="Pagina di esempio con i menu illustrati nell&#39;esempio" href="menu_verticali.html">pagina di esempio</a>.</p>
+    <h2>Giocare con i bordi</h2>
+    <p>Il secondo menu, associato alla classe <code>menu2</code>, presenta dei bordi alla destra ed alla sinistra dei link, il colore dei bordi cambia al passaggio del mouse.</p>
+    <p><img class="esempio" title="Anteprima del menu 2" alt="Anteprima del menu 2 con l&#39;effetto roll-over" src="anteprima_menu2.png" /></p>
+    <p>Il codice CSS adottato si differenzia da quello per il menu di base per l&#39;aggiunta delle seguenti dichiarazioni:</p>
+    <p class="code"><code>ul.menu2 li a {<br />
+    <br />
+     border-width:5px;border-style:none solid; /* aggiungo dei bordi laterali */<br />
+    }<br />
+    ul.menu2 li a:link, ul.menu2 li a:visited {<br />
+     border-color:#009<br />
+    }<br />
+    ul.menu2 li a:hover, ul.menu2 li a:active {<br />
+     border-color:#66c;<br />
+    }<br />
+    </code></p>
+    <p>Si specifica la dimensione e il tipo di bordo (<code>none</code> per il bordo superiore e quello inferiore, <code>solid</code> per i bordi destro e sinistro). Il colore dei bordi si specifica assieme ai colori per il testo e lo sfondo. Quando il mouse si trova sopra il link, ovvero quando il link &egrave; attivato il bordo diventa di colore pi&ugrave; chiaro.</p>
+    <h2>Giocare con gli sfondi</h2>
+    <p>Il terzo menu, associato alla classe <code>menu3</code>, si presenta del tutto simile al primo menu, ma l&#39;effetto roll-over si differenzia per il fatto che lo sfondo del link selezionato &egrave; sfumato, come illustrato nella seguente immagine.</p>
+    <p><img class="esempio" title="Anteprima del menu 3" alt="Anteprima del menu 3 con l&#39;effetto roll-over" src="anteprima_menu3.png" /></p>
+    <p>Il codice CSS adottato si differenzia da quello per il menu di base per l&#39;aggiunta delle seguenti dichiarazioni:</p>
+    <p class="code"><code>ul.menu3 li {<br />
+     background:url(sfumato.png); /*pre-load immagine*/<br />
+     }<br />
+    ul.menu3 li a:hover, ul.menu3 li a:active {<br />
+     background:#eee url(sfumato.png) 100% 0 repeat-y;<br />
+    } /* colori per l&#39;effetto roll-over */<br />
+    <br />
+    </code></p>
+    <p>La sfumatura dell&#39;effetto roll-over &egrave; ottenuta con un&#39;immagine di sfondo che compare, opportunamente posizionata, al passaggio del mouse. Ponendo tale immagine come sfondo dell&#39;elemento della lista si fa in modo che questa sia pre-caricata senza che possa per&ograve; essere vista, essendo coperta dallo sfondo dei link. Al passaggio del mouse, l&#39;immagine &egrave; posta come del link. L&#39;immagine &egrave; posizionata a sinistra in alto (<code>100% 0</code>) e ripetuta solo verticalmente (<code>repeat-y</code>). Il colore dello sfondo al passaggio del mouse &egrave; tale da completare l&#39;effeto di sfumatura (nell&#39;esempio, infatti l&#39;immagine di sfondo occupa solo il 30% dello spazio orizzontale).</p>
+    <h2>Considerazioni</h2>
+    <p>In questo articolo &egrave; stato presentato un modello di base, di facile implementazione, per la realizzazione di menu verticali con effetti roll-over. Oltre al modello di base sono stati illustrati due possibili esempi di come sia possibile modificare tale modello.</p>
+    <p>Gli effetti roll-over sono stati ottenuti, con evidenti vantaggi, senza utilizzare il Javascript. L&#39;usabilit&agrave; e l&#39;accessibilit&agrave; dei menu &egrave; integra, si noti infatti come la stessa <a title="Pagina di esmepio" href="no_css_menu_verticali.html">pagina priva dei CSS</a> sia perfettamente utilizzabile con ogni tipo di browser.</p><p><a href="../../commenti/index.html?aid=3" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 25.05.2003</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="menu_verticali.html">Esempio</a></li><li><a href="no_css_menu_verticali.html">Esempio senza CSS</a></li>
+<li><a href="menu_verticali.css" title="Foglio di stile associato all&acute;esempio">Codice CSS</a></li>
+<li><a href="menu_verticali.zip" title="Scarica l&acute;articolo in PDF, esempi, ecc. [file zip - 67 KB]">ZIP</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../../tutorial/IE5_box_model/index.html">Il box model di IE5/Win</a></li>
+  <li><a href="../../tips/nascondere_i_css/index.html">Nascondere i CSS</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=3" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/template/menu_verticali/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+

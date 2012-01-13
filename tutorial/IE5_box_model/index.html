@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | Tutorial | Il box model di IE5/Win</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li ><a href="../../clonazioni/index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li ><a href="../../template/index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li ><a href="../../tips/index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li ><a href="../../DHTML/index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">Tutorial</a> &gt; <a href="index.html">IE5 box model</a> &gt; Il box model di IE5/Win</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+<h1 id="titoloArticolo">Il box model di IE5/Win</h1>
+<p>Il box model dei CSS permette di definire dei blocchi rettangolari con specifici valori per la larghezza e l'altezza della sezione contenuti, del padding, dei bordi, dei margini. Purtroppo, IE5 per Windows non ha una interpretazione corretta del box model. E' molto importante conoscere il problema, essendo il box model uno dei migliori strumenti offerti dai CSS ed essendo IE5 per Windows ancora il browser pi&ugrave; diffuso.</p>
+<p>Il box model viene specificato impostando la largezza e l'altezza dei contenuti, il padding, dimensioni e stile del bordo e il margine. Il padding &egrave; lo spazio fra i contenuti e il bordo, mentre il margine &egrave; lo spazio fra il bordo e gli altri contenuti della pagina.</p>
+<p>Quando, con la propriet&agrave; 'width', si specifica la larghezza del box, si specifica la larghezza dell'area che conterr&agrave; il testo del box. La larghezza del box fino al bordo &egrave; la somma della larghezza specificata con width + ampiezza del padding + spessore del bordo (vedi immagine successiva).</p>
+<img class="esempio" alt="[immagine: Rappresentazione grafica del box model secondo lo standard CSS, sono illustare le varie propriet&agrave;]" src="../../images/tutorial/IE5_box_model/standard.gif" height="174" width="246" /> 
+<p>Questo secondo gli standard CSS.</p>
+<p>IE5 per Windows (non IE5 per Mac) considera la larghezza specificata con width, come la larghezza del box fino al bordo. Bordo e padding vengono scalati dalla larghezza specificata (vedi immagine successiva).</p>
+<img class="esempio" alt="[immagine: Rappresentazione grafica del box model secondo l'interpretazione di IE5/Win, sono illustare le varie propriet&agrave;]" src="../../images/tutorial/IE5_box_model/ie5.gif" height="174" width="246" /> 
+<p>Si consideri il seguente codice XHTML:</p>
+<p class="code"><code>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;<br />    &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;<br />&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;<br />&lt;head&gt;<br />&lt;title&gt;Esempio&lt;/title&gt;<br />&lt;style type=&quot;text/css&quot;&gt;<br />&lt;!-- <br />.box { <br />  width:200px; <br />  border:5px solid #900; <br />  padding:7px; <br />  margin:10px<br />}<br />--&gt;<br />&lt;/style&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;div class=&quot;box&quot;&gt;<br />  Lorem ipsum dolor sit amet, consectetuer <br />  adipiscing elit, sed diam nonummy ...<br />&lt;/div&gt;<br />&lt;/body&gt;<br />&lt;/html&gt;<br /></code></p>
+<p>Il risultato deve essere un box largo 200px + [2 x 5px] + [2 x 7px] = 224px, cio&egrave; la larghezza &egrave; data dai 200px dei contenuti a cui devono essere sommati 5px per ognuno dei bordi laterali e 7px + 7px per il padding. Un browser che interpreti correttamente il box model (ad es. IE5/Mac, IE6, NN6, Moz) mostrer&agrave; un box largo 224px. IE5 per Windows, invece, mostrer&agrave; un box largo 200px, come specificato con width. Un esempio &egrave; riportato nella figura successiva.</p>
+<img class="esempio" alt="[immagine: Risultato dell'esmpio su IE5/Win e su un browser standard]" src="../../images/tutorial/IE5_box_model/confronto.gif" height="215" width="234" /> 
+<p>Come si vede, in IE5 per Windows il box risulta pi&ugrave; stretto. Impostare il layout di un sito senza tenere conto dell'errata interpretazione del box model da parte di IE5/Win pu&ograve; portare a risultati non soddisfacenti.</p>
+<p>Per ovviare al problema sono possibili due alternative: la <a href="../../tips/nascondere_i_css/index.html">tecnica di Tantek</a> oppure &egrave; possibile specificare la larghezza attraverso un'apposita classe.</p>
+<h3>Tecnica di Tantek</h3>
+<p class="code"><code>&lt;style type=&quot;text/css&quot;&gt;<br />&lt;!-- <br />.box { <br />  width:224px; <br />  border:5px solid #900; <br />  padding:7px; <br />  margin:10px<br />    voice-family: &quot;\&quot;}\&quot;&quot;;<br />    voice-family: inherit;<br />  width:200px;<br />}<br />--&gt;<br />&lt;/style&gt;<br /></code></p>
+<p>Dapprima si specifica una larghezza pari alla larghezza dei contenuti + l'ampiezza del padding + l'ampiezza dei bordi, nel nostro esempio 224px, come richiesto da IE5/Win. Successivamente, utilizzando la <a href="../../tips/nascondere_i_css/index.html">tecnica di Tantek</a>, si fornisce la larghezza corretta, nel nostro esempio 200px, con un comando che IE5/Win non &egrave; in grado di interpretare a causa di un bug. Per <a href="../../tips/nascondere_i_css/index.html">maggiori dettagli</a> sulla tecnica di Tantek &egrave; possibile leggere l'articolo &quot;<a href="../../tips/nascondere_i_css/index.html">Come nascondere i CSS ai browser</a>&quot;.</p>
+<h3>Specificare la larghezza attraverso un'apposita classe</h3>
+<p>Se specificassimo solo la larghezza, lasciando i valori di default (0px) per il bordo e il padding, non ci sarebbe differenza di interpretazione fra IE5/Win e un browser che interpreti con correttezza il box model. Ci&ograve; pu&ograve; suggerirci un metodo per impostare box che appiano correttamente anche su IE5/Win. Il codice &egrave; quello di seuito riportato.</p>
+<p class="code"><code>
+[...]<br />
+&lt;style type=&quot;text/css&quot;&gt;<br />
+&lt;!-- <br />
+.box {  <br />  
+width:224px;<br />
+}<br />
+.content { <br />
+border:5px solid #900; <br />  
+padding:7px; <br />
+}<br />--&gt;<br />&lt;/style&gt;<br />[...]<br />&lt;div class=&quot;box&quot;&gt;<br />  &lt;div class=&quot;content&quot;&gt;<br />    Lorem ipsum dolor sit amet, consectetuer <br />    adipiscing elit, sed diam nonummy ...<br />  &lt;/div&gt;<br />&lt;/div&gt;<br />[...]<br /></code></p>
+<p>Nella classe '.content' vengono specificati il padding e il bordo, nella classe '.box' viene specificata la larghezza dei contenuti. In questo modo, il contenuto sar&agrave; di 200px sia su IE5/Win sia su gli altri browser.</p>
+<h3>L'importanza del DOCTYPE</h3>
+<p>A questo punto &egrave; necessario soffermarsi sull'importanza di specificare il DOCTYPE della pagina. Se non ne viene specificato nessuno, IE6 emula IE5 riproponendo l'errata interpretazione del box model. In questo caso la <a href="../../tips/nascondere_i_css/index.html">tecnica di Tantek</a> non funzionerebbe, poich&eacute; basata su un bug di IE5/Win non presente in IE6. Dei <a href="http://www.webstandards.org/learn/templates/" title="La pagina si apre in una nuova finestra" rel="esterno">template</a> per la corretta impostazione di documenti (X)HTML sono disponibili presso le pagine del <a href="http://www.webstandards.org/" title="La pagina si apre in una nuova finestra" rel="esterno">Web Standard Project</a>.</p><p><a href="../../commenti/index.html?aid=5" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 03.09.2002</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="IE5_box_model.zip" title="Scarica l&acute;articolo in PDF, esempi, ecc. [file zip - 80 KB]">ZIP</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../../tips/nascondere_i_css/index.html">Nascondere i CSS</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=5" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/tutorial/IE5_box_model/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+

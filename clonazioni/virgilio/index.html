@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | Clonazioni | Virgilio con i CSS</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li ><a href="../../tutorial/index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li ><a href="../../template/index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li ><a href="../../tips/index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li ><a href="../../DHTML/index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">Clonazioni</a> &gt; <a href="index.html">Virgilio</a> &gt; Virgilio con i CSS</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+<h1 id="titoloArticolo">Virgilio con i CSS</h1>
+
+<p>In questo articolo vedremo come un layout complesso come quello di <a href="http://www.virgilio.it/" title="La pagina si apre in una nuova finestra" rel="esterno">Virgilio</a> possa essere <a href="virgilio.html" title="La pagina si apre in una nuova finestra" rel="esterno">realizzato con i soli CSS</a> senza l'ausilio di tabelle, semplificando enormemente il codice.</p>
+
+<p>Dopo una breve analisi del layout originale, sar&agrave; analizzato il codice XHTML e il foglio di stile associato. Verr&agrave; infine fornita un'analisi dei <a href="virgilio.html" title="La pagina si apre in una nuova finestra" rel="esterno">risultati conseguiti</a> nella realizzazione del layout.</p>
+
+<p>Realizzare un simile layout, senza tabelle e con un particolare uso delle immagini &quot;decorative&quot;, mostrer&agrave; la grande capacit&agrave; dei CSS di controllare l'aspetto delle pagine web.</p>
+
+<h2>Analisi del layout di Virgilio</h2>
+
+<p>Il layout di <a href="http://www.virgilio.it/" title="La pagina si apre in una nuova finestra" rel="esterno">Virgilio</a> presenta tre importanti punti da analizzare: layout &quot;pixel-perfect&quot; a larghezza fissa, layout a &quot;due colonne pi&ugrave; una&quot; (vedremo in seguito il significato di questa curiosa definizione), un elevato numero di immagini prive di contenuto informativo il cui solo scopo &egrave; realizzare il layout.</p>
+
+<h3>Layout pixel perfect</h3>
+
+<p>Il layout di <a href="http://www.virgilio.it/" title="La pagina si apre in una nuova finestra" rel="esterno">Virgilio</a> ha una larghezza fissa (760px) che da un lato impedisce una comoda visualizzione del sito ad utenti che utilizzino schermi con risoluzioni inferiori a 800x600, dall'altro permette al webmaster una facile gestione del layout, in questo caso attraverso un esagerato numero di tabelle e celle di larghezza prefissata.</p>
+
+<p>Nella <a href="virgilio.html" title="La pagina si apre in una nuova finestra" rel="esterno">versione realizzata con i CSS</a>, sar&agrave; mantenuta la scelta originale di utilizzare un layout a larghezza fissa, anche se ci&ograve; rende meno accessibile il sito.</p>
+
+<h3>Due colonne pi&ugrave; una</h3>
+
+<p>Il layout di <a href="http://www.virgilio.it/" title="La pagina si apre in una nuova finestra" rel="esterno">Virgilio</a> &egrave; formato da due colonne: una laterale (larga 150px) dove trovano posto il modulo per la consultazione della posta elettronica e alcuni sponsor e una sezione centrale divisa orizzontalmente in due sezioni. Ognuna delle sezioni centrali presenta una colonna sulla sinistra il cui allineamento verticale forma una terza colonna (da cui deriva la nostra scelta di definire il layout di Virgilio a 2+1 colonne), anche se interrotta verticalmente.</p>
+
+<h3>Immagini decorative</h3>
+
+<p>Col termine &quot;immagine decorativa&quot;, verranno indicate tutte quelle immagini che non hannno alcun <strong>contenuto informativo</strong> e che servono solo a formare la grafica del sito (come ad esempio l'<a href="http://www.virgilio.it/home/images/ic_notizie.gif" title="Mostra l'immagine - Si aprir&agrave; una nuova finestra" rel="esterno">icona dell'antenna</a> nel box delle notize ultime notizie) ovvero ad integrare il layout (come il <a href="http://www.virgilio.it/home/images/ang_sondaggio.gif" title="Mostra l'immagine - Si aprir&agrave; una nuova finestra" rel="esterno">triangolo</a> che forma il fumetto dei sondaggi di LA7 ovvero il <a href="http://images.virgilio.it/img_hd/angolo.gif" title="Mostra l'immagine - Si aprir&agrave; una nuova finestra" rel="esterno">triangolo arancione</a> posto su uno sfondo grigio che si trova nella barra infondo alla pagina).</p>
+
+<p>Questo tipo di immagini risultano inutili quando si visualizzi la <a href="virgilio.html" title="La pagina si apre in una nuova finestra" rel="esterno">versione da noi realizzata</a> con un browser (ad esempio NN4) non in grado di leggere il foglio di stile ovvero con un dispositivo (ad esempio un computer palmare) per il quale &egrave; opportuno realizzare un CSS specifico (immaginatevi come sia scomodo visitare un sito largo 760px con una schermo piccolo come quello di un PDA). Per questo motivo, tali immagini (alcune sono state escluse a priori come quelle dei pulsanti) verranno introdotte <strong>non nel codice XHTML</strong> tramite il tag &lt;img&gt; ma solo nel foglio di stile come <strong>sfondo</strong> di alcune sezioni. Per avere un'idea di come risulti la pagina senza il foglio &egrave; <a href="no_css_virgilio.html" title="La pagina si apre in una nuova finestra" rel="esterno">disponibile</a> una versione della pagina di esempio priva dell'istruzione per caricare il foglio di stile.</p>
+
+<h2>Clonazione</h2>
+
+<h3>Divisione in sezioni</h3>
+
+<p>I CSS permettono la <a href="../../tutorial/css_vs_table/index.html" title="CSS vs Tabelle: scopri i vantaggi che i CSS ofrrono rispetto alle tabelle nella realizzazione dei layout">separazione fra i contenuti e il layout</a> con il quale tali contenuti sono presentati. A questo punto la pagina non &egrave; pi&ugrave; separata in una serie di celle, ma organizzata in sezioni con un ordinamento logico ad albero. Tale struttura &egrave; evidenziata anche nell'indentazione del <a href="virgilio.css" title="Visualizza il foglio di stile">foglio di stile</a> realizzato.</p>
+
+<p>Le sezioni saranno separate, nel file XHTML, da tag &lt;div&gt;, identificate da opportuni 'id'. Nel seguito saranno riportati solo i frammenti di codice che necessitano di particolari commenti, per il codice completo si rimanda alla consultazione del <a href="virgilio.css" title="Visualizza il foglio di stile">foglio di stile</a>.</p>
+
+<p>Nel codice XHTML saranno presenti alcuni horizontal rule (&lt;hr /&gt;) che servono a migliorare l'usabilit&agrave; del sito per quei browser (es.:NN4) o dispositivi (es.:PDA) che non siano in grado di leggere il foglio di stile ovvero per i quali &egrave; stato predisposto un diverso foglio di stile. Questi horizontal rule saranno nascosti dal foglio di stile utilizzato tramite la propriet&agrave; display:none.</p>
+
+<p>In seguito all'utilizzo delle propriet&agrave; float, alcune sezioni potrebbero essere <a href="../../tips/recupero_float/index.html" title="L'utilizzo della propriet&agrave; float richiede alcuni accorgimenti.">allineate in maniera indesiderata</a>. Per evitare il problema si utilizzera una particolare classe, .ripristino-float, tramite il seguente codice:</p>
+
+<p class="code"><code><em>CSS</em><br />.ripristino-float { clear: both; height:1px;overflow:hidden;margin:-1px; }<br /><em>XHTML</em><br />&lt;div class=&quot;ripristino-float&quot;&gt;&lt;/div&gt;<br /></code></p>
+
+<p>Il codice &lt;div class=&quot;ripristino-float&quot;&gt;&lt;/div&gt; andr&agrave; posto dopo la sezione caratterizzata dalla propriet&agrave; float.</p>
+
+<h4>Body</h4>
+
+<p class="code"><code>body { padding: 0px; margin: 0px; text-align: center; }<br /></code></p>
+
+<p>Annulliamo il margine e il padding automatico del BODY, in questo modo possiamo sfruttare tutta l'ampiezza dell finestra. L'allineamento centrato &egrave; necessario per risolvere un problema di IE5 con i margini automatici, come sar&agrave; pi&ugrave; avanti illustrato</p>
+
+<h4>Sezione #logo</h4>
+
+<p class="code"><code>#logo { <br />  width:760px;<br />  margin:10px auto 0 auto;<br />  position: relative; <br />  text-align:left; <br />}<br />  #logo img { margin-left: 8px; }<br /></code></p>
+
+<p>Il logo &egrave; costituito dalla seguente immagine. <img class="esempio" src="img/logo.gif" alt="[immagine Logo utilizzato]" /> L'immagine viene posta in un box largo 760px, la larghezza della homepage di <a href="http://www.virgilio.it/" title="La pagina si apre in una nuova finestra" rel="esterno">Virgilio</a>, allineato centralmente tramite le definizioni auot per i margini sinistro e destro (ricordiamo che i lati del box model dei CSS sono ordinati i senso orario: top right bottom left). Purtroppo IE5 non elabora correttamente la propriet&agrave; 'auto'. Per superare il problema si &egrave; imposto l'allineamento centrato per il testo del body, dunque si &egrave; dovuto ripristinare l'allineamento a sinistra nella sezione <strong>#logo</strong>. L'immagine viene scostata dalla estremit&agrave; sinistra della sezione, non dell finestra, tramite la definizione di un margine sinistro di 8px per le immagini contente nella sezione (il solo logo). Le definizioni margine inferiore pari a -20px, z-index pari a 2, position: relative saranno chiarite nella seguente sezione <strong>#content</strong>.</p>
+
+<h4>Sezione #content</h4>
+
+<p class="code"><code>#content { <br />  width: 760px; <br />  margin:-20px auto 0 auto; <br />  color: #000; background: #FC6; <br />  border-top: 8px solid #000; <br />  text-align:left; <br />}<br /></code></p>
+
+<p>Questa sezione, che contiene tutto il resto della pagina, &egrave; utilizzata per definire la larghezza del sito e il suo allineamento. Questa sezione ha un bordo superiore alto 8px di colore nero che riproduce la fascia superiore di colore nero presente nella home di <a href="http://www.virgilio.it/" title="La pagina si apre in una nuova finestra" rel="esterno">Virgilio</a>. Affinch&eacute; il logo si sovrapponga alla fascia, si &egrave; impostato un margine superiore negativo (-20px). Il risultato &egrave; perfetto per IE5/6, non perfetto con NN6 e Opera. L'istruzione position: relative; nel definire la sezione <strong>#logo</strong> evita che, sovrapponendosi, il logo finisca dietro la sezione <strong>#content</strong></p>
+
+<h4>Sezione #leftcontent</h4>
+
+<p class="code"><code>#leftcontent { <br />  float: left;<br />  width: 610px;<br />  background: #FFF;color: #000;<br />}<br /></code></p>
+
+<p>La sezione <strong>#leftcontent</strong> contiene tutte le sezioni della parte sinistra del corpo della pagina (larga 610px). L'allineamento &egrave; realizzato tramite float:left. La larghezza &egrave; fissata a 610px (Larghezza_totale - Larghezza_colonna_destra = 760px - 150px = 610px).</p>
+
+<h4>Sezione #header</h4>
+
+<p class="code"><code>#header { <br />  border-bottom: 1px solid #F30; <br />  color: #000; <br />  background: #F90 url(img/header_bgr.gif) 0 0 no-repeat; <br />}<br />  #header form { <br />    margin: 0 0 0 65px;<br />    height: 47px;<br />    text-align: center;<br />  }<br />  [omissis]<br />  #header form input.formbut { <br />    border: 1px outset #FC6;<br />    background: #900; color: #FFF; <br />    font: bold 11px verdana,sans-serif; <br />    text-transform: uppercase;<br />   }<br />  [omissis]<br /></code></p>
+
+<p>La sezione <strong>#header</strong> contiene il form per la ricerca. Lo sfondo &egrave; arancione (#FC6 = #FFCC66) presenta la seguente immagine per integrare il logo. <img class="esempio" src="img/header_bgr.gif" alt="[immagine: Sfondo della sezione header]" />Il pulsante per la ricerca riprende lo stile dell'immagine usata dal layout di <a href="http://www.virgilio.it/" title="La pagina si apre in una nuova finestra" rel="esterno">Virgilio</a> impostando lo sfondo rosso scuro (#900) e colorando di bianco il testo. Le parti di codice omesse impostano il resto del form.</p>
+
+<h4>Sezioni #navbar e #subnavbar</h4>
+
+<p>Le sezioni <strong>#navbar</strong> e <strong>#subnavbar</strong> sono realizzate impostando bordi e margini e padding.</p>
+
+<h4>Sezione #main</h4>
+
+<p class="code"><code>#main { <br />  padding-top: 32px; <br />  border-top: 1px dotted #000; <br />}<br /></code></p>
+
+<p>La sezione <strong>#main</strong> contiene tutte le sezioni della parte principale, quella che contiene le informazioni del portale, della sezione <strong>#leftcontent</strong>. Il bordo superiore spesso 1px ed &egrave; punteggiato, in modo da riprodurre l'effetto presente nelle pagine di <a href="http://www.virgilio.it/" title="La pagina si apre in una nuova finestra" rel="esterno">Virgilio</a>. Il browser IE5/6 sostituisce il bordo da 1px punteggiato con quello da 1px tratteggiato, ci&ograve; non accade con spessori superiori.</p>
+
+<h4>Sezione #ultimenotizie</h4>
+
+<p class="code"><code>#ultimenotizie { <br />  float: left; <br />  height: 158px; width: 152px; <br />  padding: 7px 3px; margin-right: 23px; <br />  border: 1px solid #F90; <br />  font: 10px verdana,sans-serif; <br />  background: <br />    #FFF url(img/ic_notizie.gif) 3px 3px no-repeat; <br />} <br />  #ultimenotizie p.testa { <br />    font: bold 10px verdana, sans-serif; <br />    margin: 0 0 5px 20px; <br />}<br />[omissis]<br /></code></p>
+
+<p>La sezione <strong>#ultimenotizie</strong> &egrave; posizionata tramite <strong>float:left</strong> ed ha larghezza ed altezza fissa. Ribadiamo che un layout &quot;pixel-perfect&quot; non &egrave;, a nostro avviso, una buona scelta ma &egrave; coerente con l'impostazione scelta dai responsabili di Virgilio. In altro a destra &egrave; posta l'icona dell'antenna parabolica, impostando l'immagine come sfondo della sezione nel CSS e non tramite codice XHTML col tag &lt;img&gt;. E' un evidente esempio di come i contenuti posssano essere separati dal layout.</p>
+
+<h4>Sezioni #strillo e #community</h4>
+
+<p class="code"><code>#strillo { <br />  height:85px;<br />  margin-left:185px;padding-right:12px;<br />  border-bottom:1px dotted #C60;<br />  font:12px verdana,sans-serif;<br />}<br /><br />#community { <br />  height:80px;<br />  padding-top:10px 20px 0 0;<br />  margin-left:185px;<br />  font:10px verdana,sans-serif; <br />}<br />  #community .box {<br />    height:70px;width:150px;<br />    margin-left: 250px; <br />    background:<br />      #FFF <br />      url(img/com_ang.gif) <br />      40px -3px <br />      no-repeat;<br />    text-align: right;<br />  }<br />  #community #fumetto { <br />    height:36px;width:130px;<br />    padding:10px;margin:3px 0 10px 0; <br />    background: #900;color:#FFF;<br />    [omissis] <br />  }<br />  [omissis]<br /></code></p>
+
+<p>Le sezioni <strong>#strillo</strong> e <strong>#community</strong> sono le due sezioni, separate orizzontalmente da una linea tratteggiata, poste al fianco della sezione <strong>#ultimenotizie</strong>.</p>
+
+<p>L'altezza &egrave; impostata in modo da allinearsi col box delle ultime notizie. Il margine sinistro &egrave; fissato a 185px in modo da non sovrapporsi al box delle ultime notizie. La linea orizzontale &egrave; realizzata tramite il brodo inferiore della sezione <strong>#strillo</strong>.</p>
+
+<p>Il fumetto della sezione <strong>#community</strong> &egrave; realizzato con un box 150x56px, il fumetto &egrave; completato tramite il triangolino ottenuto impostando come sfondo del box contraddistinto dalla classe 'box' l'immagine 'com_ang.gif' opportunamente posizionata. La stessa soluzione sar&agrave; utilizzata per il fumetto dei sondaggi che sar&agrave; illustrato pi&ugrave; avanti.</p>
+
+<h4>Sezione #canali</h4>
+
+<p class="code"><code>#canali {<br />  float: right; <br />  padding: 10px; <br />  border-left: 19px solid #F90; <br />  background: #DDD; color: #000; <br />  font: 10px verdana,sans-serif; <br />}<br />  #canali .content { width: 406px; }<br />    #canali .content .colonna { <br />      float: left; width: 195px; <br />    }<br />      #canali .content .colonna big { <br />        display: block; <br />        font: bold 12px verdana,sans-serif; <br />      }<br />    #canali .content .separacolonne { <br />      width: 10px; float: left; <br />    }<br /></code></p>
+
+<p>La sezione <strong>#canali</strong> &egrave; quella caratterizzata dalla larga fascia arancione sulla sinistra ed &egrave; suddivisa in due colonne verticali.</p>
+
+<p>La fascia arancione &egrave; realizzata impostando il bordo sinistro, l'allineamento a destra &egrave; realizzato tramite la solita istruzione float e l'impostazione della larghezza. Le colonne sono separate da un'apposita classe 'separacolonne' comoda per realizzare una spaziatura uniforme fra le colonne senza preoccuparsi dell'effettivo numero di colonne.</p>
+
+<p>Per aggirare l'errata <a href="../../tutorial/IE5_box_model/index.html" title="Tutorial sull'errata interpretazione del box model da parte di IE5 e possibili soluzioni - La pagina si apre in una nuova finestra" rel="esterno">interpretazione del box model</a> da parte di IE5, si &egrave; introdotta la classe .content che ha il compito di definire separatamente la larghezza del box e suoi bordi, margini, padding [<a href="../../tutorial/IE5_box_model/index.html" title="Tutorial sull'errata interpretazione del box model da parte di IE5 e possibili soluzioni - La pagina si apre in una nuova finestra" rel="esterno">Ulteriori dettagli</a>].</p>
+
+<h4>Sezione #colonna</h4>
+
+<p>Sulla sinistra della sezione <strong>#canali</strong> appena analizzata, si trova la sezione <strong>#colonna</strong>. La sua implementazione non evidenzia particolari accorgimenti, basta impostare la larghezza a 160px. La realizzazione del fumetto per il sondaggio &egrave; simile a quella del fumetto della sezione <strong>#community</strong>.</p>
+
+<p>E' invece interessante soffermarsi sull'implementazione degli spazi indicati con la classe 'spot'. Il bordo punteggiato &egrave; realizzato impostando il bordo. Le differenti dimensioni fra link e test sono ottenute impostando una dimensione per la classe stessa e una dimensione maggiore per i link (tag &lt;a&gt;) della classe. Questo metodo, usato in molte altre sezioni, permette di risparmiare un gran numero di tag &lt;font&gt;, che anzi non sono stati affatto utilizzati, come raccomandato dal <a href="http://www.w3c.org/" title="Il W3C si occupa di stabilire degli standard per il web - Il link apre una nuova finestra" rel="esterno">W3C</a> (del resto il tag &lt;font&gt;, come il tag &lt;center&gt;, mescola contenuiti e impaginazione).</p>
+
+<h4>Sezione #rightbar</h4>
+
+<p class="code"><code>#rightbar { <br />  float: right; <br />  width: 150px; <br />  margin: 0px; <br />  background: #FC6; <br />}<br /></code></p>
+
+<p>La barra a destra &egrave; realizzata impostando il float a destra e la larghezza della sezione a 150px. Il colore di sfondo &egrave; lo stesso della sezione <strong>#content</strong>, creando l'illusione che la colonna si sviluppi per tutta l'altezza della pagina. In realt&agrave; la colonna finisce con l'ultimo box. Se le sezioni #content e #rightbar avessero avuto due differenti colori, ad esempio #FFF e #FC6, la barra laterale sarebbe <a href="../../images/clonazioni/virgilio/esempio1.gif" rel="esterno" title="L'esempio &egrave; costituito da un'immagine gif. La pagina si apre in una nuova finestra">apparsa interrotta</a>.</p>
+
+<h4>Sezione #emailform</h4>
+
+<p class="code"><code>#emailform { <br />  padding: 10px 0 10px 10px; <br />  border-bottom: 1px solid #F30; <br />  background: #F90; color: #000; <br />}<br />  [omissis]<br />  #emailform .enter { <br />    float: right; <br />    margin-top: -62px; <br />    padding-right: 10px; <br />    text-align: right; <br />  }<br />    #emailform .enter input { <br />      border: 1px outset #FC6; <br />      text-transform: uppercase; <br />      background: #900; color: #FFF;<br />    }<br /></code></p>
+
+<p>Nella colonna di destra ci sono il modulo per accedere alla posta elettronica e dei box per gli sponsor. Questi ultimi sono di scarso interesse e sono stati implementati in modo simile a quanto fatto per le classi <strong>.spot</strong>. Pi&ugrave; interessante &egrave; invece la sezione <strong>#emailform</strong>. Le dimensioni dei campi sono state regolate impostando il carattere, la larghezza dei campi tramite le classi loro assegnate. Il pulsante &egrave; stato realizzato impostando il colore dello sfondo e del testo. L'allineamento alla destra dei campi si &egrave; ottenuto allineando la classe che contiene il pulsante (<strong>enter</strong>) e regolandone il margine superiore (-62px). L'allineamento verticale risulta centrato per IE ma non per NN e Opera.</p>
+
+<h4>Sezione #footer</h4>
+
+<p class="code"><code>#footer { clear: both; [omissis] }<br />  #footer .topleft { <br />    float: left; <br />    padding: 2px 3px 2px 3px; <br />    background: #333 url(img/angolo.gif) 100% 100% no-repeat; <br />    color: #FFF; <br />  }<br />    #footer .topleft .content { width: 604px; }<br />  #footer .topright { <br />    float: right; <br />    padding: 2px 3px 2px 3px; <br />    text-align: center; <br />    background: #F90; <br />    color: #000; <br />  }<br />    #footer .topright .content { width: 144px; }<br />  #footer .bottom { padding: 0px 10px; text-align: center; }<br /></code></p>
+
+<p>La sezione <strong>#footer</strong> presenta la propriet&agrave; 'clear: both' la quale ha lo scopo di evitare l'<a href="../../tips/recupero_float/index.html" title="L'utilizzo della propriet&agrave; float richiede alcuni accorgimenti.">errato allineamento</a> con le sezioni #leftcontent e #rightbar caratterizzate dalle propriet&agrave; 'float:left' e 'float:right'. La sezione <strong>#footer</strong> &egrave; divisa in due classi affiancate combinando float e larghezza. Il triangolo utilizzato per &quot;fondere&quot; le due sezioni &egrave; stato impostato come sfondo della sezione di sinistra.</p>
+
+<h3>Considerazioni</h3>
+
+<p>La somiglianza fra la <a href="virgilio.html" title="La pagina si apre in una nuova finestra" rel="esterno">versione realizzata con i CSS</a> e la <a href="http://www.virgilio.it/" title="La pagina si apre in una nuova finestra" rel="esterno">versione originale</a>, realizzata con un gran numero di tabelle annidate, &egrave; evidente. Ci&ograve; che era stato realizzato con le tabelle, si &egrave; riprodotto con i CSS.</p>
+
+<p>Il codice XHTML della <a href="virgilio.html" title="La pagina si apre in una nuova finestra" rel="esterno">versione realizzata con i CSS</a> sorprende per la sua <strong>semplicit&agrave;</strong> e <strong>pulizia</strong>, essendo stato depurato da tutto il codice il cui unico scopo era impostare il layout. Il confronto fra il codice HTML di <a href="http://www.virgilio.it/" title="La pagina si apre in una nuova finestra" rel="esterno">Virgilio</a> e quello XHTML della <a href="virgilio.html" title="La pagina si apre in una nuova finestra" rel="esterno">versione da noi realizzata</a> &egrave; impietoso.</p>
+
+<p>La semplicit&agrave; del codice permette inoltre una maggiore <strong>velocit&agrave; di caricamento</strong> delle pagine, essendo composte da molto meno codice e dunque con un peso, in termini di kB, notevolmente inferiore. Anche la riproduzione della pagina da parte del browser &egrave; pi&ugrave; veloce, poich&eacute; il codice da interpretare &egrave; pi&ugrave; semplice.</p>
+
+<p>Si consideri infine il differente uso delle immagini. La <a href="http://www.virgilio.it/" title="La pagina si apre in una nuova finestra" rel="esterno">versione originale di Virgilio</a> introduce numerose immagini col solo scopo di integrare il layout. Navigando con screen reader per non vedenti o con browser puramente testuali come Lynx, s'incontrano un gran numero di immagini che creano solo confusione. La versione realizzata con i CSS, invece, non avendo nel codice XHTML immagini prive di contenuto non presenta affatto il problema.</p>
+
+<p>Per ultimo, non certo per importanza, si consideri l'evidente vantaggio di poter realizzare, impostando un CSS per ogni tipo di dispositivo/browser (PC, Stampante, PDA, Browser vocali), un <strong>diverso layout per ogni dispositivo</strong> (Per maggiori dettagli vedi <a href="../../tutorial/css_vs_table/index.html" title="CSS vs Tabelle: scopri i vantaggi che i CSS ofrrono rispetto alle tabelle nella realizzazione dei layout">CSS vs Table</a>).</p><p><a href="../../commenti/index.html?aid=1" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 17.09.2002</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="virgilio.html">Esempio</a></li><li><a href="no_css_virgilio.html">Esempio senza CSS</a></li>
+<li><a href="virgilio.css" title="Foglio di stile associato all&acute;esempio">Codice CSS</a></li>
+<li><a href="virgilio.zip" title="Scarica l&acute;articolo in PDF, esempi, ecc. [file zip - 54 KB]">ZIP</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../../tutorial/css_vs_table/index.html">CSS e tabelle a confronto</a></li>
+  <li><a href="../../tips/recupero_float/index.html">Ripristino in seguito all'utilizzo della propriet&agrave; float</a></li>
+  <li><a href="../../tutorial/IE5_box_model/index.html">Il box model di IE5/Win</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=1" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/clonazioni/virgilio/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+

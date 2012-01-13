@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | Template | Pagine zoomabili</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li ><a href="../../tutorial/index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li ><a href="../../clonazioni/index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li ><a href="../../tips/index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li ><a href="../../DHTML/index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">Template</a> &gt; <a href="index.html">Pagine zoomabili</a> &gt; Pagine zoomabili</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+    <h1 id="titoloArticolo">Pagine zoomabili</h1>
+    <p>In questo articolo vedremo come realizzare un semplice layout in grado di assecondare il ridimensionamento dei caratteri. L&#8217;effetto &#232; simile a quello di una pagina che pu&#242; essere ingrandita con una sorta di lente di ingrandimento.</p>
+    <h2>Il problema</h2>
+    <p>Una delle funzioni pi&#249; utili del browser, in termini di accessibilit&#224;, &#232; la possibilit&#224; di ingrandire o ridurre le dimensioni del testo (N.B.:Internet Explorer per Windows ancora oggi non varia la dimensione dei caratteri se esperessa in pixel).</p>
+    <p>Ingrandendo il testo pu&#242; per&#242; accadere che parole piuttosto lunghe non riescano pi&#249; ad essere contenute nello spazio loro assegnato (vedi figura 1).</p>
+    <p class="img"><img src="20030803_figura1.png" alt="screenshot: il testo ingrandito esce fuori dai bordi del box contenitore" /><br />
+    [Fig.1 &#8212; Screenshot con Mozilla/Firebird] Il testo ingrandito esce fuori dai bordi.</p>
+    <p>Con Internet Explorer l&#8217;effetto &#232; leggermente differente, poich&#233; il box si espande ma il layout pu&#242; risultare confuso dato che gli altri box, non essendo dotati di funzioni specifiche, non si adattano al cambiamento. Un esempio &#232; illustrato in figura 2.</p>
+    <p class="img"><img src="20030803_figura2.png" alt="screenshot: il box contenitore si espande e si sovrappone al box alla sua destra" /><br />
+    [Fig.2 &#8212; Screenshot con IE6] A causa del testo ingrandito (molto grande), il box contenitore si espande e si sovrappone al box alla sua destra.</p>
+    <h2>La soluzione</h2>
+    <p>Per risolvere il problema &#232; sufficiente utilizzare unit&#224; di misura variabili con la dimensione del testo, ovverosia gli <em>em</em> (maggiori dettagli sull&#8217;unit&#224; em sono disponibili nell&#8217;articolo <a href="../../tutorial/come_dimensionare_i_caratteri/index.html">Dimensionare i caratteri con i CSS</a>). L&#8217;unit&#224; em &#232; pari alla dimensione dei caratteri, dunque la sua lunghezza varia al variare della dimensione dei caratteri, cos&#236; da poter realizzare layout &#8220;elastici&#8221;.</p>
+    <p>Nella <a href="http://www.constile.org/template/pagine_zoomabili/pagina_zoomabile.html">pagina di esempio</a> &#232; presentato un layout a tre colonne in cui la larghezza e il posizionamento delle colonne secondarie &#232; stabilito in em.</p>
+    <p>Dettagli sulla realizzazione di un layout a tre colonne col posizionamento assoluto sono disponibili nell&#8217;articolo &#8220;<a href="../nuovo_layout_a_tre_colonne/index.html">Layout a tre colonne per tutti i gusti</a>&#8221; dove i layout sono realizzati utilizzando i pixel.</p>
+    <p>La pagina di <a href="http://www.constile.org/template/pagine_zoomabili/pagina_zoomabile.html">pagina di esempio</a> &#232; cos&#236; strutturata:</p>
+    <ul>
+      <li>Intesazione</li>
+      <li>
+        Corpo:
+        <ul>
+          <li>principale</li>
+          <li>secondario</li>
+          <li>menu</li>
+        </ul>
+      </li>
+      <li>Note</li>
+    </ul>
+    <p>Nella <a href="http://www.constile.org/template/pagine_zoomabili/pagina_zoomabile.html">pagina di esempio</a> le due colonne laterali sono larghe 15 em e distanziate fra loro di 1 em, la colonna del menu &#232; posta alla distanza di 1 em dal bordo destro della finestra del browser:</p>
+    <p class="code"><code>#secondario {<br />
+    position : absolute;<br />
+    top : 0;<br />
+    right : 17em;<br />
+    width : 15em<br />
+    }</code></p>
+    <p class="code"><code>#menu {<br />
+    position : absolute;<br />
+    top : 0;<br />
+     right : 1em;<br />
+    width : 15em;<br />
+    }<br />
+    </code></p>
+    <p>In questo modo, all&#8217;aumentare della dimensione dei caratteri, aumenter&#224; anche la dimensione delle colonne laterali.</p>
+    <p>La colonna principale ha il margine destro pari a 33 em, in modo da lasciare spazio alle colonne secondarie posizionate in modo assoluto:</p>
+    <p class="code"><code>#principale {<br />
+    margin : 0.5em 33em 0.5em 1em;<br />
+     }</code></p>
+    <p>La colonna principale, per lasciare spazio alle colonne secondarie, si restringer&#224; all&#8217;aumentare della dimensione dei caratteri.</p>
+    <p>L&#8217;effetto finale, dunque &#232; quello di avere un layout le cui colonne secondarie (pi&#249; strette) si allargano per ospitare testo di dimensioni maggiori e la cui colonna principale, pi&#249; larga, si restringe per adattarsi alla nuova impaginazione, evitando che il layout si allarghi oltre la dimensione della finestra del browser (vedi figura 3).</p>
+    <p class="img"><img src="20030803_figura3.png" alt="screenshot: confronto fra pagina con carattere normale e pagina con carattere ingrandito" /><br />
+    [Fig.3 &#8212; Screenshot con Mozilla/Firebird] Ingrandendo il carattere il layout si adatta di conseguenza.</p>
+    <h2>L&#8217;effetto &#8220;lente di ingrandimento&#8221;</h2>
+    <p>Oltre che per l&#8217;impaginazione delle diverse aree, le unit&#224; em possono essere adottate per altri elementi del layout come ad esempio lo spessore dei bordi. Ad esempio nella <a href="http://www.constile.org/template/pagine_zoomabili/pagina_zoomabile.html">pagina di esempio</a> il bordo che separa l&#8217;intesatazione dalle colonne sottostanti aumenta all&#8217;aumentare della dimensione dei caratteri. Utilizzando intensivamente le unit&#224; em per gli altri aspetti del layout, agendo sulla dimensione dei caratteri si otterr&#224; un effetto simile all&#8217;uso di una lente di ingrandimento (vedi <a href="http://www.constile.org/template/pagine_zoomabili/pagina_zoomabile.html">pagina di esempio</a>).</p>
+    <h2>Lo strano comportamento di IE5.2 per Mac</h2>
+    <p>Col browser IE5.2 per Mac, per&#242;, si presenta un problema: la colonna dei contenuti secondari non si posiziona correttamente, come se il valore specificato per la propriet&#224; <code>right</code> fosse maggiore del previsto. Un esempio &#232; mostrato in figura 5.</p>
+    <p class="img"><img src="20030803_figura4.png" alt="screenshot: la colonna dei contenuti secondari &#232; spostata verso sinistra" /><br />
+    [Fig.4 &#8212; Screenshot con IE5.2 Mac] La colonna dei contenuti secondari &#232; spostata verso sinistra.</p>
+    <p>In pratica, &#232; come se l&#8217;unit&#224; em fosse maggiore del dovuto.</p>
+	<p>La soluzione al problema, fortunatamente, &#232; estremamente semplice: basta aggiungere la dichiarazione <code>font-size : 1em</code> alla regola CSS per la colonna dei contenuti secondari:</p>
+    <p class="code"><code>#secondario {<br />
+    position : absolute;<br />
+    top : 0;<br />
+     right : 17em;<br />
+    width : 15em;<br />
+    <strong>font-size : 1em;</strong><br />
+    }<br />
+    </code></p><p><a href="../../commenti/index.html?aid=22" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 04.08.2003</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="http://www.constile.org/template/pagine_zoomabili/pagine_zoomabili.html">Esempio</a></li>
+<li><a href="pagine_zoomabili.css" title="Foglio di stile associato all&acute;esempio">Codice CSS</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../../tutorial/progettare_con_stile/index.html">Progettare con i CSS</a></li>
+  <li><a href="../../tutorial/come_dimensionare_i_caratteri/index.html">Dimensionare i caratteri con i CSS</a></li>
+  <li><a href="../nuovo_layout_a_tre_colonne/index.html">Layout a tre colonne per tutti i gusti</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=22" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/template/pagine_zoomabili/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+

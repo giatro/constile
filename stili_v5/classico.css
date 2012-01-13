@@ -1,0 +1,28 @@
+h1#titoloArticolo { background:#fff;color:#900 }
+
+#navbar { background:#cc9 url(geco_ico.gif) 5px 50% no-repeat;color:#000 }
+
+#intestazione {	background:#fff;color:#000 }
+#logo {	background:#996 url(logo_on.gif) 0 0 no-repeat;color:inherit }
+#logo a { background:#996 url(logo.gif) 0 0 no-repeat;color:inherit }
+
+#locazione { background:#fff;color:#000 }
+
+#footer { border-color:#996;background:#cc9 url(barcode.gif) 50% 100% no-repeat;color:inherit }
+#secondario { border-color:#cc9 }
+#principale, #contenuto { border-color:#999 }
+
+#motore .label { background:#cc9;color:#000 }
+#newsletter .label { background:#996;color:#fff; }
+
+#footer p.spaghetti {margin: 1em 0px -1em 0px;padding:0px;text-align:center;width:100%; overflow:hidden;}
+.spaghetti a img {border:1px solid}
+#issn {
+background:#996;
+color:#fff;
+font-weight:bold;
+position:absolute;
+top:2px;
+right:1.5em;
+}
+#issn acronym {border-bottom:1px dashed #fff}

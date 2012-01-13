@@ -1,0 +1,54 @@
+body {
+	margin	: 0;
+	padding	: 0;
+	}
+#intestazione {
+	margin	: 0 0 .5em 0;
+	}
+#intestazione h1 {
+	margin	: 1em 0 0 0.5em;
+	}
+#corpo {
+	position	: relative;
+	}
+#principale {
+	margin	: 0.5em 33em 0.5em 1em;
+	}
+#secondario {
+	position	: absolute;
+	top		: 0;
+	right		: 17em;
+	width		: 15em;
+	font-size	: 1em;
+}
+#menu {
+	position	: absolute;
+	top		: 0;
+	right		: 1em;
+	width		: 15em;
+}
+#note {
+	margin	: 1em 33em 1em 1em;
+}
+p { 
+	margin	: 0 0 1em 0;
+}
+
+body {
+	font		: 80% verdana, sans-serif;
+	}
+#intestazione {
+	border-bottom	: 1em solid #900;
+	}
+#intestazione h1 {
+	font-size	: 2em;
+	}
+#secondario {
+	background	: #ffc;
+	}
+#menu {
+	background	: #fcc;
+	}
+#note {
+	border-top	: 1px dashed #999;
+	}

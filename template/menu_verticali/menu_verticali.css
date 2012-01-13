@@ -1,0 +1,81 @@
+body {
+font:10px verdana, helvetica, sans-serif;
+}
+h6 { /*stile per i titoli dei menu*/
+font-size:1em;
+font-weight:bold;margin:2px 0;
+padding:.3em 1em;
+}
+/** MENU 1 ** roll-over basato solo sui colori **/
+ul.menu1 { 
+width:150px;
+list-style:none; /* elimino i punti elenco */
+margin:0; padding:0; /* elimino i rientri delle liste */
+}
+ul.menu1 li a { 
+display:block; /* il link occupa tutto lo spazio orizzontale */
+text-decoration:none; /* elimino la sottolineatura, che si tratta di un link si capisce dalla struttura */
+padding:0 1em; /* lascia spazio far il bordo del menu e il testo del link */
+height:2em;line-height:2em; /* altezza del link: height e line-height devono avere il medesimo valore */ 
+}
+ul.menu1 li { display:inline } /*elimina lo spazio fra gli elementi della lista introdotto da Opera*/
+ul.menu1 li a:link, ul.menu1 li a:visited { 
+background:#ccc;
+color: #009;
+} /* colori per il link */
+ul.menu1 li a:hover, ul.menu1 li a:active { 
+background: #eee;
+color:#c00;
+} /* colori per l'effetto roll-over */
+
+/** MENU 2 ** roll-over basato sui colori e sui bordi laterali **/
+
+ul.menu2 { 
+width:150px;
+list-style:none; /* elimino i punti elenco */
+margin:0; padding:0; /* elimino i rientri delle liste */
+}
+ul.menu2 li a { 
+display:block; /* il link occupa tutto lo spazio orizzontale */
+text-decoration:none; /* elimino la sottolineatura, che si tratta di un link si capisce dalla struttura */
+padding:0 1em; /* lascia spazio far il bordo del menu e il testo del link */
+height:2em;line-height:2em; /* altezza del link: height e line-height devono avere il medesimo valore */ 
+border-width:5px;border-style:none solid; /* aggiungo dei bordi laterali */
+}
+ul.menu2 li { display:inline } /*elimina lo spazio fra gli elementi della lista introdotto da Opera*/
+ul.menu2 li a:link, ul.menu2 li a:visited { 
+background:#ccc;
+color: #009;
+border-color:#009
+} /* colori per il link */
+ul.menu2 li a:hover, ul.menu2 li a:active { 
+background: #eee;
+color:#c00;
+border-color:#66c;
+} /* colori per l'effetto roll-over */
+
+/** MENU 3 ** sfondo sfumato **/
+
+ul.menu3 { 
+width:150px;
+list-style:none; /* elimino i punti elenco */
+margin:0; padding:0; /* elimino i rientri delle liste */
+}
+ul.menu3 li a { 
+display:block; /* il link occupa tutto lo spazio orizzontale */
+text-decoration:none; /* elimino la sottolineatura, che si tratta di un link si capisce dalla struttura */
+padding:0 1em; /* lascia spazio far il bordo del menu e il testo del link */
+height:2em;line-height:2em; /* altezza del link: height e line-height devono avere il medesimo valore */ 
+}
+ul.menu3 li { 
+display:inline;
+background:url(sfumato.png); /*pre-load immagine*/ 
+}
+ul.menu3 li a:link, ul.menu3 li a:visited { 
+background:#ccc;
+color: #009;
+} /* colori per il link */
+ul.menu3 li a:hover, ul.menu3 li a:active { 
+background:#eee url(sfumato.png) 100% 0 repeat-y;
+color:#c00;
+} /* colori per l'effetto roll-over */

@@ -1,0 +1,28 @@
+body, td {font-family:verdana; line-height:140%; font-size:80%;}
+img{border:0px; padding-right:5px;vertical-align:middle}
+
+td{border: 1px; padding:1px 7px; background:#fff;}
+
+a.dirs:link {text-decoration: none; color: #009;}
+a.dirs:visited {text-decoration: none; color: #909;}
+a.dirs:active {text-decoration: none; color: #c00}
+a.dirs:hover {text-decoration: none; color: #c00;}
+
+a.files:link {text-decoration: none; color: #009;}
+a.files:visited {text-decoration: none; color: #909;}
+a.files:active {text-decoration: none; color: #c00;}
+a.files:hover {text-decoration: none; color: #c00;}
+
+a:link {text-decoration: none; color: #009;}
+a:visited {text-decoration: none; color: #909;}
+a:active {text-decoration: none; color: #c00;}
+a:hover {text-decoration: none; color: #c00;}
+
+#thisdircontains{padding:0px 0px 15px 0px;}
+
+#dirslist{background-color:#000; padding:10px 10px;}
+#fileslist{background-color:#fff; color:#000;padding:1em 0;border-bottom:5px solid #000}
+#copy{padding: 20px 30px; font-size:9px;}
+
+td.filedetails{ padding-left:10px;}
+

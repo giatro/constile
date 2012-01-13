@@ -1,0 +1,84 @@
+body { font-size: 80%; margin: 0;padding:0; }
+
+h1 { 
+	font:italic 900 5em/1em georgia, serif;
+	color: #F93;
+	display: block;
+	margin:50px 0 0 0;
+	border-top: 5px double #F93;
+	border-bottom: 2px solid #F93;
+	padding-left: 50px;
+}
+
+h2 { 
+	font: italic 900 1.5em/1em verdana, helvetica, sans-serif;
+	display: block;
+	margin:10px 0;
+	text-align: right;
+	padding-right: 100px;
+}
+
+#autore { 
+	font: .70em verdana, helvetica, sans-serif;
+	text-align: right; 
+	margin:1px 0;
+	padding-right:50px;
+	border-style: solid none;
+	border-width: 1px;
+	border-color: #F93;
+}
+
+#articolo {
+	font: 1em georgia, serif;
+	margin:0 50px 50px 50px;
+	padding-bottom:2em;
+	border-bottom: 2px dotted #F93;	
+} 
+
+#articolo p { 
+  text-indent: 2em; 
+  text-align: justify 
+}
+
+#articolo p#primo-paragrafo { text-indent: 0em; }
+#articolo p#primo-paragrafo:first-letter { 
+  font-size: 3em; 
+  font-style: italic;
+  float: left;
+	background: #F93;
+	color: #FFF;
+	margin:0 5px 5px -50px;
+	padding: 5px 5px 5px 50px;
+	line-height:1em;
+}
+#articolo p#primo-paragrafo:first-line { 
+  font-variant: small-caps;
+}
+
+#articolo blockquote { 
+	width:20%;
+	font: .70em/2em verdana, helvetica, sans-serif; 
+	word-spacing: .2em;
+	padding: 2.5em 1em;
+	margin: 0 0 2em 2em;
+	border:1px solid #F93;
+	float:right;	
+}
+#articolo blockquote span.special-quote { 
+	color: #F93;
+	font: italic 900 2em/1em georgia, serif;
+}
+
+#articolo div.immagine { 
+	width:200px;
+	padding:5px;
+	font: .70em verdana, helvetica, sans-serif; 
+	margin:0px 10px 10px 0px;
+	border:1px solid #F93;
+	float:left;	
+}
+#articolo div.immagine img {
+	border-bottom:3px solid #F93;
+	display:block;	
+	padding-bottom:1px;
+} 

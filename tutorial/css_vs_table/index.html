@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | Tutorial | CSS e tabelle a confronto</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li ><a href="../../clonazioni/index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li ><a href="../../template/index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li ><a href="../../tips/index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li ><a href="../../DHTML/index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">Tutorial</a> &gt; <a href="index.html">Css vs table</a> &gt; CSS e tabelle a confronto</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+<h1 id="titoloArticolo">CSS e tabelle a confronto</h1>
+
+<p>In questo articolo, dopo una breve introduzione sul perch&egrave; sia errato utilizzare le tabelle per impostare la grafica di un sito web, saranno messi a confronto i vantaggi e gli svantaggi dei CSS con i vantaggi e gli svantaggi delle tabelle.</p>
+
+<h2>Tra contenuti e forma</h2>
+
+<p>Agli inizi, quando Internet era usato come mezzo di comunicazione fra scienziati e ricercatori, il <strong>contenuto informativo</strong> era l'aspetto pi&ugrave; importante della pagina web. Per aiutare i ricercatori a riportare in maniera organizzata dati sperimentali, furono create le <strong>tabelle</strong> che, per loro stessa natura, servivano a <strong>intabellare dei dati</strong>, basti pensare al tag &lt;td&gt; dove l'acronimo td sta per <strong>table data</strong>.</p>
+
+<p>Le tabelle sono per&ograve; in grado di contenere molti tipi di informazioni, non solo parole e numeri, come immagini e altre tabelle. Tra i webmaster si diffuse dunque la <strong>cattiva abitudine</strong> di utilizzare le tabelle per la realizzazione del layout di un sito, tradendo quello che era lo scopo della loro creazione. Annidando tabelle dentro tabelle &egrave; possibile realizzare impaginazioni pi&ugrave; o meno complesse. La cosa and&ograve; peggiorando con l'introduzione di software per la realizzazione di pagine web del tipo WYSIWYG (What You See Is What You Get: ci&ograve; che vedi &egrave; ci&ograve; che otterrai) che si basano quasi esclusivamente sull'uso delle tabelle. Il webmaster si trova di fronte a un'interfaccia grafica e &quot;disegna&quot; il layout del sito senza accorgersi che il software sta creando un codice che, nella migliore delle ipotesi &egrave; <strong>ridondante e disorganizzato</strong>, nella maggior parte dei casi risulta anche <strong>errato</strong>. Si ottengono cos&igrave; pagine pesanti (in termini di dimensione dei files) e lente da scaricare ed elaborare, spesso non utilizzabili da dispositivi come i PDA ovvero da utenti non vedenti che utilizzano screen reader, solo per fare alcuni esempi. Si pensi ad esempio ad utenti che utilizzano browser vocali o a linea di testo. Il testo sar&agrave; letto dall'inizio alla fine nell'ordine in cui compare nel codice, ed essendo il contenuto informativo indissolubilmente mescolato al codice per la grafica capita spesso che l'ordine in cui sono lette le informazioni non sia corretto.</p>
+
+<p>Per garantire una completa <strong>accessibilit&agrave;</strong> dei contenuti, <strong>la grafica deve essere separata dal testo</strong>, le tabelle devono intabellare.</p>
+
+<p>Per fornire un'impaginazione ai contenuti esiste una apposita tecnica, quella dei CSS (Cascading Style Sheets: fogli di stile a cascata), di cui ora mostreremo i vantaggi.</p>
+
+<h3>CSS Vs &lt;Table&gt;</h3>
+
+<h4>I vantaggi dei CSS</h4>
+
+<ul>
+<li>Accesso ai contenuti con qualsiasi dispositivo per la navigazione in Internet, anche per quelli non in grado di interpretare i CSS.</li>
+
+<li>Completa separazione fra contenuti e grafica.</li>
+
+<li>Possibilit&agrave; di <a href="../progettare_con_stile/index.html" title="Come progettare un sito che utilizza i CSS">organizzare il contenuto</a> in sezioni e sottosezioni.</li>
+
+<li>Codice (X)HTML semplice e pulito, privo delle ridondanze imposte dalle tabelle.</li>
+
+<li>File pi&ugrave; leggeri, pi&ugrave; veloci da scaricare e interpretare da parte del browser.</li>
+
+<li>Possibilit&agrave; di realizzare layout pi&ugrave; complessi di quelli possibili con le tabelle.</li>
+
+<li>Associazione di diverse impostazioni del layout per i diversi dispositivi come monitor, PDA, stampanti.</li>
+
+<li>Maggiore coerenza grafica fra le varie pagine di un sito.</li>
+
+<li>Possibilit&agrave; di cambiare l'aspetto del sito, anche notevolmente, modificando solamente un file.</li>
+
+<li>Abbandono dei disastri compiuti dai software WYSIWYG, per approdare alla tecnica qui definita WY<strong>C</strong>IWYG (What You <strong>Code</strong> Is What You Get: ci&ograve; che <strong>codifichi</strong> &egrave; ci&ograve; che otterrai) che &egrave; l'unica che garantisce il <strong>totale controllo</strong> sul risultato finale.</li>
+</ul>
+
+<h4>Gli svantaggi dei CSS</h4>
+
+<ul>
+<li>I browser pi&ugrave; datati hanno una non corretta interpretazione dei CSS, ci&ograve; richiede un minimo d'accortezza al momento delle progettazione. Punto.</li>
+</ul>
+
+<h4>I vantaggi delle tabelle</h4>
+
+<ul>
+<li>Fanno funzionare i software WYSIWYG. Punto.</li>
+</ul>
+
+<h4>Gli svantaggi delle tabelle</h4>
+
+<ul>
+<li>Riducono l'accessibilit&agrave; del sito.</li>
+
+<li>Impediscono di separare i contenuti dal modo in cui sono presentati</li>
+
+<li>Riducono, spesso impediscono, l'<a href="../progettare_con_stile/index.html" title="Come progettare un sito che utilizza i CSS">organizzazione strutturata</a> dei contenuti.</li>
+
+<li>Codice confuso e ridondante.</li>
+
+<li>Notevole quanto inutile aumento del peso delle pagine.</li>
+
+<li>Minori possibilit&agrave; grafiche.</li>
+
+<li>Un unico layout per tutti i dispositivi.</li>
+
+<li>Per ogni pagina &egrave; necessario ricreare il layout.</li>
+
+<li>Cambiare la grafica di un sito richiede spesso la totale ri-scrittura delle pagine, tutte.</li>
+
+<li>Abbandonare i disastrosi software WYSIWYG e continuare ad utilizzare le tabelle richiede uno sforzo davvero enorme.</li>
+</ul>
+
+<h3>Un cambiamento di filosofia</h3>
+
+<p>Il confronto fra CSS e tabelle, che vede quest'ultime inequivocabilmente sconfitte, evidenzia la necessit&agrave; di un cambiamento nel concepire la realizzazione della pagina web: prima vengono i contenuti e la loro <a href="../progettare_con_stile/index.html" title="Come progettare un sito che utilizza i CSS">organizzazione strutturata</a>, poi si realizza uno o pi&ugrave; CSS che istruiscano il browser su come presentare le informazioni. La vecchia tecnica, disegno una griglia con le tabelle e realizzo la grafica e in seguito ci mescolo i contenuti appartiene al passato e non pu&ograve; pi&ugrave; condurre in nessun luogo.</p>
+
+<p>Progettare con i CSS, realizzando pagine standard (magari in XHTML) significa progettare per il futuro, senza per&ograve; trascurare il passato: una pagina (X)HTML standard + CSS standard &egrave; accessibile con <strong>tutti</strong> i dispositivi per la navigazione nel web. Certo, i browser pi&ugrave; datati richiederanno CSS specifici, magari pi&ugrave; semplici, ma ottenere la stessa grafica su tutti i dispositivi/browser non &egrave; possibile e neppure utile. Un sito indipendente dal browser &egrave; quello in grado di presentare correttamente i contenuti su <strong>tutti</strong> i browser, non quello che ha la stessa grafica su IE e NN.</p><p><a href="../../commenti/index.html?aid=2" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 15.09.2002</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="css_vs_table.zip" title="Scarica l&acute;articolo in PDF, esempi, ecc. [file zip - 23 KB]">ZIP</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../progettare_con_stile/index.html">Progettare con i CSS</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=2" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/tutorial/css_vs_table/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+

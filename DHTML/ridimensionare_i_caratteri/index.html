@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | DHTML | Ridimensionare i caratteri con un click</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li ><a href="../../tutorial/index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li ><a href="../../clonazioni/index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li ><a href="../../template/index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li ><a href="../../tips/index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">DHTML</a> &gt; <a href="index.html">Ridimensionare i caratteri</a> &gt; Ridimensionare i caratteri con un click</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+<h1 id="titoloArticolo">Ridimensionare i caratteri con un click</h1>
+
+<p>Nell'articolo &quot;<a rel="esterno" href="../../tutorial/come_dimensionare_i_caratteri/index.html" title="[APRE UNA NUOVA FINESTRA] Articolo ''Dimensionare i caratteri con i CSS''">Dimensionare i caratteri con i CSS</a>&quot;, sono state illustrate diverse possibili scelte per impostare la dimensione dei font di un articolo e si &egrave; accennato riguardo la possibilit&agrave; di ridimensionare i caratteri &quot;al volo&quot; tramite i CSS e il JavaScript.</p>
+
+<p>In questo articolo vedremo come migliorare l'accessibilit&agrave; di un sito consentendo agli utenti di ridimensionare i caratteri con un click, facendo uso dei CSS e del <acronym title="Document Object Model">DOM</acronym> tramite JavaScript.</p>
+
+<h2>L'importanza di poter ridimensionare i caratteri</h2>
+
+<p>Spesso molti webmaster, o presunti tali, operano con monitor molto grandi, usano colori poco contrastanti e utilizzano font dalle dimensioni molto ridotte. Come conseguenza un utente che visiti un sito con con caratteri piccoli e poco contrastanti e che non abbia un'ottima vista (per quanto mi riguarda ho una vista eccellente ma non sempre riesco a leggere ben le pagine di molti siti) ha due sole possibilit&agrave;: sforzare la vista, abbandonare il sito. Certo molti browser offrono l'opportunit&agrave; di ingrandire i caratteri dello schermo, ma quanti utenti di suddetti browser conoscono tale opportunit&agrave;? Tutto sarebbe molto pi&ugrave; semplice se ci fosse un link da attivare che modificasse la dimensione dei font del sito che si sta visitando senza dover ricorrere ai menu. Sarebbe inoltre bello che il sito ricordasse qual &egrave; la dimensione dei font preferita da ogni utente. Tutto questo &egrave; possibile con un intelligente uso dei CSS e lo sfruttamento del <acronym title="Document Object Model">DOM</acronym>, attraverso un semplice script. Guardate la <a href="ridimensionare_i_caratteri.html" title="[APRE UNA NUOVA FINESTRA] Esempio" rel="esterno">pagina di esempio</a> e capirete subito le potenzialit&agrave; di questo strumento.</p>
+
+<h2>Come impostare la dimensione dei caratteri</h2>
+
+<p>Nel foglio di stile si dovr&agrave; optare per le <a rel="esterno" href="../../tutorial/come_dimensionare_i_caratteri/index.html" title="[APRE UNA NUOVA FINESTRA] Articolo ''Dimensionare i caratteri con i CSS''">unit&agrave; di lunghezza relative</a>. Il BODY dovr&agrave; avere la dimensione dei font espressa in unit&agrave; percentuali (nota: nel body &egrave; preferibile utilizzare unit&agrave; percentuali rispetto le unit&agrave; em, a causa di un comportamento bizzarro di IE quando si ridimensionano i caratteri con il menu &quot;Visualizza &gt; Carattere&quot;), gli altri selettori dovranno avere la dimensione dei font espressa in unit&agrave; percentuali o in unit&agrave; em. Ad esempio:</p>
+
+<p class="code"><code>body { font-size: 80%; }<br />h1 { font-size: 2em; }<br />.nota { font-size: 0.9em; }<br /></code></p>
+
+<p>In questo modo, modificando la dimensione del font del BODY, sar&agrave; possibile modificare la diemensione dei font di tutti gli elementi della pagina. Per modificare la dimensione del font del BODY sfrutteremo il <acronym title="Document Object Model">DOM</acronym> tramite JavaScript.</p>
+
+<h2>Il codice JavaScript</h2>
+
+<p>Per modificare la dimensione dei font utilizzeremo il seguente codice JavaScript [<a href="setFontSize.js">scarica il file</a>] che, oltre ad apportare le modifiche necessarie, memorizza in un cookie la dimensione del font desiderata.</p>
+
+<p class="code"><code>function createCookie(name,value,days) {<br /><em>// istruzioni per creare il cookie, non interessa ai fini dell'articolo</em><br />}<br /><br />function readCookie(name) {<br /><em>// istruzioni per leggere il cookie, non interessa ai fini dell'articolo</em><br />}<br /><br />function setFontSize(size) {<br />  var body = document.getElementsByTagName('body')[0];<br />  var percentuale = &quot;80%&quot;; // default<br />  if (size == 1) percentuale = &quot;70%&quot;;<br />  if (size == 2) percentuale = &quot;80%&quot;;<br />  if (size == 3) percentuale = &quot;90%&quot;;<br />  if (size == 4) percentuale = &quot;100%&quot;;<br />  if (size == 5) percentuale = &quot;110%&quot;;<br />  body.style.fontSize = percentuale;<br />  createCookie('TuoSitoFontSize',size,365);<br />}<br /><br />window.onload = function() {<br />  size = readCookie('TuoSitoFontSize');<br />  setFontSize(size);<br />}<br /></code></p>
+
+<h3>La funzione setFontSize()</h3>
+
+<p>La funzione <strong>setFontSize()</strong> &egrave; la funzione principale, essa si occupa di impostare la dimensione del font del BODY in base al valore della variabile <strong>size</strong> (passata come argomento della funzione La funzione <strong>setFontSize()</strong>) e di memorizzare tale dimensione in un cookie.</p>
+
+<p>La prima operazione che la funzione sovlge &egrave; quella di memorizzare l'oggetto rappresentato dal tag BODY nella variabile <strong>body</strong>:</p>
+
+<p class="code"><code>var body = document.getElementsByTagName('body')[0];<br /></code></p>
+
+<p>Successivamente, in base al valore della variabile <strong>size</strong> viene calcolato il valore, espresso in unit&agrave; percentuali, da dare alla dimensione del font del BODY, di default si imposta la dimensione specificata nel foglio di stile (in questo caso 80%). Il valore calcolato &egrave; memorizzato nella variabile <strong>percentuale</strong>.</p>
+
+<p class="code"><code>var percentuale = &quot;80%&quot;; // default<br />  if (size == 1) percentuale = &quot;70%&quot;;<br />  if (size == 2) percentuale = &quot;80%&quot;;<br />  if (size == 3) percentuale = &quot;90%&quot;;<br />  if (size == 4) percentuale = &quot;100%&quot;;<br />  if (size == 5) percentuale = &quot;110%&quot;;<br /></code></p>
+
+<p>Una volta calcolato il valore da dare alla dimensione del font del BODY, tale dimensione viene applicata attraverso l'istruzione:</p>
+
+<p class="code"><code>body.style.fontSize = percentuale;<br /></code></p>
+
+<p>A questo punto il valore della variabile <strong>size</strong> viene memorizzato in un cookie:</p>
+
+<p class="code"><code>createCookie('TuoSitoFontSize',size,365);<br /></code></p>
+
+<h3>Come viene utilizzato il cookie</h3>
+
+<p>Quando una pagina viene caricata viene letto il valore della variabile <strong>size</strong> e viene richiamata la funzione <strong>setFontSize()</strong>. Se non &egrave; memorizzato nessun valore valido, viene usato il valore di default.</p>
+
+<p class="code"><code>window.onload = function() {<br />  size = readCookie('TuoSitoFontSize');<br />  setFontSize(size);<br />}<br /></code></p>
+
+<h3>Come invocare la modifica della dimensione del font</h3>
+
+<p>Per invocare la modifica della dimensione dei font si pu&ograve; utilizzare un link che invochi la funzione <strong>setFontSize()</strong> con un opportuno argomento:</p>
+
+<p class="code"><code>&lt;a href=&quot;javascript: setFontSize(1)&quot;&gt;caratteri piccoli&lt;/a&gt;<br /></code></p>
+
+<h2>Limiti e suggerimenti</h2>
+
+<p>Lo script funziona solo con i browser che abbiano un valido supporto del <acronym title="Document Object Model">DOM</acronym>, come mozilla, IE5.5, IE6 (no Opera 6). I browser che non supportano opportunamente il <acronym title="Document Object Model">DOM</acronym> non avranno nessun tipo di problema.</p>
+
+<p>Qualora si desiderasse non modificare la dimensione dei font di alcuni elementi (ad esempio i form), si pu&ograve; impostare la dimensione dei font in pixel.</p><p><a href="../../commenti/index.html?aid=14" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 06.11.2002</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="ridimensionare_i_caratteri.html">Esempio</a></li>
+<li><a href="ridimensionare_i_caratteri.zip" title="Scarica l&acute;articolo in PDF, esempi, ecc. [file zip - 32 KB]">ZIP</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../../tutorial/come_dimensionare_i_caratteri/index.html">Dimensionare i caratteri con i CSS</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=14" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/DHTML/ridimensionare_i_caratteri/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+

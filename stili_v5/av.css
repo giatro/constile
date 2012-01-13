@@ -1,0 +1,17 @@
+html { font:100% verdana,helvetica,sans-serif }
+body { padding:0 2em;background:#fff url(linea.png) 16em 0 repeat-y;color:#000 }
+
+#articoliRecenti p { margin:.5em 0 1.5em 0 }
+
+#footer, #secondario {position:static;width:13em;background-color:#eee}
+#spagetti p {margin-top:.5em;margin-bottom:.5em}
+
+#footer p, #secondario p,
+#footer div, #secondario div {padding:0 .5em}
+
+div#newsletter {padding:0}
+
+p#cc,div#spaghetti {padding:1em 0}
+
+#principale, #contenuto {position:absolute;left:15em;right:0;width:auto;margin:0}
+p#navGenerale {padding:1em .5em}

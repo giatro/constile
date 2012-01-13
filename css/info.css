@@ -1,0 +1,42 @@
+body { 
+font:100% georgia,palatino,serif;
+padding:3em 6em;
+margin:0;
+}
+
+h1 { font-size:1.5em;background:#fff;color:#900;margin:0 }
+abbr { cursor:help;border-bottom:1px dashed #900 }
+
+.contenuti { 
+border:2px solid #900;
+background:#f6f6f6;
+color:#000;
+padding:1em;
+}
+.contenuti p { 0 0 1em 0}
+
+a:link		{ color:#009; background:transparent; text-decoration:none;border-bottom:1px solid }
+a:visited	{ color:#909; background:transparent; text-decoration:none;border-bottom:1px solid }
+a:hover		{ color:#fff; background:#900; text-decoration:none;border-bottom:1px solid #900 }
+a:active	{ color:#900; background:#ff0; text-decoration:none;border-bottom:1px solid #ff0 }
+
+.w3cbutton { 
+text-align:left;
+display:block;
+text-decoration:none;
+width:10em;
+border:1px solid #000;
+font:10px arial,helvetica,sans;
+background:#fc6;
+color:#000;
+}
+.w3cbutton .w3c {
+background:#fff;
+color:#0c479d;
+padding:0 .5em;margin-right:.25em
+}
+.w3cbutton .waiA { 
+background:transparent;
+color:#900
+} 
+p.w3cbutton { margin:0 }

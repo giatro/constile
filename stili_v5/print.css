@@ -1,0 +1,57 @@
+body { margin:0 1em }
+body,#bodycontent { color:#000; background: #FFF; font:9pt georgia, serif; }
+hr, #navbar, #footer, #avviso-non-standard, .nascosto, #skin, #secondario,#motore { display:none; }
+h1, h2,h3,h4,h5,h6 { font-family: verdana, helvetica, sans-serif }
+#corpo h2,#corpo h3,#corpo h4,#corpo h5,#corpo h6	 { width:60%; }
+
+#locazione { border-bottom:1mm solid #999;padding-bottom:3mm; }
+
+#logo { font-size:2em;border-bottom:1mm solid #999;padding-bottom:3mm;margin-bottom:5mm;font:1.5em verdana,helvetica,sans-serif }
+
+pre { font: 8pt verdana, helvetica, sans-serif; text-align: left;}
+pre { border:1pt dashed #336; padding:2mm; }
+
+a:link, a:visited { 
+  font-weight:bold;
+  text-decoration: underline;
+  color:#009;  
+	background:#fff
+}
+
+a[rel="esterno"]:after {
+  content: " [" attr(href) "]";
+}
+
+#logo a:after,#locazione a:after { content:"" }
+
+acronym:after{
+  content: " [acronimo: " attr(title) "]";
+}
+abbr:after{
+  content: " [abbrev.: " attr(title) "]";
+}
+
+img { border: none; }
+img.esempio { 
+	text-align: center;
+
+	border: 1px dashed #999; 
+	padding: .5em; 
+	display: block; 
+	margin: .5em auto; 
+}
+
+code { font: bold 1em "courier new", monospace; color:#600;background:#fff }
+code.block { 
+	display: block;
+	line-height: 1em;
+	font-weight: normal;
+	
+	border: 1px dashed #666; 
+	padding:.5em;
+	margin:0 0 3em 0;
+	
+	background: #ccc; color:#600
+}code.block em { background: #ccc;color: #666; } /* usato nei commenti nei codici degli articoli */
+#page-url { text-align:right;color:#666;background: #fff;padding:1em 0 }
+	

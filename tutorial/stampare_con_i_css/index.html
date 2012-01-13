@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | Tutorial | Pagine pronte per la stampa con i CSS</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li ><a href="../../clonazioni/index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li ><a href="../../template/index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li ><a href="../../tips/index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li ><a href="../../DHTML/index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">Tutorial</a> &gt; <a href="index.html">Stampare con i css</a> &gt; Pagine pronte per la stampa con i CSS</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+<h1 id="titoloArticolo">Pagine pronte per la stampa con i CSS</h1>
+
+<p>Le pagine web, spesso pensate solo per la visione su schermo, possono risultare inadatte alla stampa. In questo articolo vedremo come, attraverso i CSS, sia possibile impostare l'aspetto di una pagina quando viene stampata.</p>
+
+<h2>Perch&eacute; stampare una pagina</h2>
+
+<p>Quando una pagina web viene stampata, ci&ograve; che interessa il navigatore sono i <strong>contenuti</strong>. I menu di navigazione, i banner, le gif animate e gli effetti speciali non interessano. La quasi totalit&agrave; dei webmaster sembra per&ograve; insensibile al problema. La cosa &egrave; sorprendente, soprattutto poich&eacute; la quasi totalit&agrave; delle pagine web, cos&igrave; come appaiono su schermo, sono inadatte alla stampa.</p>
+
+<h2>Perch&eacute; le pagine su schermo non sono adatte alla stampa?</h2>
+
+<p>Bisogna avere chiaro un concetto fondamentale: <strong>media differenti</strong> hanno <strong>necessit&agrave; differenti</strong>. Quando stiamo navigando su un sito utilizzando lo schermo del PC, i menu di navigazione sono molto comodi. Quando stampiamo una pagina, i menu di navigazione sono completamente inutili. Su schermo possiamo giocare con i colori, ma le stampanti in bianco e nero possono non essere in grado di riprodurre gli stessi risultati. Lo schermo del PC si basa sui pixel, le stampanti si basano sui punti e sui millimetri. Lo schermo &egrave; pi&ugrave; largo dei fogli usati dalle stampanti.</p>
+
+<h2>Le due possibili soluzioni al problema</h2>
+
+<h3>Pagina adatta alla stampa</h3>
+
+<p>I webmaster, almeno quelli che si sono posti il problema, spesso hanno cercato una soluzione aggirando il problema stesso e realizzando apposite pagine adatte alla stampa. Alle normali pagine se ne afficancano altre con gli stessi &quot;contenuti informativi&quot;, realizzate appositamente per essere stampate. La cosa &egrave; lodevele, ma presenta due svantaggi: uno per il webmaster, l'altro per l'utente. Il webmaster si vede infatti costretto a realizzare due versioni di una stessa pagina. Questo problema non &egrave; poi cos&igrave; importante per i siti dinamici. Lo svantaggio per l'utente &egrave; di natura differente. Affinch&eacute; possa stampare in maniera ottimale i contenuti, l'utente deve selezionare il link che conduce ad una nuova pagina, ma non sempre il navigatore si accorge dell'esistenza dell'apposito link.</p>
+
+<h3>Foglio di stile specifico per la stampante</h3>
+
+<p>In alternativa alla creazione di pagine ottimizzate per la stampa, &egrave; possibile, e consigliabile, realizzare un foglio di stile specifico. E' questo il metodo utilizzato da .ConStile. L'unica controindicazione all'adozione di questo metodo, che verr&agrave; illustrato nella prossima sezione, &egrave; che non funziona sui browser (come NN4) che non sono in grado di leggere fogli di stile per specifici la stampante. Per verificare come il metodo funzioni egregiamente, provate a stampare questo articolo. Noterete che la barra laterale e il menu di navigazione scompaiono. Noterete inoltre l'utilizzo di un diverso font.</p>
+
+<h2>Realizzare un foglio di stile specifico per la stampante</h2>
+
+<h3>Via il superfluo</h3>
+
+<p>Innanzitutto sar&agrave; utile eliminare tutte quelle parti che non occorre o non vogliamo che siano stampate. Ci&ograve; &egrave; facilmente realizzabile con la propriet&agrave; 'display:none', i contenuti ci sono ma non verranno stampati. Siano, ad esempio, '#barra-laterale' (un ID) e '.sponsor' (una calsse) i selettori della barra laterale e degli sponsor e si voglia evitare di stamparli. Il codice da utilizzare sar&agrave; il seguente:</p>
+
+<p class="code"><code>#barra-laterale, .sponsor { display: none; }<br /></code></p>
+
+<h3>Attenzione ai colori</h3>
+
+<p>Successivamente sar&agrave; opportuno impostare colori che risultino adatti alla stampa. L'unica scelta possibile per i testo &egrave; ovviamente il nero, mentre pu&ograve; risultare utile colorare differentemente i titoli e i link. In ogni caso i colori dovrebbero essere sufficientemente scuri, per evitare che le stampanti in bianco e nero restituiscano del testo troppo chiaro e poco leggibile.</p>
+
+<h3>Il carattere &egrave; importante</h3>
+
+<p>Su schermo vengono spesso preferiti i caratteri sans-serif (come Verdana o Helvetica), ma per la stampa su carta &egrave; preferibile usare i caratteri serif (come il Georgia o il Times) anche perch&eacute; le grazie dei caratteri serif facilitano la lettura e vengono riprodotte su carta meglio che su schermo (grazie alla maggiore risoluzione delle stampanti). Per i titoli &egrave; consigliabile utilizzare caratteri differenti, in questo caso i caratteri pi&ugrave; adatti sono quelli serif.</p>
+
+<p>Essendo la lettura su carta meno faticosa, &egrave; possibile utilizzare caratteri pi&ugrave; piccoli di quelli che solitamente si utilizzano su schermo, facendo risparmiare inchiostro e fogli agli utenti. I visitatori del vostro sito ne saranno contenti.</p>
+
+<p>La dimensione dei caratteri stampati su carta pu&ograve; essere impostata attraverso attraverso i punti, l'unit&agrave; di misura dei caratteri negli elaboratori di testo.</p>
+
+<h3>Precisi al millimetro</h3>
+
+<p>Lo schermo dei PC &egrave; basato sui pixel. Qualsiasi altra unit&agrave; di misura non ha molto senso. Su carta &egrave; diverso. La pagina ha una dimensione standard (210 x 297 millimetri per il formato A4). Su carta &egrave; possibile e opportuno specificare dimensioni in millimetri. Potete impostare bordi, margini, larghezze con precisione millimetrica. Provate ad esempio a stampare questo articolo (qualora non lo aveste gi&agrave; fatto). Noterete che le barre sopra e sotto il logo sono spesse esattamente un millimetro e che l'indentazione dei paragrafi &egrave; esattamente 10mm. Ci&ograve; &egrave; stato possibile grazie alle seguenti due istruzioni:</p>
+
+<p class="code"><code>#header { border-bottom:1mm solid #000; border-top:1mm solid #000; }<br />#corpo p { text-indent: 10mm; }<br /></code></p>
+
+<h3>Come rappresentare i link</h3>
+
+<p>Come per la normale rappresentazione su schermo, anche le pagine stampate dovrebbero avere bene in evidenza i link. Caratteri in grassetto e testo sottolineato saranno sufficienti. Volendo &egrave; possibile scegliere di utilizzare un diverso colore. In questo caso il colore ideale &egrave; il blu scuro. I link visitati dovrebbero avere lo stesso aspetto di quelli non ancora visitati.</p>
+
+<p class="code"><code>a:link, a:visited { <br />  font-weight:bold;<br />  text-decoration: underline;<br />  color:#009;  <br />}<br /></code></p>
+
+<h4>Dove conducono i link?</h4>
+
+<p>Abbiamo evidenziato i link. Chi legger&agrave; la pagina stampata sapr&agrave; che ci sono ulteriori informazioni da leggere, in altre pagine, ma qual'&egrave; l'indirizzo. I fogli di stile permettono anche questo. Attraverso il codice di seguito riportato, l'indirizzo puo seguire il link.</p>
+
+<p class="code"><code>a:link:after, a:visited:after {<br />  content: &quot; [&quot; attr(href) &quot;]&quot;;<br />}<br /></code></p>
+
+<p>Questo metodo ha due problemi: il primo &egrave; che questo tipo istruzione funziona solo con i browser che interpretano al meglio i fogli di stile, in particolare solo sui browser basati su Gecko&trade;, cio&egrave; Netscape Navigator 6 e <a href="http://www.mozilla.org/releases/mozilla1.0/" rel="esterno" title="Mozilla &egrave; lo strumento migliore per la navigazione nel web">Mozilla 1.0</a>. Dunque il metodo <strong>non funziona con Opera 6</strong> e <strong>Internet Explorer 6</strong>. Il secondo problema &egrave; dovuto alla struttura dei link. L'indirizzo che verr&agrave; visualizzato sar&agrave; quello riportato nell'attibuto 'href' dei link. Quindi l'indirizzo di pagine interne al vostro sito sar&agrave; del tipo '../../sezione/pagina.html' ovvero '/sezione/pagina.html' dipendendo da che tipo di indirizzi si utilizzano: indirizzi relativi o indirizzi assoluti. Per i link esterni non ci sono problemi 'http://www.sitoesterno.xxx/'. La cosa non &egrave; grave e in futuro potr&agrave; essere sistemata con i CSS di livello 3.</p>
+
+<h2>Associare un foglio di stile alla stampante</h2>
+
+<p>Per associare un foglio di stile specifico alla stampante basta utilizzare il seguente codice:</p>
+
+<p class="code"><code>[...]<br />&lt;head&gt;<br />[...]<br />&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/stampante.css&quot; media=&quot;print&quot; /&gt;<br />[...]<br />&lt;/head&gt;<br />[...]<br /></code></p>
+
+<p><strong>Bisogna per&ograve; fare attenzione</strong> a come sono richiamati gli altri fogni di stile. Se un foglio di stile viene collegato ad una pagina senza specificare il tipo di media, la stampate, alle regole specificate nel file '/css/stampante.css' aggiunger&agrave; anche le regole dell'altro CSS. Per risolvere il problema &egrave; sufficiente <a href="../../tips/css_e_media_type/index.html" title="CSS e media type">specificare il media per ogni foglio di stile</a> attraverso il seguente codice:</p>
+
+<p class="code"><code>[...]<br />&lt;head&gt;<br />[...]<br />&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/schermo.css&quot; media=&quot;screen&quot; /&gt;<br />&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/palmare.css&quot; media=&quot;handheld&quot; /&gt;<br />&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/stampante.css&quot; media=&quot;print&quot; /&gt;<br />[...]<br />&lt;/head&gt;<br />[...]<br /></code></p>
+
+<p>oppure:</p>
+
+<p class="code"><code>[...]<br />&lt;head&gt;<br />[...]<br />&lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt;@import &quot;/css/screen.css&quot;; /* No NN4 */&lt;/style&gt;<br />&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/palmare.css&quot; media=&quot;handheld&quot; /&gt;<br />&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/css/stampante.css&quot; media=&quot;print&quot; /&gt;<br />[...]<br />&lt;/head&gt;<br />[...]<br /></code></p>
+
+<p>Purtroppo, se i fogli di stile vengono richiamati attraverso il metodo @import, il che &egrave; molto comodo per <a href="../../tips/nascondere_i_css/index.html" title="Tecniche per nascondere specifici CSS a specifici browser">nascondere i CSS a Netscape Navigator 4</a>, Opera 6 sembra trascurare il media a cui il foglio di stile &egrave; associato. In questo caso sar&agrave; necessario sovrascrivere le regole contenute nei fogli collegati tramite @import.</p>
+
+<h2>Pronti ad andare in stampa</h2>
+
+<p>Impostare un foglio di stile per la stampante &egrave;, in realt&agrave;, molto pi&ugrave; facile di quanto non appaia da questo articolo. In ogni caso, i vantaggi offerti ripagano il lavoro svolto.</p>
+<p>Per ulteriori dettagli vi consigliamo di leggere i seguenti articoli:</p>
+<ul>
+<li><a href="../../tips/css_e_media_type/index.html" title="Breve panoramica sui tipi di media a cui &egrave; possibile associare i fogli di stile">CSS e media type</a>: breve panoramica sui tipi di media a cui &egrave; possibile associare i fogli di stile.</li>
+<li><a href="../../tips/nascondere_i_css/index.html" title="Tecniche per nascondere specifici CSS a specifici browser">Nascondere i CSS</a>: tecniche per nascondere specifici CSS a specifici browser.</li>
+<li><a href="http://www.alistapart.com/stories/goingtoprint/" title="Si apre in una nuova finestra" rel="esterno">Going to Print</a> [<a href="http://www.alistapart.com/" title="A List Apart - Si apre in una nuova finestra" rel="esterno">www.alistapart.com</a>]: un ottimo articolo, in inglese, sulla stampa attraverso i CSS.</li>
+</ul><p><a href="../../commenti/index.html?aid=7" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 15.09.2002</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="stampare_con_i_css.zip" title="Scarica l&acute;articolo in PDF, esempi, ecc. [file zip - 28 KB]">ZIP</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../../tips/css_e_media_type/index.html">Diversi media, diversi stili</a></li>
+  <li><a href="../../tips/nascondere_i_css/index.html">Nascondere i CSS</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=7" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/tutorial/stampare_con_i_css/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+

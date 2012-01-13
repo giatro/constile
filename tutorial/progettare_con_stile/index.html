@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | Tutorial | Progettare con i CSS</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li ><a href="../../clonazioni/index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li ><a href="../../template/index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li ><a href="../../tips/index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li ><a href="../../DHTML/index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">Tutorial</a> &gt; <a href="index.html">Progettare con stile</a> &gt; Progettare con i CSS</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+<h1 id="titoloArticolo">Progettare con i CSS</h1>
+
+<p>Progettare un sito web, il cui layout debba basarsi sui CSS, impone uno schema logico diverso da quello solitamente usato. In questo articolo saranno brevemente illustrati i punti chiave per progettare un sito web &quot;con stile&quot;.</p>
+
+<h2>Contenuti e impaginazione: due oggetti ben distinti</h2>
+
+<p>Le pagine web non sono la carta stampata. La precedente affermazione, senza il necessario approfondimento, pu&ograve; apparire un banale dato di fatto. La differenza principale fra la carta stampata e le pagine web, oltre all'evidente differenza nella dinamica della pubblicazione, &egrave; che la carta stampata &egrave; non mutevole. A differenza della locuzione &quot;immutabile&quot;, forse pi&ugrave; legata a un concetto temparale, credo che il termine &quot;non mutevole&quot; sia maggiormante legato a un concetto geometrico della mutabilit&agrave;. Si consideri ad esempio un quotidiano. Chi stabilisce l'impaginazione di un articolo sa gi&agrave; che ogni lettore vedr&agrave; l'articolo impaginato esattamente come stabilito. Il caratter&agrave; sar&agrave; esattamente quello voluto, la grandezza dei caratteri esatta al millimetro. La pagina avr&agrave; una larghezza ed un'altezza prestabilita. Tutti gli elementi grafici saranno posizionati come predisposto. La pagina web &egrave; estremamente mutevole. La sua rappresentazione dipende dal tipo di dispositivo (PC, PDA, WebTV, Stampante) browser (Internet Explorer, Linx, Screen Reader), dal sistema operativo, dalla risoluzione del monitor, dai font disponibili.</p>
+
+<p>Non c'&egrave; nessun reale controllo su come apparir&agrave; una pagina web (Flash richiede tutt'altro tipo di discorso).</p>
+
+<p>Appare dunque chiaro come l'informazione che &egrave; contenuta in una pagina web debba essere del tutto separata dall'impaginazione. Quando ci&ograve; non accade, quando cio&egrave; l'informazione comunicata dipende dall'impaginazione, c'&egrave; un problema nell'organizzazione dei contenuti.</p>
+
+<p>In ultima analisi l'(X)HTML dovr&agrave; essere usato <strong>esclusivamente per i contenuti</strong>, mentre il layout sar&agrave; realizzato con i CSS. Dunque nel codice (X)HTML non dovranno comparire tag quali il &lt;font&gt; e il &gt;center&lt;. Saranno invece benvenuti i tag che servono a struttutare i contenuti come &lt;h1&gt;..&lt;h6&gt;, &lt;p&gt;, &lt;b&gt;.</p>
+
+<h2>Una struttura per i contenuti</h2>
+
+<p>Per realizzare una valida separazione fra i contenuti e la loro impaginazione, &egrave; necessario strutturare i contenuti stessi. Sar&agrave; dunque opportuno separare, magari con uno schema su carta, la pagina in sezioni e sottosezioni come ad esempio un'intestazione e un pi&egrave; di pagina, un corpo con i contenuti principali, una sezione contenente link di approfondimento e una contenente un men&ugrave; di navigazione.</p>
+
+<img class="esempio" alt="[immagine: esempio di struttura per i contenuti]" src="../../images/tutorial/progettare_con_stile/struttura_contenuti.gif" height="246" title="esempio di struttura per i contenuti" width="310" /> 
+
+<p>Una strutturazione dei contenuti &egrave; una buona norma per ogni tipo di pubblicazione, sia sul web sia su tutti gli altri canali di comunicazione.</p>
+
+<p>Ogni sezione dovrebbe essere associata ad un tag &lt;div&gt;, caratterizzato dal proprio selettore ID o dalla propria classe. E' di seguito riportato un esempio di codice XHTML che realizzi la struttura precedentemente illustrata.</p>
+
+<p class="code"><code>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;<br />    &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;<br />&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;<br />&lt;head&gt;<br />&lt;title&gt;Esempio di strutturazione dei contenuti&lt;/title&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br /><br />  &lt;div id=&quot;intestazione&quot;&gt;<br /><br />    &lt;div class=&quot;contenuti&quot;&gt;............&lt;/div&gt;<br /><br />    &lt;div id=&quot;menu-nav&quot;&gt;............&lt;/div&gt;<br /><br />  &lt;/div&gt;<br /><br />  &lt;hr /&gt;  <br />  <br />  &lt;div id=&quot;principale&quot;&gt;<br /><br />    &lt;div class=&quot;contenuti&quot;&gt;............&lt;/div&gt;<br /><br />    &lt;div id=&quot;approfondimenti&quot;&gt;............&lt;/div&gt;<br /><br />  &lt;/div&gt;<br /><br />  &lt;hr /&gt;<br />  <br />  &lt;div id=&quot;pie-di-pagina&quot;&gt;............&lt;/div&gt;<br />  <br />&lt;/body&gt;<br />&lt;/html&gt;<br /></code></p>
+
+<p>Le tre sezioni principali sono separate da degli orizontal rule, per una migliore leggibilit&agrave; dei contenuti. L'orizontal rule non &egrave; propriamente un elemento grafico e pu&ograve; essere considerato a tutti gli effetti parte dei contenuti.</p>
+
+<p>Si noti come, finora, non si sia assolutamente parlato di come impaginare i contenuti. In effetti, a questo punto potremmo anche non avere nessuna idea su come sar&agrave; il layout.</p>
+
+<h2>Applicare i layout</h2>
+
+<p>E' a questo punto possibile applicare i vari layout al documento. Essendo la pagina web indipendente dal tipo di dispositivo o browser utilizzato &egrave; possibile <a href="../../tips/css_e_media_type/index.html" title="Come associare un foglio di stile per ogni tipo di media">specificare</a> un particolare <a href="../../tips/css_e_media_type/index.html" title="Come associare un foglio di stile per ogni tipo di media">foglio di stile per vari media</a> come lo schermo di un computer, il foglio di una stampante, uno screen reader, un PDA.</p>
+
+<p class="code"><code>body { ... }<br /><br />hr { ... }<br /><br />#intestazione { ... }<br />  #intestazione .contenuti { ... }<br />  #intestazioni #menu-nav { ... }<br /><br />#principale { ... }<br />  #principale .contenuti { ... }<br />  #principale #approfondimenti { ... }<br />  <br />#pie-di-pagina { ... }<br /></code></p>
+
+<p>Per alcuni media &egrave; consigliabile eliminare alcune parti del contenuto della pagina. Ad esempio, per la visualizzazione su schermo &egrave; possibile progettare un layout pi&ugrave; o meno complesso. In questo caso gli horizontal rule potrebbero risultare inutili, essendo la struttura del documento chiarita dal layout</p>
+
+<p class="code"><code>hr { display: none; }<br /></code></p>
+
+<p>Oppure, per la stampante, pu&ograve; risultare utile eliminare il menu di navigazione.</p>
+
+<p class="code"><code>#intestazioni #menu-nav { display: none; }<br /></code></p>
+
+<h3>Il (non)problema della retro compatibilit&agrave;</h3>
+
+<p>I CSS sono uno strumento estremamente potente, non possono esserci dubbi. I limiti alla loro diffusione sono essenzialmente due:</p>
+
+<ul>
+<li>la pigrizia dei webmaster ad apprendere nuove tecniche e a cambiare vecchie (cattive) abitudini;</li>
+
+<li>la compatibilit&agrave; con i browser pi&ugrave; datati.</li>
+</ul>
+
+<p>Se per il primo problema si tratta di un limite culturale a cui non possiamo porre molto rimedio, se non ribadendo che lavorando con i CSS tutto diventa pi&ugrave; semplice, possiamo affermare che il secondo problema &egrave; in realt&agrave; inesistente.</p>
+
+<p>Per definizione, gli standard web, come i CSS e l'XHTML, sono retrocompatibili. Semmai sono gli sviluppatori dei browser che si sono mossi con colpevole ritardo. Comunque i problemi vengono risolti dagli stessi browser che li provocano. Se trascuriamo problemi minori, come ad esempio il <a href="../IE5_box_model/index.html" title="Il box model di IE5/Win: problemi e soluzioni">box model di IE5/Win</a>, i browser pi&ugrave; recenti interpretano i CSS in maniera piuttosto valida.</p>
+
+<p>Browser piuttosto datati come IE4 e NN4 hanno invece una pessima interpretazione dei CSS. Il supporto ai CSS di IE4 e NN4 &egrave; talmente scarso che le pagine potrebbero divenire illegibili. Se IE4 &egrave; quasi del tutto estinto e pu&ograve; dunque essere trascurato, NN4, pur essendo un browser piuttosto mediocre, &egrave; ancora utilizzato da una buona percentuale degli utenti di internet. Per risolvere il problema ci sono essenzialmente tre metodi:</p>
+
+<ol>
+<li>creare un foglio di stile compatibile anche con NN4;</li>
+
+<li>non utilizzare nessun foglio di stile per NN4;</li>
+
+<li>creare un foglio di stile apposito per NN4.</li>
+</ol>
+
+<p>La prima soluzione, che a prima vista pu&ograve; sembrare la pi&ugrave; conveniente, &egrave; quella pi&ugrave; radicale e meno consigliabile. Creare un CSS che venga interpretato correttamente da NN4 significa rinunciare a quasi tutte le potenzialit&agrave; dei CSS. Il gioco non vale la candela.</p>
+
+<p>La seconda e la terza soluzione sono quelle consigliabili (soprattutto la terza) e possono essere realizzate attraverso la regola '@import'.</p>
+
+<p>Per associare un foglio di stile esterno ad una pagina ci sono essenzialmente due comandi:</p>
+
+<p class="code"><code>  &lt;head&gt;<br />    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;foglio_di_stile.css&quot; /&gt;<br />  &lt;/head&gt;<br />  <br />  <em>ovvero</em><br />  <br />  &lt;head&gt;<br />    &lt;style type=&quot;text/css&quot;&gt;<br />      @import url(&quot;foglio_di_stile.css&quot;);<br />    &lt;/style&gt;<br />  &lt;/head&gt;<br /></code></p>
+
+<p>Il primo metodo viene permette di importare i CSS su tutti i browser compatibili con i CSS, NN4 compreso. Il secondo metodo, basato su @import, non viene interpretato da browser datati come IE4 e NN4. Per impedire che il CSS venga (disastrosamente) interpretato da NN4 &egrave; sufficiente caricare il foglio di stile con il metodo @import. In questo modo la pagina sar&agrave; priva di layout, ma, avendo strutturato con cura l'(X)HTML il sito dar&agrave; totalmente accessibile anche senza grafica.</p>
+
+<p>Se invece si decidesse di utilizzare un CSS apposito per NN4 &egrave; sufficiente utilizzare ambedue i metodi per associare un foglio di stile ad una pagina web:</p>
+
+<p class="code"><code>  &lt;head&gt;<br />    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css href=&quot;css_x_nn4.css&quot; /&gt;<br />    &lt;style type=&quot;text/css&quot;&gt;<br />      @import url(&quot;css_avanzato.css&quot;);<br />    &lt;/style&gt;<br />  &lt;/head&gt;<br /></code></p>
+
+<p>Nel foglio di stile css_x_nn4.css ci sono solo quelle regole che vengono correttamente interpretate da NN4, nel foglio di stile css_avanzato.css ci sono le regole che NN4 non &egrave; in grado di intepretare. Se in css_avanzato.css ci sono delle regole presenti anche in css_x_nn4.css, quest'ultime vengono sovrascritte. Se ad esempio in css_x_nn4.css si definisce un colore di sfondo bianco per il body e in css_avanzato.css si definisce un colore di sfondo grigio per il body, le pagine su NN4 appariranno su uno sfondo bianco mentre in NN6, ad esempio, appariranno su uno sfondo grigio.</p>
+
+<h4>Avviso ai naviganti</h4>
+
+<p>Qualora si decidesse di applicare un css particolare per NN4, ovvero di non applicare affatto un foglio di stile per questo e altri browser datati, sarebbe opportuno avvisare i naviganti, attraverso un messaggio nascosto ai browser pi&ugrave; recenti, che, pur presentando i medesimi contenuti, esiste una versione pi&ugrave; &quot;piacevole&quot; del sito.</p>
+
+<p>Il messaggio dovrebbe precisare come le due versioni presentino gli stessi contenuti e come le differenze si limitino al solo aspetto grafico. L'avviso non dovrebbe apparire, come spesso si legge su alcuni siti, un rifiuto al pieno accesso al sito, bens&igrave; dovrebbe essere un invito all'utilizzo di browser pi&ugrave; performanti.</p>
+
+<p>Messaggi come &quot;sito ottimizzato per IE5 e NN6&quot; sono un inutile autogol. Inutile perch&eacute; il sito, se ben progettato e rispettoso degli standard, risulta accessibile con ogni browser, compreso lo storico Mosaic. Autogol poich&eacute; il messagio lascia intendere che si sono trascurati gli utenti dei browser pi&ugrave; datati, quando l'utilizzo degli standard e dei CSS si preoccupa proprio del contrario.</p>
+
+<p>Per nascondere l'avviso ai browser standard si pu&ograve; utilizzare la propriet&agrave; display:none da associare ad un selettore ID nel foglio di stile avanzato associato alla pagina web attraverso il metodo @import.</p>
+
+<p class="code"><code><em>codice (X)HTML</em><br />[...]<br />&lt;head&gt;<br />  &lt;style type=&quot;text/css&quot;&gt;<br />    @import url(&quot;css_avanzato.css&quot;);<br />  &lt;/style&gt;<br />&lt;/head&gt;<br />&lt;body&gt;<br />&lt;div id=&quot;avvisoNN4&quot;&gt;<br />  Questo sito &egrave; costruito secondo ...<br />&lt;/div&gt;<br />[...]<br /><br /><em>file css_avanzato.css</em><br />[...]<br />#avvisoNN4 { display: none; }<br />[...]<br /></code></p>
+
+<h2>Validare il codice</h2>
+
+<p>Affinch&eacute; tutto funzioni al meglio, vi consigliamo di validare il codice (X)HTML e quello CSS attraverso i validatori automatici del W3C [<a href="http://validator.w3.org/" title="Validatore (X)HTML - Si apre in una nuova finestra" rel="esterno">(X)HTML</a>, <a href="http://jigsaw.w3.org/css-validator/" title="Validatore CSS - Si apre in una nuova finestra" rel="esterno">CSS</a>] ovvero quelli del WDG [<a href="http://www.htmlhelp.com/tools/validator/" title="Validatore (X)HTML - Si apre in una nuova finestra" rel="esterno">(X)HTML</a>, <a href="http://www.htmlhelp.com/tools/csscheck/" title="Validatore CSS - Si apre in una nuova finestra" rel="esterno">CSS</a>].</p><p><a href="../../commenti/index.html?aid=6" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 01.09.2002</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="progettare_con_stile.zip" title="Scarica l&acute;articolo in PDF, esempi, ecc. [file zip - 50 KB]">ZIP</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../../tips/css_e_media_type/index.html">Diversi media, diversi stili</a></li>
+  <li><a href="../IE5_box_model/index.html">Il box model di IE5/Win</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=6" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/tutorial/progettare_con_stile/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<title>Esempio min-height</title>
+<style type="text/css">
+<!-- 
+.box {
+min-height	: 100px; /* non &#232; interpetata da Internet Explorer */
+height		: auto !important; /* serve per Opera, Mozilla e gli altri browser per sovrascrivere la terza dichiarazione che vincolerebbe in ogni caso l'altezza del box (cosa non prevista da min-height). Internet Explorer non d&#224; peso alla direttiva !important */
+height		: 100px; /* &#232; interpretata solo da Internet Explorer poich&#233; per gli altri browser la seconda dichiarazione &#232; pi&#249; importante. In ogni caso Internet Explorer intepreter&#224; height come se si trattasse di min-height */
+
+margin		: 1em;
+padding		: 1em;
+background	: #ffc;
+color		: #000;
+border		: 1px solid #900;
+font		: 1em georgia, serif;
+} 
+-->
+</style>
+</head>
+<body>
+<div class="box"><p>Lorem ipsum dolor sit amet, ...</p></div>
+<div class="box">
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam eget mi. Quisque non purus. Nullam ultrices odio eu tellus. Suspendisse quis wisi in est sodales vehicula. Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam eu urna eget eros pretium dapibus. Mauris sit amet enim. Nullam laoreet, nisl sed gravida lacinia, lacus risus feugiat tortor, et laoreet dolor ligula ut risus. Donec lacinia dignissim lectus. Praesent lectus mi, congue in, gravida vel, tincidunt at, justo.</p>
+<p>Etiam ut arcu a justo pretium facilisis. Ut nulla massa, vestibulum a, feugiat id, ullamcorper sed, nulla. Nunc pharetra tristique ligula. Fusce nec libero ut ligula malesuada luctus. Cras lacinia tempus magna. Duis a odio id est iaculis posuere. Nam erat. Sed urna. Cras nec nunc. Donec lectus est, accumsan id, luctus lobortis, bibendum a, leo. In id enim nec libero faucibus lacinia. Donec eu tortor et dui euismod sollicitudin. Cras imperdiet. Aenean ipsum nibh, tincidunt a, consequat eu, lobortis et, dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec euismod nulla ac ligula. Nam suscipit quam quis neque. Pellentesque feugiat gravida dolor. Sed nec enim vel orci fringilla rhoncus.</p>
+</div>
+</body>
+</html>

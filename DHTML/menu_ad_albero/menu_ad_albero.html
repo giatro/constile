@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | DHTML | Menu ad albero in JS/CSS: esempio</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<style type="text/css">
+<!-- 
+body { 
+	font: .80em verdana, helvetica, sans-serif;	
+}
+ul { 
+	list-style: disc url(doc.gif);
+	margin:0;padding:0 2em;
+}
+li.menu { list-style: square url(cartellachiusa.gif); }
+-->
+</style>
+<script type="text/javascript">
+<!--
+function mmenu(mID) {
+	var menu = document.getElementById(mID);
+	var display = menu.style.display;
+	menu.style.display = (display == "block") ? "none" : "block";
+	menu.parentNode.style.listStyleImage = (display == "block") ? "url(cartellachiusa.gif)" : "url(cartellaaperta.gif)";
+}
+
+window.onload = function() {
+	var uls = document.getElementsByTagName("ul");
+	for (i=0;i<uls.length;i++) {
+		if(uls[i].className=="submenu")uls[i].style.display = "none";
+	}
+}
+//-->
+</script>
+</head>
+<body>
+
+
+<ul>
+<li class="menu"><a href="javascript:mmenu('submenu-1')">Canale 1</a>
+	<ul class="submenu" id="submenu-1">
+		<li><a href="menu_ad_albero.html#">Link</a></li>
+		<li><a href="menu_ad_albero.html#">Link</a></li>
+		<li class="menu"><a href="javascript:mmenu('submenu-1-1')">Sotto menu Canale 1</a>
+			<ul class="submenu" id="submenu-1-1">
+				<li><a href="menu_ad_albero.html#">Link s1.1</a></li>
+				<li><a href="menu_ad_albero.html#">Link s1.2</a></li>
+				<li><a href="menu_ad_albero.html#">Link s1.3</a></li>
+				<li><a href="menu_ad_albero.html#">Link s1.4</a></li>
+				<li class="menu"><a href="javascript:mmenu('submenu-1-1-1')">Sotto Sotto menu Canale 1</a>
+					<ul class="submenu" id="submenu-1-1-1">
+						<li><a href="menu_ad_albero.html#">Link s1.1.1</a></li>
+						<li><a href="menu_ad_albero.html#">Link s1.1.2</a></li>
+						<li><a href="menu_ad_albero.html#">Link s1.1.3</a></li>
+						<li><a href="menu_ad_albero.html#">Link s1.1.4</a></li>
+					</ul>
+				</li>				
+				<li><a href="menu_ad_albero.html#">Link s1.5</a></li>								
+			</ul>
+		</li>
+	</ul>
+</li>
+<li class="menu"><a href="javascript:mmenu('submenu-2')">Canale 2</a>
+	<ul class="submenu" id="submenu-2">
+		<li><a href="menu_ad_albero.html#">Link</a></li>
+		<li><a href="menu_ad_albero.html#">Link</a></li>
+		<li class="menu"><a href="javascript:mmenu('submenu-2-1')">Sotto menu Canale 2</a>
+			<ul class="submenu" id="submenu-2-1">
+				<li><a href="menu_ad_albero.html#">Link s1.1</a></li>
+				<li><a href="menu_ad_albero.html#">Link s1.2</a></li>
+			</ul>
+		</li>		
+		<li class="menu"><a href="javascript:mmenu('submenu-2-2')">Sotto menu Canale 2</a>
+			<ul class="submenu" id="submenu-2-2">
+				<li><a href="menu_ad_albero.html#">Link s1.1</a></li>
+				<li><a href="menu_ad_albero.html#">Link s1.2</a></li>
+				<li><a href="menu_ad_albero.html#">Link s1.3</a></li>
+			</ul>
+		</li>		
+		
+	</ul>
+</li>
+<li class="menu"><a href="javascript:mmenu('submenu-3')">Canale 3</a>
+	<ul class="submenu" id="submenu-3">
+		<li><a href="menu_ad_albero.html#">Link</a></li>
+		<li><a href="menu_ad_albero.html#">Link</a></li>
+	</ul>
+</li>
+</ul>
+
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | Tips | Nascondere i CSS</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li ><a href="../../tutorial/index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li ><a href="../../clonazioni/index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li ><a href="../../template/index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li ><a href="../../DHTML/index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">Tips</a> &gt; <a href="index.html">Nascondere i css</a> &gt; Nascondere i CSS</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+<h1 id="titoloArticolo">Nascondere i CSS</h1>
+
+<p>In alcuni casi, nascondere i CSS o parte di essi a specifici browser pu&ograve; essere davvero utile. Ad esempio Netscape Navigator 4 (nato poco tempo dopo la definizione dei CSS di livello 1), non supporta affatto i CSS di livello 2 ed interpreta i CSS di livello 1 in maniera molto &quot;personale&quot;. Come conseguenza, un sito che utilizzi i CSS pu&ograve; divenire molto confuso se visualizzato con NN4. Oppure si consideri Internet Explorer 5 per Windows, il quale ha un'<a href="../../tutorial/IE5_box_model/index.html" title="Il box model secondo IE5/Win">errata interpretazione</a> del box model.</p>
+
+<h2>Netscape Navigator 4</h2>
+
+<p>Come detto NN4 ha un'interpretazione talmente scarsa dei CSS che le pagine potrebbero divenire illegibili. Per risolvere il problema ci sono essenzialmente tre metodi:</p>
+
+<ol>
+<li>creare un foglio di stile compatibile anche con NN4;</li>
+
+<li>non utilizzare nessun foglio di stile per NN4;</li>
+
+<li>creare un foglio di stile apposito per NN4.</li>
+</ol>
+
+<p>La prima soluzione, che a prima vista pu&ograve; sembrare la pi&ugrave; conveniente, &egrave; quella pi&ugrave; radicale e meno consigliabile. Creare un CSS che venga interpretato correttamente da NN4 significa per&ograve; rinunciare a quasi tutte le potenzialit&agrave; dei CSS.</p>
+
+<p>La seconda e la terza soluzione sono quelle consigliabili (soprattutto la terza) e possono essere realizzate attraverso la regola '@import'.</p>
+
+<p>Per associare un foglio di stile esterno ad una pagina ci sono essenzialmente due comandi:</p>
+
+<p class="code"><code>  &lt;head&gt;<br />    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;foglio_di_stile.css&quot; /&gt;<br />  &lt;/head&gt;<br />  <br />  <em>ovvero</em><br />  <br />  &lt;head&gt;<br />    &lt;style type=&quot;text/css&quot;&gt;<br />      @import url(&quot;foglio_di_stile.css&quot;);<br />    &lt;/style&gt;<br />  &lt;/head&gt;<br /></code></p>
+
+<p>Il primo metodo viene permette di importare i CSS su tutti i browser compatibili con i CSS, NN4 compreso. Il secondo metodo, basato su @import, non viene interpretato da browser datati come IE4 e NN4. Per impedire che il CSS venga (disastrosamente) interpretato da NN4 &egrave; sufficiente caricare il foglio di stile con il metodo @import. In questo modo la pagina sar&agrave; priva di layout, ma, avendo strutturato con cura l'(X)HTML il sito dar&agrave; totalmente accessibile anche senza grafica.</p>
+
+<p>Se invece si decidesse di utilizzare un CSS apposito per NN4 &egrave; sufficiente utilizzare ambedue i metodi per associare un foglio di stile ad una pagina web:</p>
+
+<p class="code"><code>  &lt;head&gt;<br />    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css href=\&quot;css_x_nn4.css&quot; /&gt;<br />    &lt;style type=&quot;text/css&quot;&gt;<br />      @import url(&quot;css_avanzato.css&quot;);<br />    &lt;/style&gt;<br />  &lt;/head&gt;<br /></code></p>
+
+<p>Nel foglio di stile css_x_nn4.css ci sono solo quelle regole che vengono correttamente interpretate da NN4, nel foglio di stile css_avanzato.css ci sono le regole che NN4 non &egrave; in grado di intepretare. Se in css_avanzato.css ci sono delle regole presenti anche in css_x_nn4.css, quest'ultime vengono sovrascritte. Se ad esempio in css_x_nn4.css si definisce un colore di sfondo bianco per il body e in css_avanzato.css si definisce un colore di sfondo grigio per il body, le pagine su NN4 appariranno su uno sfondo bianco mentre in NN6, ad esempio, appariranno su uno sfondo grigio.</p>
+
+<p>Oltre che a NN4, il metodo illustrato nasconde il foglio di stile anche a:</p>
+
+<ul>
+<li>IE3/Win</li>
+
+<li>IE4/Win (4.72 escluso)</li>
+
+<li>IE4.01/Mac</li>
+
+<li>IE4.5/Mac</li>
+
+<li>Konqueror 2.1.2</li>
+
+<li>Amaya 5.1/Win</li>
+</ul>
+
+<h2>Internet Explorer 5 per Windows</h2>
+
+<p>Internet Explorer 5 per Windows ha una valida interpretazione dei CSS. Gli unici due grandi problemi rilevabili sono l'interpretazione delle keyword per il dimensionamento assoluto dei font (vedi &quot;<a href="../../tutorial/come_dimensionare_i_caratteri/index.html">Dimensionare i caratteri con i CSS</a>&quot;) e l'interpretazione del box-model.</p>
+
+<p>Un bug di IE5/Win pu&ograve; risolvere (!) il problema. Sembra assurdo, ma, una volta tanto, un bug risulta molto utile.</p>
+
+<p>La tecnica &egrave; nota come &quot;il Box Model Hack&quot; di <a href="http://tantek.com/" title="La pagina si apre in una nuova finestra" rel="esterno">Tantek</a> e viene usata principalmente per risolvere il <a href="../../tutorial/IE5_box_model/index.html">problema del box model di IE5/Win</a>. Un'esempio &egrave; di seuito riportato.</p>
+
+<p class="code"><code>.box { <br /><em>/* <br />   si vuole un box largo 224px <br />   di cui 200px per i contenuti <br />   5+5px per i bordi e <br />   7+7px per il padding <br />*/</em><br />  border:5px solid; <br />  padding:7px; <br />  margin:10px<br />  width:224px; <em>/* valore per IE5/Win */</em><br />    voice-family: &quot;\&quot;}\&quot;&quot;; <br />    voice-family: inherit;<br />    width:200px; <em>/* valore per gli altri browser */</em><br />}<br />html&gt;body .box { <em>/* &quot;be nice to Opera 5&quot; !! non lasciare spazi prima o dopo '&gt;' !! */</em><br />color:blue;<br />} <br /></code></p>
+
+<p>Quando IE5/Win effettua il parsing del CSS e incontra l'istruzione <strong>voice-family: &quot;\&quot;}\&quot;&quot;;</strong>, un bug blocca l'interpretazione delle regole fino a <strong>}</strong>. L'istruzione <strong>voice-family:inherit;</strong>, ripristina il giusto valore per la propriet&agrave; <strong>voice-family</strong>. I browser che non hanno il medesimo bug di IE5/Win continueranno il parsing delle regole assegnate alla class '.box', sovrascrivendo la larghezza precedentemente assegnata.</p>
+
+<p>Non &egrave; solo IE5/Win ad avere un bug che impedisce di continuare a leggere le istruzioni della classe 'box'. Ad esempio anche Opera 5 ha il medesimo errore ma, a differenza di IE5/Win, ha una corretta interpretazione del box model. La regola assegnata subito dopo attraverso il selettore 'html&gt;body .box' (non interpretato da IE6/Win e inferiori) permette ad Opera 5 di leggere la giusta istruzione (da cui il nome &quot;be nice to Opera 5&quot; assegnato da Tantek alla regola).</p>
+
+<p>Bisogna per&ograve; fare molta attenzione. Se non viene specificato il giusto <a href="http://www.alistapart.com/stories/doctype/" title="Fix Your Site With the Right DOCTYPE" rel="esterno">DOCTYPE della pagina</a>, i browser di nuova generazione (IE6, NN6) funzioneranno con precedenti versioni proprietarie dei DOCTYPE. Per esempio IE6/Win funzioner&agrave;, dal punto di vista dei CSS, come il vecchio IE5/Win riproponendo l'errata interpretazione del box model, ma la tecnica di Tantek non risolver&agrave; il problema, poich&eacute; il bug che la faceva &quot;funzionare&quot; non &egrave; presente (fortunatamente) in IE6/Win. Lo stesso avviene (con IE6) se si utilizza il prologo ?xml:</p>
+
+<p class="code"><code>&lt;?xml version=&quot;1.0&quot;?&gt;<br /></code></p>
+
+<p>Non essendo il prologo necessario, &egrave; meglio non includerlo nelle pagine.</p>
+
+<h2>E gli altri browser?</h2>
+
+<p>Ci sono molte altre tecniche, raccolte presso <a href="http://w3development.de/css/hide_css_from_browsers/" title="tecniche varie per nascondere i CSS ai browser">w3development.de</a>, che permettono di nascondere in modi diversi i CSS a diversi altri browser. Qui si &egrave; cercato di illustrare le due tecniche pi&ugrave; diffuse, poich&eacute; pi&ugrave; utili, fra i webmaster. Si consiglia comunque di dare un'occhiata alle <a href="http://w3development.de/css/hide_css_from_browsers/" title="tecniche varie per nascondere i CSS ai browser">altre tecniche</a> soprattutto per non nascondere i CSS a un browser per errore.</p><p><a href="../../commenti/index.html?aid=9" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 01.09.2002</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="nascondere_i_css.zip" title="Scarica l&acute;articolo in PDF, esempi, ecc. [file zip - 26 KB]">ZIP</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../../tutorial/IE5_box_model/index.html">Il box model di IE5/Win</a></li>
+  <li><a href="../../tutorial/come_dimensionare_i_caratteri/index.html">Dimensionare i caratteri con i CSS</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=9" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/tips/nascondere_i_css/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+

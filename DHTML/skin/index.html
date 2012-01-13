@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | DHTML | Skin alternative in JS/CSS</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li ><a href="../../tutorial/index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li ><a href="../../clonazioni/index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li ><a href="../../template/index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li ><a href="../../tips/index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">DHTML</a> &gt; <a href="index.html">Skin</a> &gt; Skin alternative in JS/CSS</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+<h1 id="titoloArticolo">Skin alternative in JS/CSS</h1>
+<p>Dare la possibilit&agrave; agli utenti di scegliere l'aspetto del sito &egrave; certamente un bel servizio, capace anche migliorare l'accessibilit&agrave; per gli utenti con problemi alla vista, come gli ipovedenti. Ci&ograve; &egrave; possibile grazie ai <acronym title="Cascading Style Sheets">CSS</acronym> e al <acronym title="Document Object Model">DOM</acronym>.</p>
+<h2>Un sito con molte facce</h2>
+<p>Abbiamo pi&ugrave; volte visto come i CSS permettano di <a href="../../tutorial/progettare_con_stile/index.html">separare i contenuti di un sito dal suo layout</a>. Essendo la grafica distinta dal codice (X)HTML della pagina, &egrave; possibile ottenere aspetti differenti semplicente associando differenti fogli di stile come nella <a href="skin.html">pagina di esempio</a> associata all'articolo.</p>
+<p>Per ottenere questo risultato, l'ideale sarebbe utilizzare uno script lato server (PHP, JSP, ...). Purtroppo non sempre ci&ograve; &egrave; possibile, poich&eacute; non tutti i siti hanno a disposizione il supporto di tali linguaggi sul proprio server. Una valida alternativa &egrave; utilizzare uno script in Javascript che funzioni direttamente sul browser dell'utente. Lo script presentato in questo articolo funziona solo se i cookie sono attivi e se il browser ha un valido supporto del <acronym title="Document Object Model">DOM</acronym> come ad esempio IE5, IE6, Mozilla 1, Netscape 7.</p>
+<h2>Come associare il foglio di stile</h2>
+<p>Il foglio di stile deve essere associato col seguente codice:</p>
+<p class="code"><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;stile.css&quot; media=&quot;screen&quot; /&gt;</code></p>
+<p>E' importante che il foglio di stile sia collegato specificando <code>media=&quot;screen&quot;</code> (E' in generale buona norma <a href="../../tips/css_e_media_type/index.html">specificare il media</a> a cui il foglio di stile &egrave; associato).</p>
+<p>I lettori pi&ugrave; esperti noteranno che ci&ograve; non permette l'utilizzo del metodo <code>@import</code> per escludere fogli di stile elaborati a browser quali Netscape Navigator 4. In realt&agrave; ci&ograve; pu&ograve; facilmente essere ottenuto utilizzando il metodo <code>@import</code> direttamente nel foglio di stile.</p>
+<h2>Lo script</h2>
+<p>Il codice Javascript, per semplicit&agrave; incluso nella <a href="skin.html">pagina di esempio</a>, &egrave; il seguente</p>
+<p class="code"><code>
+function createCookie(name,value,days) {<br />
+<em>// istruzioni per creare il cookie, non interessa ai fini dell'articolo</em><br />
+}<br />
+<br />
+function readCookie(name) {<br />
+<em>// istruzioni per leggere il cookie, non interessa ai fini dell'articolo</em><br />
+}<br />
+<em>// memorizzazione del foglio di stile scelto e aggiornamento della pagina</em><br />
+function setCSS(nome_file_css) {<br />
+ createCookie('skinUtente',nome_file_css,365);<br />
+location.reload();<br />
+}<br />
+<em>// impostazione del foglio di stile</em><br />
+function setCSShref(nome_file_css) {<br />
+var link_ = document.getElementsByTagName(&quot;link&quot;);<br />
+for ($i=0;$i&lt;link_.length;$i++)<br />
+ if(link_[$i].media==&quot;screen&quot;) link_[$i].href=nome_file_css+&quot;.css&quot;;<br />
+}<br />
+<em>// scelta del foglio di stile</em><br />
+window.onload = function() {<br />
+ nome_file_css = readCookie('skinUtente');<br />
+ if(nome_file_css) setCSShref(nome_file_css);<br />
+}
+</code></p>
+<p>Analizziamo il codice cominciando dalla memorizzazione del foglio di stile scelto e aggiornamento della pagina. Quando la funzione <code>setCSShref(nome_file_css)</code> viene invocata, viene creato un cookie che memorizza nella variabile <code>skinUtente</code> il nome del file CSS (passato attraverso la variabile <code>nome_file_css</code>) che si vuole attivare per specificare il layout della pagina e viene ricaricata la pagina (ci&ograve; &egrave; necessario con Internet Explorer ma non con Mozilla).</p>
+<p>Quando la pagina &egrave; (ri)caricata viene letto il nome del file CSS dal cookie e memorizzato nella variabile <code>nome_file_css</code>. Se il cookie esiste viene invocata la funzione <code>setCSShref(nome_file_css)</code>.</p>
+<p>La funzione <code>setCSShref(nome_file_css)</code> si occupa di impostare il giusto foglio di stile modificando il valore del parametro <code>href</code> nel tag <code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;stile.css&quot; media=&quot;screen&quot; /&gt;</code>. In pratica lo script memorizza nella variabile <code>link_</code> tutti i tag <code>LINK</code> presenti nel documento e identifica quello su cui agire attraverso il parametro <code>media=&quot;screen&quot;</code>. Una volta identificato il giusto tag <code>LINK</code> su cui agire, altera il parametro <code>href</code> per selezionare il giusto foglio di stile.</p>
+<h2>Implementazione</h2>
+<p>L'implementazione dello script &egrave; estremamente semplice. Si supponga di aver creato tre differenti fogli di stile:</p>
+<ol>
+<li>skin1.css: il foglio di stile per la skin di default;</li>
+<li>skin2.css: il foglio di stile per una skin alternativa;</li>
+<li>accessibile.css: il foglio di stile creato appositamente per favorire la navigazione a visitatori con problemi della vista come gli ipovedenti e i daltonici (dettagli su come creare un foglio di stile adatto a questo tipo di utenti vi consiglio di leggere il breve ma ottimo saggio &quot;<a title="[IL LINK SI APRE IN UNA NUOVA FINESTRA]" href="http://www.francofrascolla.it/Saggio%20ipovisione%20e%20web.htm#LOGO" rel="esterno">Ipovisione e accessibilit&agrave; e fruibilit&agrave; del web</a>&quot;).</li>
+</ol>
+<p>Per selezionare i vari CSS, dunque per impostare le varie, skin &egrave; sufficiente creare dei link che invochino la <code>funzione setCSS(<em>nome_file_css</em>)</code>, dove <code>nome_file_css</code> &egrave; il nome del file che si vuole attivare privo dell'estensione <strong>.css</strong>. Un'esempio di codice (X)HTML per la creazione dei link potrebbe essere il seguente:</p>
+<p class="code"><code>
+&lt;a href=&quot;javascript:setCSS('skin1')&quot;&gt;Skin 1&lt;/a&gt; |<br />
+&lt;a href=&quot;javascript:setCSS('skin2')&quot;&gt;Skin 2&lt;/a&gt; |<br />
+&lt;a href=&quot;javascript:setCSS('accessibile')&quot;&gt;Alta accessibilit&agrave;&lt;/a&gt;
+</code><p><a href="../../commenti/index.html?aid=16" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 14.12.2002</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="skin.html">Esempio</a></li>
+<li><a href="skin.zip" title="Scarica l&acute;articolo in PDF, esempi, ecc. [file zip - 28 KB]">ZIP</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../../tutorial/progettare_con_stile/index.html">Progettare con i CSS</a></li>
+  <li><a href="../ridimensionare_i_caratteri/index.html">Ridimensionare i caratteri con un click</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=16" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/DHTML/skin/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+

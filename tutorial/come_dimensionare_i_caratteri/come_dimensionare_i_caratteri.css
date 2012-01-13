@@ -1,0 +1,14 @@
+/*
+File 			> foglio di stile di esempio sul dimensionamento dei caratteri.
+					  Maggiori dettagli @ http://www.constile.org/tutorial/come_dimensionare_i_caratteri/
+Autore 		> gianluca troiani | g.troiani@constile.org | www.constile.org
+Versione	> 1.0.2002.09.26
+*/
+body			{ font: 80% verdana, helvetica, sans-serif }
+.smaller	{ font-size: 0.80em; }
+.bigger		{ font-size: 1.25em; }
+.font10px	{ font-size: 10px; }
+.font14px	{ font-size: 14px; }
+
+div { border: 1px solid #999; margin:20px;padding:10px; }
+#stylemenu { float: left; display: none; }

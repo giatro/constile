@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="/css/xml.css" type="text/css"?>
+<rss version="0.91">
+<channel>
+	<title>.ConStile</title>
+	<link>http://www.constile.org/constile.xml</link>
+	<docs>http://www.constile.org/constile.xml</docs>
+	<description>.ConStile: una guida dedicata all&#39;uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C.</description>
+	<webMaster>mailto:webmaster@constile.org</webMaster>
+	<language>it</language>
+	<item>
+		<title>Implementare min-height anche su Internet Explorer</title>
+		<description>Internet Explorer, nonostante i grossi passi avanti fatti dalla versione 6.0 rispetto alla versione 5.x, ha ancora diversi problemi nel supporto di molte, troppe, propriet&#224; dei CSS.Una delle propriet&#224; pi&#249; utili a non essere supportate &#232; min-height.In questo articolo vedremo come superare il problema.</description>
+		<link>http://www.constile.org/tips/min-height/</link>
+	</item>
+	<item>
+		<title>Pagine zoomabili</title>
+		<description>In questo articolo vedremo come realizzare un semplice layout in grado di assecondare il ridimensionamento dei caratteri. L&#8217;effetto &#232; simile a quello di una pagina che pu&#242; essere ingrandita con una sorta di lente di ingrandimento.</description>
+		<link>http://www.constile.org/template/pagine_zoomabili/</link>
+	</item>
+	<item>
+		<title>Immagini Proporzionali con i CSS</title>
+		<description>In alcuni e' molto utile dimensionare le immagini di una pagina web in modo proporzionale anziche' in modo assoluto, cosi' da avere immagini che si ridimensionano in basse alla finestra del browser.In questo articolo vedremo come fare cio' con i CSS.</description>
+		<link>http://www.constile.org/tips/immagini_proporzionali/</link>
+	</item>
+	<item>
+		<title>Menu verticali con i CSS</title>
+		<description>[versione riveduta e corretta]In questo articolo saranno illustrati tre esempi di come sia possibile trasformare una semplice lista di link in un menu verticale. Attraverso l&#39;uso delle pseudo-classi a:hover e a:active e' possibile ottenere effetti roll-over senza l&#39;uso di javascript.</description>
+		<link>http://www.constile.org/template/menu_verticali/</link>
+	</item>
+	<item>
+		<title>Emulare le immagini mappate con i CSS</title>
+		<description>Tramite i CSS e' possibile realizzare immagini mappate utilizzando una semplice lista di link. Il codice XHTML e' assolutamente semplice e totalmente accessibile con qualsiasi dispositivo. Il codice CSS e' di facile comprensione e completamente personalizzabile.</description>
+		<link>http://www.constile.org/tips/emulare_le_immagini_mappate_con_i_css/</link>
+	</item>
+	<item>
+		<title>Banner espandibili con i CSS</title>
+		<description>Non sempre e' necessario il JavaScript per ottenere effetti dinamici. In questo articolo vedremo come realizzare dei banner che si espandono al passaggio del mouse, utilizzando esclusivamente i CSS.</description>
+		<link>http://www.constile.org/tips/banner_espandibili_con_i_css/</link>
+	</item>
+	<item>
+		<title>Layout a tre colonne per tutti i gusti</title>
+		<description>In questo articolo vedremo come realizzare un layout a tre colonne sfruttando il posizionamento assoluto invece della proprieta' float. Attraverso tre diversi CSS, col medesimo codice XHTML, otterremo tre diversi tipi di layout: a larghezza prefissata, liquido con colonne laterali di larghezza prefissata, completamente liquido.</description>
+		<link>http://www.constile.org/template/nuovo_layout_a_tre_colonne/</link>
+	</item>
+	<item>
+		<title>Come porre un box al centro della pagina</title>
+		<description>Porre un box al centro della pagina e' molto semplice, basta sapere come fare. In questo articolo vedremo un esempio di come porre al centro della pagina, sia in verticale sia in orizzontale, un box largo 350px e alto 200px.</description>
+		<link>http://www.constile.org/template/centrare_il_box/</link>
+	</item>
+	<item>
+		<title>Skin alternative in JS/CSS</title>
+		<description>Dare la possibilita' agli utenti di scegliere l'aspetto del sito e' certamente un bel servizio, capace anche migliorare l'accessibilita' per gli utenti con problemi alla vista, come gli ipovedenti. Cio' e' possibile grazie ai CSS e al DOM.</description>
+		<link>http://www.constile.org/DHTML/skin/</link>
+	</item>
+	<item>
+		<title>Menu ad albero in JS/CSS</title>
+		<description>Realizzeremo un menu ad albero sfruttando i CSS e il DOM attraverso il JavaScript. La semplicita' del CSS e degli script contrastano con l'efficacia del risultato.</description>
+		<link>http://www.constile.org/DHTML/menu_ad_albero/</link>
+	</item>
+</channel>
+</rss>

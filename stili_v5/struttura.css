@@ -1,0 +1,267 @@
+#logo { height:25px;margin:0 }
+a#logoIMG {
+	display:block;
+	height:25px;width:475px;
+}
+a#logoIMG:hover { background:transparent url(logo_on.gif) no-repeat; }
+
+#skins { 
+	padding:.1em 1em;
+	border-bottom:1px solid #000;	
+}
+#skins a { text-decoration:none }
+
+#locazione { 
+	border-top:1px dotted;
+	border-bottom:1px dotted;
+}
+#locazione A:link,#locazione A:visited { 
+	text-decoration:none; 
+	font-weight:bold; 
+	color:#009; 
+	background:transparent
+}
+#locazione A:hover,#locazione A:active { 
+	color:#fff; 
+	background:#900
+}
+
+img { border:0px solid }
+img#cover { border:1px solid #000;width:298px }
+
+#secondario h1,#secondario h2,#secondario h3,#secondario h4,#secondario h5,#secondario h6 { margin:0 }
+#articoliRecenti h1,#articoliRecenti h2,#articoliRecenti h3,#articoliRecenti h4,#articoliRecenti h5,#articoliRecenti h6 { margin:0 }
+
+pre, code.block { 
+  position:relative;
+	display:block;
+	border:1px dotted #666; 
+	padding:1em;
+	margin:1em 0;
+	background:#ffc;color:#900
+}code.block em { color:#C60;background:transparent }
+
+.help, acronym, abbr { cursor:help;border-bottom:1px dashed #900 }
+hr, .title, .nascosto, .alt, #avviso-non-standard { display:none }
+
+a:link		{ color: #009; background:transparent; text-decoration:none;border-bottom:1px solid }
+a:visited	{ color: #909; background:transparent; text-decoration:none;border-bottom:1px solid }
+a:hover		{ color: #fff; background:#900; text-decoration:none;border-bottom:1px solid #660000 }
+a:active	{ color: #900; background:#ff0; text-decoration:none;border-bottom:1px solid #900 }
+#logo a,#skin a, #locazione a, #newsletter a, #geco a, #wconstile a, #cc a { border-bottom-style:none }
+#navbar a { border-bottom-style:none }
+
+ul { 
+	list-style-type:square; 
+	margin:0 0 1em 0;
+	padding-left:2em; 
+}
+li { margin:.5em 0 }
+
+#geco {
+margin-top:1em;
+position:relative;
+height:30px;width:100%;
+background:transparent url(gecoON.gif) 50% 50% no-repeat;color:#000
+}
+#geco a {
+display:block;
+height:30px;width:100%;
+background:transparent url(geco.gif) 50% 50% no-repeat;color:#009
+}
+#geco a:hover {
+background:transparent;color:#009
+}
+
+#wconstile {
+margin-top:1em;
+position:relative;
+height:30px;width:100%;
+background:transparent url(wconstileON.gif) 50% 50% no-repeat;color:#000
+}
+#wconstile a {
+display:block;
+height:30px;width:100%;
+background:transparent url(wconstile.gif) 50% 50% no-repeat;color:#009
+}
+#wconstile a:hover {
+background:transparent;color:#009
+}
+
+#cc { border-top:3px double #fff;border-bottom:3px double #fff } 
+
+/* layout */
+
+body { 
+	padding:0 1em; 
+	margin:0;
+}
+
+#intestazione { 
+margin:0;
+background:#fff;color:#000;
+padding-bottom:5px
+}
+#navbar { margin-bottom:5px }
+#bodycontent { 
+position:relative;width:100%;
+margin:0 
+}
+
+#navbar { 
+border-top:1px solid #000;
+padding-top:5px
+}
+#footer {
+border-top:10px solid;border-bottom:10px solid;
+position:absolute;right:0;top:0;
+width:14em;
+padding:1em 0 30px 0
+}
+#secondario {
+border-top:10px solid;
+position:absolute;right:15em;top:0;
+width:12em;
+padding:1em 0;
+font-size:1em;
+}
+#principale {
+border:10px #999; /* border-top:... da' un errore nel form !!! */
+border-style:solid none none none;
+position:relative;top:0;
+margin:0 28em .5em 0;
+padding:0;
+background:#fff;color:#000
+}
+#contenuto {
+border-top:10px solid;
+position:relative;
+margin:0 15em .5em 0;
+padding:0;
+background:#fff;color:#000
+}
+
+#page-url { 
+	margin:0 297px 0 161px;
+	text-align:right;
+	font-size:.80em;
+	padding:1em 210px 0 1em;
+	height:35px;
+	background:#fff url(barcode.png) bottom center no-repeat;color:#333;
+	border-top:1px dotted #999;
+	display:none
+}
+
+#navbar ul {
+list-style: none;
+padding:6px 3em;margin:0;
+text-align:right;	
+}
+#navbar ul li { 
+	padding:5px 0;
+	margin:0;
+	display:inline;
+} #navbar ul li.nascosto { display:none }
+#navbar ul li a { 
+text-decoration:none;
+padding:5px 10px 5px 10px;
+background:transparent;color:#009;
+}
+#navbar ul li a:visited { background:transparent;color:#009 }
+#navbar ul li a:hover { background:#900;color:#fff; }
+#navbar ul li#voisietequi a { background:#fff;color:#009;padding-bottom:6px }
+#navbar ul { position:relative;top:1px }
+
+#copertina { border:1px solid #ccc;padding:1em;margin-bottom:1em;background:#eee;color:#000 }
+#copertina p { margin:0 }
+#articoliRecenti p { margin:.5em 0 1.5em 0 }
+#articoliRecenti h3 { margin-top:1em }
+h2.sezioneHome { border-bottom:1px solid #999;margin-top:2em }
+#essenziali h3 { display:inline;padding-right:.3em }
+
+#libri img { display:block;border:1px solid #666 }
+#libri #autori { font-style:italic }
+#libri .link { margin:.5em 0 }
+
+#edicola { margin-top:1em;padding-top:1em;border-top:1px solid #999 }
+#edicola img { display:block;border:1px solid #666 }
+#edicola .link { margin:.5em 0 }
+
+#online { margin-top:1em;padding-top:1em;border-top:1px solid #999 }
+#online p,#online ul { margin:0 0 .5em 0 }
+#online ul {padding:0 0 0 1.5em}
+
+.libro { border-top:1px solid #999;padding-top:.5em;margin:1em 0 3em 0;clear:left }
+.libro img { float:left;margin: .3em 0 1em 0;position:relative }
+.libro h2 { width:60%;margin:0 0 .80em 95px;padding-left:.80em }
+.libro p, .libro .autore, .libro .edizione, .libro .acquista { margin-left:95px;margin-right:0;padding-left:1em }
+.libro .acquista { margin:.5em 0 0 95px }
+
+img.esempio { 
+text-align:center;
+border:1px dashed #999; 
+padding:2px; 
+display:block; 
+margin:.5em auto 1em auto; 
+}
+
+#motore { margin:0 0 2em 0;border:1px solid #000;padding:0 0 .5em 0;position:relative;top:1em; }
+#motore .input { 
+margin:0; padding:0;
+text-align:center 
+}
+#motore input { border:2px solid;position:relative; }
+#motore .label { 
+text-align:left;
+font-weight:bold;
+border-bottom:1px solid;
+text-indent:.5em;
+margin:0 0 .5em 0;
+}
+
+#motore input { border-color:#000 #999 #999 #000;width:14em;background:#ddd;color:#000; }
+#motore input:hover { background:#eee;color:#000; }  
+#motore input.but { border-color:#996 #330 #330 #996;background:#663;color:#fff;width:7em }
+#motore input.but:hover { background:#996;color:#fff }
+#motore input.but:active { background:#996;color:#fff;border-color:#663 }
+
+#newsletter { margin:1em 0;padding:0;text-align:center;border:1px solid #000;background:#fff;color:#000 }
+#newsletter form { margin:0 }
+#newsletter a { display:block;background:#fff;color:#009;padding-bottom:5px }
+#newsletter a:visited { background:#fff;color:#909 }
+#newsletter a:hover { background:#900;color:#fff }
+#newsletter form p { 
+margin:0;padding:0 0 0.5em 0;
+background:#fff;color:#000
+}
+#newsletter input.txt,#newsletter input.but { border:2px solid; }
+#newsletter .label { 
+text-align:left;
+font-weight:bold;
+border-bottom:1px solid #000;
+text-indent:.5em;
+margin:0 0 .5em 0 
+}
+#newsletter input.txt { border-color:#000 #999 #999 #000;width:8em;background:#ddd;color:#000; }
+#newsletter input:hover { background:#eee;color:#000; }  
+#newsletter input.but { border-color:#996 #330 #330 #996;background:#663;color:#fff;width:8em;margin-top:5px }
+#newsletter input.but:hover { background:#996;color:#fff }
+#newsletter input.but:active { background:#996;color:#fff;border-color:#663 }
+
+#footer p { margin:1em 5px;padding:5px }
+#footer p#cc { margin:1em 0 }
+#footer p#geco,#footer p#wconstile { margin:1em 0;padding:0 }
+#footer img { vertical-align: middle }
+
+#footer #avviso {text-align:center;line-height:1.5em;}
+#footer #avviso a {font-size:130%;font-weight:bold;background:transparent;color:#900}
+#footer #avviso a:hover {background:#900;color:#fff}
+
+#spaghetti {margin:1em 0;padding:1em 0;border-top:3px double #fff;border-bottom:3px double #fff}
+#spaghetti p {padding:0;margin:0;width:100%;overflow:hidden}
+#spaghetti img {border:1px solid}
+
+p#navGenerale {border-top:3px double #fff;border-bottom:3px double #fff;margin:1em 0;padding:1em 0}
+
+#newsletter input {margin:.5em auto}
+#motore input {margin:.5em}

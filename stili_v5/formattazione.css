@@ -1,0 +1,78 @@
+html { font:80% verdana,helvetica,sans-serif }
+body { font-size:100%;background:#fff;color:#000 }
+
+h1 { font-size:1.50em }
+h1#titoloArticolo { font:900 3em georgia,palatino,serif;width:60%;padding-left:50px }
+h2 { font-size:1.25em;margin:1.5em 0 1em 0 }
+h3,h4,h5,h6 { font-size:1em }
+
+p.img { margin:1em 2em;padding:1em;border:1px dashed #999;background:#eee;color:#000 }
+p.img img {border:1px solid #000;}
+
+.libro h2 { font-variant:small-caps;font-size:1.25em }
+#copertina h2 { font-variant:small-caps;font-size:1.5em;line-height:3em;letter-spacing:.1em;word-spacing:.2em }
+
+code { font:bold 1.1em "courier new", monospace; letter-spacing:.1em; word-spacing:.2em;color:#900;background:#ffc }
+p.code { line-height:1em; margin:0 2em;padding:0 .5em;border-bottom:1px solid #fff;background:#ffc;color:#900 }
+pre, code.block { line-height:1em; font-size:1.1em }
+code strong { background:#ff6;color:#900 }
+code em { font-style:normal;background:#ffc;color:#600 }
+
+#locazione { line-height:1.5em;letter-spacing:.1em;word-spacing:.2em }
+
+#page-url { text-align:right;	font-size:.80em }
+
+input { font:bold 1em verdana,helvetica,sans-serif;letter-spacing:.1em;word-spacing:.3em;padding:0 3px }
+
+#footer { text-align:center }
+
+#online p { text-align:right }
+
+#avviso {
+background:#ffc;
+color:#000;
+border:1px dashed #000;
+padding:.5em;
+text-align:left;
+}
+#motore input {margin-left:1em}
+#newsletter input {display:block;margin:0 auto}
+#newsletter input.txt {margin-bottom:1em}
+
+
+/* bottoni W3C ispirati da http://www.sovavsiti.cz/css/w3c_buttons.html */
+
+.w3cbutton a { 
+white-space:nowrap;
+display:block;
+width:10em; 
+font:1em arial,helvetica,sans-serif;
+border:1px solid #000;
+background:#fc6;color:#000;
+margin:1em auto;
+text-align:left;
+}
+.w3cbutton a:link,.w3cbutton a:visited { 
+background:#fc6;color:#000;
+}
+.w3cbutton a:hover { background:#ff9;color:#333 }
+.w3cbutton a:hover .w3c { background:#fff;color:#3f7acf }
+.w3cbutton .w3c {
+padding:0 .5em;margin-right:.25em;
+background:#fff;color:#0c479d;
+}
+.w3cbutton .waiA { 
+background:transparent;
+color:#900
+}  
+
+#rss a { 
+	font-weight:bold;
+    background:#f60;
+    color:#fff;
+    padding:0 .3em;
+    border-width:1px;
+    border-style:solid;
+    border-color:#fc0 #960 #960 #fc0 
+	}
+#rss a:hover {background:#f90;color:#fff}

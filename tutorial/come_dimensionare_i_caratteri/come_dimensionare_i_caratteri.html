@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>.ConSitle.[org] | Tutoria | Dimensionarei caratteri con i CSS: esempio</title>
+<link rel="stylesheet" type="text/css" href="come_dimensionare_i_caratteri.css" />
+</head>
+<body>
+
+<div style="float:left; width:70%; margin:0;padding:0;border:none;">
+
+<div class="font10px">Carattere fisso a 10px</div>
+
+<div class="font14px">Carattere fisso a 14px</div>
+
+<div>Carattere del body (80% del font predefinito dal browser)
+<div class="smaller">
+	Carattere della classe smaller, 80% del carattere del parent.
+		<div class="smaller">
+			Carattere della classe smaller, 80% del carattere del parent.
+				<div class="smaller">
+					Carattere della classe smaller, 80% del carattere del parent.
+				</div>
+		</div>
+</div>
+</div>
+
+<div>Carattere del body (80% del font predefinito dal browser)
+<div class="bigger">
+	Carattere della classe bigger, 125% del carattere del parent.
+		<div class="bigger">
+			Carattere della classe bigger, 125% del carattere del parent.
+				<div class="bigger">
+					Carattere della classe bigger, 125% del carattere del parent.
+				</div>
+		</div>
+</div>
+</div>
+
+</div>
+
+<div id="stylemenu"><script type="text/javascript">
+<!--
+
+if (document.getElementById) { 
+	document.write('Dimensione dei caratteri:<br />'); 
+	document.write('<a href="javascript:setFontSize(\'small\')">Small</a> | ');
+	document.write('<a href="javascript:setFontSize(\'medium\')">Medium</a> | ');	
+	document.write('<a href="javascript:setFontSize(\'large\')">Large</a>');
+	document.getElementById("stylemenu").style.display="block";
+}
+function setFontSize(value) {
+	theStyle = null;
+	if (value == "small") theStyle 	= "70%";
+	if (value == "medium") theStyle 	= "80%";
+	if (value == "large") theStyle 	= "100%";
+	if (theStyle) 
+		document.getElementsByTagName("body")[0].style.fontSize = theStyle;
+}
+// -->
+</script></div>
+</body>
+</html>
+

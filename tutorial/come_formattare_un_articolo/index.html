@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="it">
+<head>
+<title>.ConStile | Tutorial | Come formattare un articolo</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Una guida dedicata all'uso dei fogli di stile a cascata (cascade style sheets - CSS) per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C." />
+<meta name="keywords" content="CSS, fogli di stile, HTML, XHTML, layout, template, guide, tutorial, suggerimenti, tips, codice, open content" />
+<meta http-equiv="revisit-after" content="15 days" />
+<meta http-equiv="imagetoolbar" content="false" />
+<meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- èé -->
+<link rel="top" href="../../index.html" title="Homepage" />
+<link rel="search" href="../../ricerca.php" title="Cerca nell'archivio di .ConStile" />
+<link rel="author" href="../../informazioni.php#autore" title="Informazioni sull'autore di .ConStile" />
+<link rel="copyright" href="../../informazioni.php#legali" title="Informazioni legali" />
+<link rel="blog" href="http://geco.constile.org/" title="Geco: il blog associato a .ConStile" />
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../constile.xml" />
+<link rel="toc" href="../../mappa.php" title="Mappa di .ConStile" />
+<link rel="index" href="../../index.html" title="La pagina principale di .ConStile" />
+<link rel="stylesheet" type="text/css" media="screen" href="../../stili_v5/schermo.css" />
+<link rel="stylesheet" type="text/css" media="print" href="../../stili_v5/print.css" />
+<link media="aural, braille" rel="stylesheet" href="../../stili_v5/aural.css" type="text/css" />
+<link media="tty" rel="stylesheet" href="../../stili_v5/tty.css" type="text/css" />
+<link rel="shortcut icon" href="../../favicon.ico" />
+<!-- wget/1.10.2 (red hat modified) -->
+</head>
+<body>
+<div id="intestazione">
+<!-- logo -->
+<div id="logo"><a id="logoIMG" href="../../index.html" title=".ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C"><span class="title">.ConStile, una guida dedicata all'uso dei CSS per lo sviluppo di siti web leggeri, usabili, conformi agli standard W3C</span></a></div>
+<div id="issn"><acronym title="International Standard Serial Number">ISSN</acronym> 1722-375X</div>
+<div class="nascosto">[<a name="TOP" id="TOP" href="index.html#MENU">Vai al menu di navigazione principale</a>]</div>
+<!-- /logo -->
+<hr />
+<!-- barra di navigazione -->
+<div id="navbar" title="Menu di navigazione">
+<h2 class="nascosto">Sezioni</h2>
+	<ul>
+		<li class="nascosto">[<a name="MENU" id="MENU" href="index.html#CONTENUTI">Vai ai contenuti</a>]</li>
+		<li ><a href="../../index.html" title="Pagina principale del sito">Homepage</a></li>
+		<li id="voisietequi"><a href="../index.html" title="Guide e consigli per la realizzazione di siti web tramite i CSS.">Tutorial</a></li>
+		<li ><a href="../../clonazioni/index.html" title="Esempi di come con i CSS sia possibile riprodurre il layout di qualsiasi sito.">Clonazioni</a></li>
+		<li ><a href="../../template/index.html" title="Template realizzati con i CSS da utilizzare per il proprio sito.">Template</a></li>
+		<li ><a href="../../tips/index.html" title="Piccoli suggerimenti per ottenere il massimo dai CSS.">Tips</a></li>
+		<li ><a href="../../DHTML/index.html" title="Come integrare (X)HTML, CSS e JavaScript per aggiungere un po' di sale al proprio sito web.">DHTML</a></li>
+		<li ><a href="../../libri/index.html" title="Libri suggeriti per approfondire la conoscenza degli standard W3C, dell'XHTML, dei CSS">Libri</a></li>
+	</ul>
+</div>
+<!-- /barra di navigazione -->
+<hr />
+<!-- barra di locazione -->
+<div id="locazione" title="&quot;Voi siete qui&quot;: Attuale posizione nel sito"><a href="../../index.html" title="Vai alla homepage">Home</a> &gt; <a href="../index.html">Tutorial</a> &gt; <a href="index.html">Come formattare un articolo</a> &gt; Come formattare un articolo</div>
+<!-- /barra di locazione -->
+</div>
+<hr />
+<div id="bodycontent">
+<div class="nascosto">[<a name="CONTENUTI" id="CONTENUTI" href="index.html#PIEDE">Vai al pi&egrave; di pagina</a>]</div>
+
+
+<div id="principale">
+
+<h1 id="titoloArticolo">Come formattare un articolo</h1>
+
+<p>In questo articolo vedremo come formattare un articolo rivolgendo particolare attenzione ai paragrafi, alle immagini e alle citazioni. Il risultato &egrave; <a href="come_formattare_un_articolo.html" title="L'esempio si apre in una nuova finestra" rel="esterno">mostrato nella pagina di esempio</a>.</p>
+
+<h2>Titolo, autore, descrizione</h2>
+
+<p>Per realizzare il titolo e la descrizione sono stati utilizzati gli header H1 e H2, per indicare l'autore &egrave; stato utilizzato un div con un identificatore.</p>
+
+<p>Questa parte non necessita di particolari commenti poich&eacute; ci siamo limitati a specificare i font, i colori, gli allineamenti ed margini e bordi. Il codice utilizzato &egrave; il seguente:</p>
+
+<p class="code"><code><em>CSS</em><br />h1 { <br />  font:italic 900 5em/1em georgia, serif;<br />  color: #F93;<br />  display: block;<br />  margin:50px 0 0 0;<br />  border-top: 5px double #F93;<br />  border-bottom: 2px solid #F93;<br />  padding-left: 50px;<br />}<br />h2 { <br />  font: italic 900 1.5em/1em verdana, helvetica, sans-serif;<br />  display: block;<br />  margin:10px 0;<br />  text-align: right;<br />  padding-right: 100px;<br />}<br />#autore { <br />  font: .70em verdana, helvetica, sans-serif;<br />  text-align: right; <br />  margin:1px 0;<br />  padding-right:50px;<br />  border-style: solid none;<br />  border-width: 1px;<br />  border-color: #F93;<br />}<br /><br /><em>(X)HTML</em><br />&lt;h1&gt;Titolo dell'articolo&lt;/h1&gt;<br />&lt;div id=&quot;autore&quot;&gt;di Pinco Pallino&lt;/div&gt;<br />&lt;h2&gt;Spazio dedicato ad una breve <br />introduzione per descrivere l'argomento <br />trattato nell'articolo&lt;/h2&gt;<br /></code></p>
+
+<h2>Il corpo dell'articolo</h2>
+
+<p class="code"><code>#articolo {<br />  font: 1em georgia, serif;<br />  margin:0 50px 50px 50px;<br />  padding-bottom:2em;<br />  border-bottom: 2px dotted #F93; <br />}<br /></code></p>
+
+<p>Il corpo dell'articolo &egrave; stato racchiuso in un DIV identificato dal selettore <strong>#articolo</strong>. Oltre a specificare margini per distanziare il testo dal bordo, la visibilit&agrave; del testo &egrave; stata aumentata utilizzando un carattere serif di dimensioni sufficientemente grandi.</p>
+
+<h3>I paragrafi</h3>
+
+<p class="code"><code>#articolo p { <br />  text-indent: 2em; <br />  text-align: justify <br />}<br /></code></p>
+
+<p>Per migliorare l'identificazione dei diversi paragrafi all'interno dell'articolo, abbiamo indentato il paragrafo e giustificato il testo. Un esempio &egrave; riportato nella seguente immagine:</p>
+
+<img class="esempio" src="../../images/tutorial/come_formattare_un_articolo/paragrafo.gif" alt="[Immagine: Esempio di paragrafo giustificato con un'indentazione di 2em]" title="Esempio di paragrafo giustificato con un'indentazione di 2em" /> 
+<h4>Il paragrafo iniziale</h4>
+
+<p>Spesso negli articoli il primo paragrafo, specialmente la prima lettera, &egrave; formattato diversamente dal resto dell'articolo. Nel nostro caso si &egrave; scelto di formattare differentemente la prima riga e la prima lettera del primo paragrafo.</p>
+
+<p>I <acronym title="Cascade Style Sheets">CSS</acronym> mettono a disposizione lo <a href="../introduzione_ai_css/sezione_3.php#s3_4" title="maggiori informazioni sugli pseudo-elementi">pseudo-elemento</a> <strong>first-child</strong> che permetterebbe di riconoscere il primo paragrafo dell'articolo attraverso il selettore <strong>#paragrafo p:first-child</strong>, ma purtroppo solo i browser basati su Geko sono in grado di riconoscere lo pseudo-elemento <strong>first-child</strong>. Dovremo dunque introdurre un nuovo identificatore, <strong>#primo-paragrafo</strong>, da utilizzare nel selettore <strong>#articolo p#primo-paragrafo</strong>. La prima lettera e la prima riga del primo paragrafo saranno selezionati attraverso i seguenti selettori: <strong>#articolo p#primo-paragrafo:first-letter</strong> e <strong>#articolo p#primo-paragrafo:first-line</strong>.</p>
+
+<h5>La prima lettera</h5>
+
+<p class="code"><code>#articolo p#primo-paragrafo:first-letter { <br />  font-size: 3em; <br />  font-style: italic;<br />  float: left;<br />  background: #F93;<br />  color: #FFF;<br />  margin:0 5px 5px -50px;<br />  padding: 5px 5px 5px 50px;<br />  line-height:1em;<br />}<br /></code></p>
+
+<p>La prima lettera del primo paragrafo &egrave; alta il triplo del testo dell'articolo ed &egrave; in corsivo. Attravero la propriet&agrave; <strong>float:left</strong> si ottiene l'effetto di circondare la lettera col resto dell'articolo. Ulteriore risalto &egrave; dato specificando un colore di background e del testo differenti dal resto dell'articolo.</p>
+
+<p>Specificando un margine sinistro pari (ma negativo) al margine specificato per il corpo dell'articolo (50px) e un padding sinistro pari (positivo) al margine sinistro (-50px) si ottiene un effetto a &quot;linguetta&quot;. Affinch&eacute; l'effetto funzioni correttamente, il primo paragrafo non deve essere indentato, per fare ci&ograve; si utilizza la seguente regola:</p>
+
+<p class="code"><code>#articolo p#primo-paragrafo { text-indent: 0em; }<br /></code></p>
+
+<p>La prima lettera del primo paragrafo apparir&agrave; come nella seguente immagine:</p>
+
+<img class="esempio" src="../../images/tutorial/come_formattare_un_articolo/primalettera.gif" alt="[Immagine: Esempio di come appare la prima lettera, maggiori dettagli sono disponibili nell'articolo]" title="Esempio di come appare la prima lettera, maggiori dettagli sono disponibili nell'articolo" /> 
+<h5>La prima riga</h5>
+
+<p>Per la prima riga del primo paragrafo si &egrave; scelto di utilizzare il maiuscoletto, il codice CSS utilizzato &egrave; il seguente:</p>
+
+<p class="code"><code>#articolo p#primo-paragrafo:first-line { <br />  font-variant: small-caps;<br />}<br /></code></p>
+
+<h3>Le citazioni</h3>
+
+<p class="code"><code>#articolo blockquote { <br />  width:20%;<br />  font: .70em/2em verdana, helvetica, sans-serif; <br />  word-spacing: .2em;<br />  padding: 2.5em 1em;<br />  margin: 0 0 2em 2em;<br />  border:1px solid #F93;<br />  float:right;  <br />}<br />#articolo blockquote span.special-quote { <br />  color: #F93;<br />  font: italic 900 2em/1em georgia, serif;<br />}<br /><br /></code></p>
+
+<p>Per le citazioni si &egrave; utilizzato il tag BLOCKQUOTE. Attraverso la propriet&agrave; <strong>float: right</strong> si permette al resto dell'articolo di disporsi attorno al box della citazione. La larghezza &egrave; stata impostata al 20%, margini e padding sono stati regolati per fornire un aspetto pi&ugrave; ordinato al box. Il carattere &egrave; diverso da quello dell'articolo per meglio rappresentare la separazione fra articolo e citazione.</p>
+
+<p>Affinch&eacute; le virgolette fossero evidenziate &egrave; stata creata la classe <strong>special-quote</strong>. Dimensioni dei font e interlinea sono stati impostati al fine di avere un insieme armonico. Si noti ad esempio che l'interlinea dell'elemento BLOCKQUOTE &egrave; stato impostato al valore 2em che &egrave; la dimensione scelta per le virgolette della classe <strong>special-quote</strong>, la cui interlinea &egrave; pari a 1em e quindi coincidente a quella del testo (La classe special-quote ha un'interlinea pari al 100% della dimensione del prorprio font che &egrave; il 200% del font del testo dell'elemento BLOCKQUOTE che ha un'interlinea pari al 200% della dimensione del font, dunque le due interlinee sono uguali). Un'esempio &egrave; riportato nella seguente immagine:</p>
+
+<img class="esempio" src="../../images/tutorial/come_formattare_un_articolo/citazione.gif" alt="[Immagine: Esempio di come appare il box delle citazioni, maggiori dettagli sono disponibili nell'articolo]" title="Esempio di come appare il box delle citazioni, maggiori dettagli sono disponibili nell'articolo" /> 
+<h3>Le immagini</h3>
+
+<p class="code"><code>#articolo div.immagine { <br />  width:200px;<br />  padding:5px;<br />  font: .70em verdana, helvetica, sans-serif; <br />  margin:0px 10px 10px 0px;<br />  border:1px solid #F93;<br />  float:left; <br />}<br />#articolo div.immagine img {<br />  border-bottom:3px solid #F93;<br />  display:block;  <br />  padding-bottom:1px;<br />} <br /></code></p>
+
+<p>Per le immagini &egrave; stata specificata la classe <strong>immagine</strong> da utilizzare col tag div. Attraverso la propriet&agrave; <strong>float: left</strong> si permette al resto dell'articolo di disporsi attorno all'immagine. La larghezza &egrave; stata impostata a 200px, supponendo di utilizzare immagini larghe 200px. Margini e padding sono stati regolati per fornire un aspetto pi&ugrave; ordinato al box. Il carattere del commento dell'immagine &egrave; diverso da quello dell'articolo per meglio rappresentare la separazione fra articolo e commento all'immagine.</p>
+
+<p>Attraverso il selettore <strong>#articolo div.immagine img</strong> &egrave; possibile specificare le caratterisitiche dell'immagine, in particolare si &egrave; usata la propriet&agrave; <strong>display: block</strong> affinch&eacute; il testo descrittivo sia posto sotto l'immagine. Nella parte inferiore dell'immagine &egrave; stato specificato un bordo di 3 pixel separato dall'immagine da un padding di 1 pixel. Un'esempio &egrave; riportato nella seguente immagine:</p>
+
+<img class="esempio" src="../../images/tutorial/come_formattare_un_articolo/immagine.gif" alt="[Immagine: Esempio di come appare un'immagine col suo commento, maggiori dettagli sono disponibili nell'articolo]" title="Esempio di come appare un'immagine col suo commento, maggiori dettagli sono disponibili nell'articolo" /> 
+<h2>Note finali</h2>
+
+<p>Con questo articolo abbiamo dimostrato come, senza l'utilizzo di tabelle e altri artifici, sia possibile formattare un articolo rendendolo piacevole e senza influenzare in alcun modo l'accessibilit&agrave; della pagina. A tale proposito si osservi come la <a href="no_css_come_formattare_un_articolo.html" title="L'esempio si apre in una nuova finestra" rel="esterno">stessa pagina priva dei CSS</a> appaia usabile e accessibile con tutti i disposotivi per l'accesso a internet.</p><p><a href="../../commenti/index.html?aid=12" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></p>
+<div id="firma"><em>G.T.</em> -- ultima revisione: 21.10.2002</div>
+</div>
+
+<hr />
+
+<div id="secondario">
+	<h3>File correlati</h3>
+	<ul>
+<li><a href="come_formattare_un_articolo.html">Esempio</a></li><li><a href="no_css_come_formattare_un_articolo.html">Esempio senza CSS</a></li>
+<li><a href="come_formattare_un_articolo.css" title="Foglio di stile associato all&acute;esempio">Codice CSS</a></li>
+<li><a href="come_formattare_un_articolo.zip" title="Scarica l&acute;articolo in PDF, esempi, ecc. [file zip - 176 KB]">ZIP</a></li>
+</ul>	<h3>Articoli correlati:</h3>
+	<ul>
+  <li><a href="../progettare_con_stile/index.html">Progettare con i CSS</a></li>
+  <li><a href="../come_dimensionare_i_caratteri/index.html">Dimensionare i caratteri con i CSS</a></li>
+		
+	</ul>
+	<hr />
+	<h3>Strumenti</h3>
+	<ul>
+		<li><a href="../../commenti/index.html?aid=12" title="Collegamento alla pagina dei commenti">Commenti sull'articolo</a></li>
+		<li><a href="javascript:self.print()">Stampa l'articolo</a></li>
+	</ul>
+</div>
+
+<hr />
+
+<!-- footer -->
+
+<div id="footer">
+
+
+
+
+<p><a href="../../css_guida_completa/index.html"><img src="../../css_guida_completa/miniCover.jpg" alt="CSS Guida Completa" /><br />Il mio libro sui CSS</a></p>
+<p><a href="http://www.sentieroimpresa.it/csszensentiero.htm" title="CSS Zen Sentiero vuole essere un luogo di sperimentazione e di confronto sul design basato sull'uso dei fogli di stile"><img src="../../images/banner_zen_sentiero_constil.gif" width="160" height="30" alt="CSS Zen Sentiero" /></a></p>
+
+<hr />
+
+
+
+<p id="rss" title="Feed RSS">.ConStile &egrave; disponibile anche in <a href="../../constile.xml">XML</a>.</p>
+
+
+
+<p id="cc" title="Licenza"><a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Some Rights Reserved</a>. This work is licensed under a <a href="http://creativecommons.org/licenses/by-nd-nc/1.0" rel="esterno" title="Informazioni sulla licenza con cui &egrave; distribuito il materiale pubblicato su .ConStile">Creative Commons License.</a></p>
+<hr />
+
+
+
+<p class="nascosto"><a accesskey="T" name="PIEDE" id="PIEDE" href="index.html#TOP" title="Torna all'inizio della pagina">Torna all'inizio della pagina</a></p>
+
+<p id="navGenerale" title="Link di navigazione generale"><a href="../../index.html" title="Torna alla homepage di .ConStile">HOMEPAGE</a> / <a href="../../mappa.php" title="Mappa del sito">Mappa</a> / <a href="../../informazioni.php" title="Tutte le informazioni su .ConStile">Informazioni</a> / <a href="../../exit.php" title="I link consigliati per uscire da .ConStile">EXIT (Link)</a></p>
+
+
+
+
+
+</div>
+
+<!-- /footer -->
+
+<hr />
+
+<!-- no CSS -->
+
+<div id="avviso-non-standard"><img src="../../images/avvisow3c.png" alt="" /></div>
+
+<!-- /no CSS -->
+
+<div id="page-url">l'indirizzo di questa pagina &egrave;: http://www.constile.org/tutorial/come_formattare_un_articolo/index.php</div>
+
+</div><!-- fine bodycontent -->
+
+
+
+</body>
+
+</html>
+
+
